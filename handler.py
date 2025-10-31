@@ -669,11 +669,29 @@ def handler(job):
         print(f"worker-comfyui - Output structure: {json.dumps(outputs, indent=2, default=str)}")
         for node_id, node_output in outputs.items():
             print(f"worker-comfyui - Node {node_id} output keys: {list(node_output.keys())}")
+            
+            # Handle both 'images' and 'gifs' output keys (some nodes use 'gifs' for video output)
+            output_items = []
             if "images" in node_output:
+                output_items = node_output["images"]
+                output_key = "images"
+            elif "gifs" in node_output:
+                output_items = node_output["gifs"]
+                output_key = "gifs"
+                print(f"worker-comfyui - Node {node_id} uses 'gifs' key instead of 'images' (common for video outputs)")
+            else:
+                unhandled_keys = [k for k in node_output.keys() if k not in ["images", "gifs"]]
+                if unhandled_keys:
+                    warn_msg = f"Node {node_id} produced unhandled output keys: {unhandled_keys}. Expected 'images' or 'gifs'."
+                    print(f"worker-comfyui - WARNING: {warn_msg}")
+                    print(f"worker-comfyui - --> If this output is useful, please consider opening an issue on GitHub to discuss adding support.")
+                continue
+            
+            if output_items:
                 print(
-                    f"worker-comfyui - Node {node_id} contains {len(node_output['images'])} image(s)"
+                    f"worker-comfyui - Node {node_id} contains {len(output_items)} item(s) in '{output_key}' key"
                 )
-                for image_info in node_output["images"]:
+                for image_info in output_items:
                     filename = image_info.get("filename")
                     subfolder = image_info.get("subfolder", "")
                     img_type = image_info.get("type")

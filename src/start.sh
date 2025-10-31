@@ -64,6 +64,21 @@ fi
 log "worker-comfyui: Starting ComfyUI"
 export PYTHONUNBUFFERED=1
 
+# Performance optimizations for RTX 4090 and high-end GPUs
+# Enable PyTorch optimizations for faster inference
+export PYTORCH_ENABLE_MPS_FALLBACK=0  # Disable MPS (we're using CUDA)
+export TORCH_CUDNN_BENCHMARK=1        # Enable cuDNN autotuning
+export TORCH_CUDNN_DETERMINISTIC=0    # Allow non-deterministic algorithms (faster)
+
+# Apply runtime PyTorch optimizations (TF32, cuDNN benchmark, memory settings)
+if [ -f "/optimize_pytorch.py" ]; then
+    log "worker-comfyui: Applying PyTorch performance optimizations for RTX 4090"
+    python /optimize_pytorch.py || log "worker-comfyui: Warning - PyTorch optimization script failed"
+fi
+
+# Note: LowVRAM mode is often enabled automatically by models
+# If you have 24GB+ VRAM (RTX 4090), consider disabling lowVRAM in workflow settings
+
 # Serve the API and don't shutdown the container
 wait_for_server() {
   local host="127.0.0.1" port="8188" timeout="180" elapsed=0
