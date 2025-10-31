@@ -1,500 +1,500 @@
-2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | Finished.
-2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | worker-comfyui - Job failed with no output images.\n
-2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | worker-comfyui - Job completed with errors/warnings: ["Workflow execution error: Node Type: KSamplerAdvanced, Node ID: 6, Message: No module named 'sageattention'\n"]\n
-2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | worker-comfyui - Closing websocket connection.\n
-2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | worker-comfyui - Processing 0 output nodes...\n
-2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | worker-comfyui - No outputs found in history for prompt 4c16a8b0-4fef-4ea6-aeff-d5745469e284.\n
-2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | worker-comfyui - Fetching history for prompt 4c16a8b0-4fef-4ea6-aeff-d5745469e284...\n
-2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | \n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc | worker-comfyui - Execution error received: Node Type: KSamplerAdvanced, Node ID: 6, Message: No module named 'sageattention'\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc | Prompt executed in 140.32 seconds\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc | \n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc | ModuleNotFoundError: No module named 'sageattention'\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     from sageattention import sageattn\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/custom_nodes/ComfyUI-KJNodes/nodes/model_optimization_nodes.py", line 95, in _patch_modules\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |            ^^^^^^^^^^^^^^^^^^^\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     return fn(*args, **kwargs)\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/opt/venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 1044, in _fn\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     self._patch_modules(False, sage_attention)\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/custom_nodes/ComfyUI-KJNodes/nodes/model_optimization_nodes.py", line 239, in patch_attention_enable\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |            ^^^^^^^^^^^^^^^^^^^\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     return fn(*args, **kwargs)\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/opt/venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 1044, in _fn\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     callback(self)\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/comfy/model_patcher.py", line 1038, in pre_run\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     self.model_patcher.pre_run()\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/comfy/samplers.py", line 996, in outer_sample\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     return self.original(*args, **kwargs)\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/comfy/patcher_extension.py", line 112, in execute\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     output = executor.execute(noise, latent_image, sampler, sigmas, denoise_mask, callback, disable_pbar, seed)\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/comfy/samplers.py", line 1029, in sample\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     return cfg_guider.sample(noise, latent_image, sampler, sigmas, denoise_mask, callback, disable_pbar, seed)\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/comfy/samplers.py", line 1044, in sample\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     return sample(self.model, noise, positive, negative, cfg, self.device, sampler, sigmas, self.model_options, latent_image=latent_image, denoise_mask=denoise_mask, callback=callback, disable_pbar=disable_pbar, seed=seed)\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/comfy/samplers.py", line 1154, in sample\n
-2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |     samples = sampler.sample(noise, positive, negative, cfg=cfg, latent_image=latent_image, start_step=start_step, last_step=last_step, force_full_denoise=force_full_denoise, denoise_mask=noise_mask, sigmas=sigmas, callback=callback, disable_pbar=disable_pbar, seed=seed)\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |   File "/comfyui/comfy/sample.py", line 45, in sample\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |     samples = comfy.sample.sample(model, noise, steps, cfg, sampler_name, scheduler, positive, negative, latent_image,\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |   File "/comfyui/nodes.py", line 1492, in common_ksampler\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |     return common_ksampler(model, noise_seed, steps, cfg, sampler_name, scheduler, positive, negative, latent_image, denoise=denoise, disable_noise=disable_noise, start_step=start_at_step, last_step=end_at_step, force_full_denoise=force_full_denoise)\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |   File "/comfyui/nodes.py", line 1559, in sample\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |              ^^^^^^^^^^^\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |     result = f(**inputs)\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |   File "/comfyui/execution.py", line 277, in process_inputs\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |     await process_inputs(input_dict, i)\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |   File "/comfyui/execution.py", line 289, in _async_map_node_over_list\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |     return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, hidden_inputs=hidden_inputs)\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |   File "/comfyui/execution.py", line 315, in get_output_data\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |     output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, hidden_inputs=hidden_inputs)\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |   File "/comfyui/execution.py", line 496, in execute\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc | Traceback (most recent call last):\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc | !!! Exception during processing !!! No module named 'sageattention'\n
-2025-10-31  13:58:22.753 | info | aht3bnuynpclkc | Restoring initial comfy attention\n
-2025-10-31  13:58:22.230 | info | aht3bnuynpclkc | Patching comfy attention to use sageattn\n
-2025-10-31  13:58:17.602 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-10-31  13:58:07.593 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-10-31  13:57:57.583 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-10-31  13:57:47.573 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-10-31  13:57:37.563 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.14.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.14.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.15.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.15.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.15.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.15.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.16.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.16.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.16.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.16.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.17.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.17.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.17.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.17.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.18.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.18.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.18.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.18.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.19.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.19.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.19.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.19.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.2.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.2.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.2.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.2.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.20.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.20.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.20.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.20.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.21.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.21.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.21.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.21.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.22.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.22.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.22.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.22.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.23.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.23.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.23.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.23.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.24.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.24.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.24.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.24.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.25.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.25.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.25.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.25.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.26.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.26.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.26.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.26.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.27.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.27.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.27.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.27.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.28.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.28.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.28.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.28.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.29.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.29.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.29.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.29.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.3.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.3.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.3.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.3.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.30.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.30.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.30.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.30.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.31.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.31.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.31.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.31.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.32.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.32.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.32.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.32.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.33.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.33.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.33.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.33.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.34.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.34.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.34.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.34.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.35.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.35.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.35.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.35.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.36.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.36.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.36.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.36.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.37.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.37.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.37.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.37.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.38.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.38.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.38.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.38.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.39.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.39.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.39.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.39.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.4.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.4.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.4.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.4.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.5.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.5.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.5.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.5.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.6.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.6.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.6.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.6.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.7.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.7.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.7.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.7.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.8.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.8.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.8.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.8.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.9.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.9.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.9.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.9.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.0.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.1.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.10.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.11.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.12.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.13.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.14.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.15.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.16.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.17.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.18.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.19.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.2.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.20.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.21.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.22.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.23.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.24.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.25.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.26.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.27.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.28.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.29.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.3.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.30.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.31.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.32.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.33.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.34.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.35.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.36.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.37.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.38.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.39.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.4.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.5.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.6.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.7.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.004 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.8.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.004 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.9.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
-2025-10-31  13:57:24.004 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.head.head Linear(in_features=5120, out_features=64, bias=True)\n
-2025-10-31  13:57:23.904 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.time_embedding.0 Linear(in_features=256, out_features=5120, bias=True)\n
-2025-10-31  13:57:23.904 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.patch_embedding Conv3d(36, 5120, kernel_size=(1, 2, 2), stride=(1, 2, 2))\n
-2025-10-31  13:57:23.904 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.9.self_attn.v Linear(in_features=5120, out_features=5120, bias=True)\n
-2025-10-31  13:57:23.756 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.text_embedding.2 Linear(in_features=5120, out_features=5120, bias=True)\n
-2025-10-31  13:57:23.649 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.time_embedding.2 Linear(in_features=5120, out_features=5120, bias=True)\n
-2025-10-31  13:57:21.026 | info | aht3bnuynpclkc | 0 models unloaded.\n
-2025-10-31  13:57:20.408 | info | aht3bnuynpclkc | Unloading WanVAE\n
-2025-10-31  13:57:20.408 | info | aht3bnuynpclkc | Unloading WanTEModel\n
-2025-10-31  13:57:17.616 | info | aht3bnuynpclkc | Requested to load WAN21\n
-2025-10-31  13:57:17.616 | info | aht3bnuynpclkc | adm 0\n
-2025-10-31  13:57:17.616 | info | aht3bnuynpclkc | model_type FLOW\n
-2025-10-31  13:57:17.616 | info | aht3bnuynpclkc | model weight dtype torch.float16, manual cast: None\n
-2025-10-31  13:57:14.663 | info | aht3bnuynpclkc | gguf qtypes: F16 (694), Q5_K (400), F32 (1)\n
-2025-10-31  13:57:09.627 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-10-31  13:56:59.617 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.8.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.8.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.9.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.9.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.3.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.4.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.4.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.8.resample.1 Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.4.residual.2 CausalConv3d(192, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.6.residual.2 CausalConv3d(192, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.middle.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.middle.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.middle.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.middle.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.1.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.1.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.4.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.5.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.5.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.6.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.6.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.10.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.10.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.6.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.7.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.7.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.9.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.9.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.middle.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.middle.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.middle.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.middle.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.16.layer.1.DenseReluDense.wi_0\n
-2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.15.layer.1.DenseReluDense.wo\n
-2025-10-31  13:56:41.924 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.14.layer.1.DenseReluDense.wi_1\n
-2025-10-31  13:56:41.697 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.11.layer.1.DenseReluDense.wo\n
-2025-10-31  13:56:41.466 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.1.layer.1.DenseReluDense.wi_0\n
-2025-10-31  13:56:41.246 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.7.layer.0.SelfAttention.q\n
-2025-10-31  13:56:41.139 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.o\n
-2025-10-31  13:56:40.923 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.21.layer.0.SelfAttention.v\n
-2025-10-31  13:56:40.709 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.o\n
-2025-10-31  13:56:40.493 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.v\n
-2025-10-31  13:56:40.281 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.v\n
-2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.relative_attention_bias\n
-2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.relative_attention_bias\n
-2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.relative_attention_bias\n
-2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.relative_attention_bias\n
-2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.relative_attention_bias\n
-2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.relative_attention_bias\n
-2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.relative_attention_bias\n
-2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.0.layer.0.SelfAttention.relative_attention_bias\n
-2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | Unloading WanTEModel\n
-2025-10-31  13:56:40.079 | info | aht3bnuynpclkc | Requested to load WanVAE\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
-2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.shared Embedding(256384, 4096)\n
-2025-10-31  13:56:36.752 | info | aht3bnuynpclkc | Requested to load WanTEModel\n
-2025-10-31  13:56:27.842 | info | aht3bnuynpclkc | clip unexpected: ['spiece_model']\n
-2025-10-31  13:56:24.209 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-10-31  13:56:14.200 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-10-31  13:56:14.200 | info | aht3bnuynpclkc | CLIP/text encoder model load device: cuda:0, offload device: cpu, current: cpu, dtype: torch.float16\n
-2025-10-31  13:56:05.496 | info | aht3bnuynpclkc | Model doesn't have a device attribute.\n
-2025-10-31  13:56:04.736 | info | aht3bnuynpclkc | Using scaled fp8: fp8 matrix mult: False, scale input: False\n
-2025-10-31  13:56:04.736 | info | aht3bnuynpclkc | adm 0\n
-2025-10-31  13:56:04.736 | info | aht3bnuynpclkc | model_type FLOW\n
-2025-10-31  13:56:04.736 | info | aht3bnuynpclkc | model weight dtype torch.float16, manual cast: None\n
-2025-10-31  13:56:03.649 | info | aht3bnuynpclkc | gguf qtypes: F16 (694), Q5_K (400), F32 (1)\n
-2025-10-31  13:56:03.649 | info | aht3bnuynpclkc | VAE load device: cuda:0, offload device: cpu, dtype: torch.bfloat16\n
-2025-10-31  13:56:03.089 | info | aht3bnuynpclkc | Model doesn't have a device attribute.\n
-2025-10-31  13:56:03.089 | info | aht3bnuynpclkc | Using pytorch attention in VAE\n
-2025-10-31  13:56:02.158 | info | aht3bnuynpclkc | got prompt\n
-2025-10-31  13:56:02.158 | info | aht3bnuynpclkc | worker-comfyui - Websocket connected\n
-2025-10-31  13:56:02.158 | info | aht3bnuynpclkc | worker-comfyui - Connecting to websocket: ws://127.0.0.1:8188/ws?clientId=0709b250-efaa-4da9-8936-b48423c550e7\n
-2025-10-31  13:56:02.158 | info | aht3bnuynpclkc | worker-comfyui - image(s) upload complete\n
-2025-10-31  13:56:02.158 | info | aht3bnuynpclkc | worker-comfyui - Successfully uploaded 91771d9aa876d0d6f931ca1ab14b8a30.jpg\n
-2025-10-31  13:56:02.158 | info | aht3bnuynpclkc | worker-comfyui - Uploading 1 image(s)...\n
+2025-10-31  14:28:50.568 | info | srop1vp2zugqy7 | Finished.
+2025-10-31  14:28:50.568 | info | srop1vp2zugqy7 | worker-comfyui - Job failed with no output images.\n
+2025-10-31  14:28:50.568 | info | srop1vp2zugqy7 | worker-comfyui - Job completed with errors/warnings: ["Workflow execution error: Node Type: KSamplerAdvanced, Node ID: 6, Message: No module named 'sageattention'\n"]\n
+2025-10-31  14:28:50.568 | info | srop1vp2zugqy7 | worker-comfyui - Closing websocket connection.\n
+2025-10-31  14:28:50.567 | info | srop1vp2zugqy7 | worker-comfyui - Processing 0 output nodes...\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 | worker-comfyui - No outputs found in history for prompt abae35f5-85fe-40e3-abe6-c7f5f01315dd.\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 | worker-comfyui - Fetching history for prompt abae35f5-85fe-40e3-abe6-c7f5f01315dd...\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 | \n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 | worker-comfyui - Execution error received: Node Type: KSamplerAdvanced, Node ID: 6, Message: No module named 'sageattention'\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 | Prompt executed in 133.43 seconds\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 | \n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 | ModuleNotFoundError: No module named 'sageattention'\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |     from sageattention import sageattn\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |   File "/comfyui/custom_nodes/ComfyUI-KJNodes/nodes/model_optimization_nodes.py", line 95, in _patch_modules\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |            ^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |     return fn(*args, **kwargs)\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |   File "/opt/venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 1044, in _fn\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |     self._patch_modules(False, sage_attention)\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |   File "/comfyui/custom_nodes/ComfyUI-KJNodes/nodes/model_optimization_nodes.py", line 239, in patch_attention_enable\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |            ^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |     return fn(*args, **kwargs)\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |   File "/opt/venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 1044, in _fn\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |     callback(self)\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |   File "/comfyui/comfy/model_patcher.py", line 1038, in pre_run\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |     self.model_patcher.pre_run()\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |   File "/comfyui/comfy/samplers.py", line 996, in outer_sample\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |     return self.original(*args, **kwargs)\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |   File "/comfyui/comfy/patcher_extension.py", line 112, in execute\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |     output = executor.execute(noise, latent_image, sampler, sigmas, denoise_mask, callback, disable_pbar, seed)\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |   File "/comfyui/comfy/samplers.py", line 1029, in sample\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |     return cfg_guider.sample(noise, latent_image, sampler, sigmas, denoise_mask, callback, disable_pbar, seed)\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |   File "/comfyui/comfy/samplers.py", line 1044, in sample\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |     return sample(self.model, noise, positive, negative, cfg, self.device, sampler, sigmas, self.model_options, latent_image=latent_image, denoise_mask=denoise_mask, callback=callback, disable_pbar=disable_pbar, seed=seed)\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |   File "/comfyui/comfy/samplers.py", line 1154, in sample\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |     samples = sampler.sample(noise, positive, negative, cfg=cfg, latent_image=latent_image, start_step=start_step, last_step=last_step, force_full_denoise=force_full_denoise, denoise_mask=noise_mask, sigmas=sigmas, callback=callback, disable_pbar=disable_pbar, seed=seed)\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |   File "/comfyui/comfy/sample.py", line 45, in sample\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |     samples = comfy.sample.sample(model, noise, steps, cfg, sampler_name, scheduler, positive, negative, latent_image,\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |   File "/comfyui/nodes.py", line 1492, in common_ksampler\n
+2025-10-31  14:28:50.328 | info | srop1vp2zugqy7 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 |     return common_ksampler(model, noise_seed, steps, cfg, sampler_name, scheduler, positive, negative, latent_image, denoise=denoise, disable_noise=disable_noise, start_step=start_at_step, last_step=end_at_step, force_full_denoise=force_full_denoise)\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 |   File "/comfyui/nodes.py", line 1559, in sample\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 |              ^^^^^^^^^^^\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 |     result = f(**inputs)\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 |   File "/comfyui/execution.py", line 277, in process_inputs\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 |     await process_inputs(input_dict, i)\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 |   File "/comfyui/execution.py", line 289, in _async_map_node_over_list\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 |     return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, hidden_inputs=hidden_inputs)\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 |   File "/comfyui/execution.py", line 315, in get_output_data\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 |                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 |     output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, hidden_inputs=hidden_inputs)\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 |   File "/comfyui/execution.py", line 496, in execute\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 | Traceback (most recent call last):\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 | !!! Exception during processing !!! No module named 'sageattention'\n
+2025-10-31  14:28:50.327 | info | srop1vp2zugqy7 | Restoring initial comfy attention\n
+2025-10-31  14:28:49.880 | info | srop1vp2zugqy7 | Patching comfy attention to use sageattn\n
+2025-10-31  14:28:45.681 | info | srop1vp2zugqy7 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  14:28:35.671 | info | srop1vp2zugqy7 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  14:28:25.661 | info | srop1vp2zugqy7 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  14:28:15.651 | info | srop1vp2zugqy7 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  14:28:05.641 | info | srop1vp2zugqy7 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.2.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.20.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.20.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.20.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.20.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.21.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.21.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.21.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.21.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.22.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.22.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.22.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.22.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.23.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.23.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.23.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.23.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.24.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.24.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.24.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.24.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.25.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.25.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.25.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.25.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.26.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.633 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.26.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.26.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.26.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.27.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.27.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.27.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.27.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.28.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.28.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.28.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.28.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.29.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.29.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.29.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.29.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.3.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.3.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.3.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.3.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.30.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.30.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.30.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.30.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.31.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.31.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.31.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.31.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.32.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.32.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.32.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.632 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.32.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.33.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.33.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.33.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.33.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.34.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.34.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.34.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.34.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.35.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.35.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.35.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.35.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.36.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.36.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:55.631 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.36.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.36.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.37.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.37.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.37.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.37.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.38.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.38.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.38.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.38.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.39.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.39.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.39.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.39.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.4.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.4.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.4.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.4.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.5.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.5.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.5.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.5.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.6.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.6.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.6.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.6.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.7.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.7.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.7.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.7.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.906 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.8.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.8.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.8.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.8.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.9.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.9.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.9.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.9.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.0.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.1.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.10.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.11.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.12.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.13.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.14.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.15.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.16.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.17.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.18.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.19.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.2.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.20.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.21.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.22.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.23.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.24.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.25.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.26.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.27.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.28.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.905 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.29.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.3.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.30.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.31.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.32.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.33.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.34.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.35.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.36.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.37.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.38.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.39.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.4.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.5.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.6.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.7.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.8.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.9.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  14:27:52.904 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.head.head Linear(in_features=5120, out_features=64, bias=True)\n
+2025-10-31  14:27:52.803 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.time_embedding.0 Linear(in_features=256, out_features=5120, bias=True)\n
+2025-10-31  14:27:52.803 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.patch_embedding Conv3d(36, 5120, kernel_size=(1, 2, 2), stride=(1, 2, 2))\n
+2025-10-31  14:27:52.803 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.blocks.9.self_attn.v Linear(in_features=5120, out_features=5120, bias=True)\n
+2025-10-31  14:27:52.598 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.text_embedding.2 Linear(in_features=5120, out_features=5120, bias=True)\n
+2025-10-31  14:27:52.416 | info | srop1vp2zugqy7 | lowvram: loaded module regularly diffusion_model.time_embedding.2 Linear(in_features=5120, out_features=5120, bias=True)\n
+2025-10-31  14:27:49.520 | info | srop1vp2zugqy7 | 0 models unloaded.\n
+2025-10-31  14:27:48.732 | info | srop1vp2zugqy7 | Unloading WanVAE\n
+2025-10-31  14:27:48.732 | info | srop1vp2zugqy7 | Unloading WanTEModel\n
+2025-10-31  14:27:45.716 | info | srop1vp2zugqy7 | Requested to load WAN21\n
+2025-10-31  14:27:45.716 | info | srop1vp2zugqy7 | adm 0\n
+2025-10-31  14:27:45.716 | info | srop1vp2zugqy7 | model_type FLOW\n
+2025-10-31  14:27:45.715 | info | srop1vp2zugqy7 | model weight dtype torch.float16, manual cast: None\n
+2025-10-31  14:27:42.579 | info | srop1vp2zugqy7 | gguf qtypes: F16 (694), Q5_K (400), F32 (1)\n
+2025-10-31  14:27:32.792 | info | srop1vp2zugqy7 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  14:27:22.784 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.8.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.784 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.9.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.784 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.9.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.downsamples.3.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.downsamples.4.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.downsamples.4.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.downsamples.8.resample.1 Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.4.residual.2 CausalConv3d(192, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.downsamples.6.residual.2 CausalConv3d(192, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.middle.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.middle.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.middle.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.middle.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.1.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.1.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.4.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.5.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.5.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.6.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly decoder.upsamples.6.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.downsamples.10.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.783 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.downsamples.10.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.782 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.downsamples.6.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.782 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.downsamples.7.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.782 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.downsamples.7.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.782 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.downsamples.9.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.782 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.downsamples.9.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.782 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.middle.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.782 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.middle.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.782 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.middle.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.782 | info | srop1vp2zugqy7 | lowvram: loaded module regularly encoder.middle.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  14:27:22.782 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.16.layer.1.DenseReluDense.wi_0\n
+2025-10-31  14:27:15.498 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.14.layer.1.DenseReluDense.wi_0\n
+2025-10-31  14:27:15.265 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.11.layer.1.DenseReluDense.wi_1\n
+2025-10-31  14:27:15.131 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.10.layer.1.DenseReluDense.wi_1\n
+2025-10-31  14:27:14.893 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.9.layer.0.SelfAttention.v\n
+2025-10-31  14:27:14.666 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.v\n
+2025-10-31  14:27:14.448 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.22.layer.0.SelfAttention.v\n
+2025-10-31  14:27:14.337 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.20.layer.0.SelfAttention.v\n
+2025-10-31  14:27:14.119 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.o\n
+2025-10-31  14:27:13.912 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.v\n
+2025-10-31  14:27:13.694 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.k\n
+2025-10-31  14:27:13.490 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.16.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  14:27:13.490 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  14:27:13.490 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  14:27:13.490 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  14:27:13.490 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  14:27:13.490 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  14:27:13.490 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  14:27:13.490 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  14:27:13.490 | info | srop1vp2zugqy7 | freed umt5xxl.transformer.encoder.block.0.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  14:27:13.490 | info | srop1vp2zugqy7 | Unloading WanTEModel\n
+2025-10-31  14:27:13.384 | info | srop1vp2zugqy7 | Requested to load WanVAE\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.318 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.317 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.0.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.1.layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.final_layer_norm T5LayerNorm()\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.316 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.315 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.314 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.313 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.312 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.311 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.310 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.310 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.310 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.310 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.310 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.310 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.310 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.310 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.310 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.310 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.310 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.310 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  14:27:11.310 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  14:27:11.310 | info | srop1vp2zugqy7 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
