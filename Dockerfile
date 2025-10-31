@@ -98,7 +98,6 @@ RUN comfy-node-install \
     ComfyUI-Manager \
     ComfyUI-RMBG \
     ComfyUI-segment-anything-2 \
-    ComfyUI-TeaCache \
     ComfyUI-VibeVoice \
     ComfyUI-VideoHelperSuite \
     ComfyUI-WanAnimatePreprocess \
@@ -109,19 +108,28 @@ RUN comfy-node-install \
     ComfyUI_LayerStyle_Advance \
     ComfyUI_JPS-Nodes \
     ComfyUI_UltimateSDUpscale \
-    ComfyUI-RES4LYF \
     comfyui-custom-scripts \
-    comfyui-dynamicprompts \
     comfyui-image-selector \
     rgthree-comfy \
-    comfyui-havocs-call-custom-nodes \
     was-node-suite-comfyui \
-    cg-image-picker \
     cg-use-everywhere \
     comfy-plasma \
     comfyui_controlnet_aux \
     masquerade-nodes-comfyui \
     mikey_nodes
+
+# Install nodes that need special handling (registry names or direct URLs)
+RUN cd custom_nodes && \
+    # RES4LYF - direct git clone
+    git clone https://github.com/ClownsharkBatwing/RES4LYF.git RES4LYF || true && \
+    # ComfyUI-TeaCache - registry name: teacache
+    comfy-node-install teacache || true && \
+    # cg-image-picker - direct GitHub URL (correct owner: chrisgoringe)
+    git clone https://github.com/chrisgoringe/cg-image-picker.git cg-image-picker || true && \
+    # HavocsCall_Custom_Nodes - registry name: havocscall_custom_nodes
+    comfy-node-install havocscall_custom_nodes || true && \
+    # DynamicPrompts - direct git clone (correct URL)
+    git clone https://github.com/adieyal/comfyui-dynamicprompts.git comfyui-dynamicprompts || true
 
 # Copy custom nodes from project directory (optional - will be overridden by Network Volume if available)
 # Set SKIP_NODE_INSTALL=true to skip installation during build
