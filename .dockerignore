@@ -1,0 +1,35 @@
+# Git files (safe to exclude - not needed in runtime)
+custom_nodes/**/.git
+custom_nodes/**/.gitignore
+custom_nodes/**/.gitattributes
+custom_nodes/**/.github
+
+# Python cache (safe to exclude - regenerated automatically)
+custom_nodes/**/__pycache__
+custom_nodes/**/*.pyc
+custom_nodes/**/*.pyo
+custom_nodes/**/*.pyd
+custom_nodes/**/.Python
+
+# Build artifacts (safe to exclude - not needed in runtime)
+custom_nodes/**/build
+custom_nodes/**/dist
+custom_nodes/**/*.egg-info
+custom_nodes/**/.eggs
+
+# IDE and editor files (safe to exclude)
+custom_nodes/**/.vscode
+custom_nodes/**/.idea
+custom_nodes/**/*.swp
+custom_nodes/**/*.swo
+custom_nodes/**/*~
+
+# OS files (safe to exclude)
+custom_nodes/**/.DS_Store
+custom_nodes/**/Thumbs.db
+custom_nodes/**/._*
+
+# Log files (safe to exclude)
+custom_nodes/**/*.log
+custom_nodes/**/*.log.*
+

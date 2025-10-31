@@ -64,59 +64,21 @@ RUN if [ "$ENABLE_PYTORCH_UPGRADE" = "true" ]; then \
 # Change working directory to ComfyUI
 WORKDIR /comfyui
 
-# Install custom nodes (optional - will be overridden by Network Volume if available)
+# Copy custom nodes from project directory (optional - will be overridden by Network Volume if available)
 # Set SKIP_NODE_INSTALL=true to skip installation during build
 ARG SKIP_NODE_INSTALL=false
-RUN if [ "$SKIP_NODE_INSTALL" != "true" ]; then \
-      mkdir -p custom_nodes && \
-      cd custom_nodes && \
-      git clone https://github.com/ltdrdata/ComfyLiterals.git || true && \
-      git clone https://github.com/pythongosssss/ComfyUI-Detail-Daemon.git || true && \
-      git clone https://github.com/wasdennnoch/ComfyUI-Easy-Use.git || true && \
-      git clone https://github.com/Fannovel16/comfyui-frame-interpolation.git ComfyUI-Frame-Interpolation || true && \
-      git clone https://github.com/pythongosssss/ComfyUI-GGUF.git || true && \
-      git clone https://github.com/FantasyTalking/ComfyUI-GGUF-FantasyTalking.git || true && \
-      git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack.git || true && \
-      git clone https://github.com/kijai/ComfyUI-KJNodes.git || true && \
-      git clone https://github.com/JonVeg/ComfyUI-LatentSyncWrapper.git || true && \
-      git clone https://github.com/pythongosssss/ComfyUI-Logic.git || true && \
-      git clone https://github.com/ltdrdata/ComfyUI-Manager.git || true && \
-      git clone https://github.com/biegert/ComfyUI-RMBG.git || true && \
-      git clone https://github.com/adelelhedi/ComfyUI-segment-anything-2.git || true && \
-      git clone https://github.com/pythongosssss/ComfyUI-TeaCache.git || true && \
-      git clone https://github.com/VibeVoice/ComfyUI-VibeVoice.git || true && \
-      git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git || true && \
-      git clone https://github.com/Wan-Animate/ComfyUI-WanAnimatePreprocess.git || true && \
-      git clone https://github.com/Wan-Animate/ComfyUI-WanVideoWrapper.git || true && \
-      git clone https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git || true && \
-      git clone https://github.com/cubiq/ComfyUI_essentials.git || true && \
-      git clone https://github.com/Fannovel16/ComfyUI_LayerStyle.git || true && \
-      git clone https://github.com/Fannovel16/ComfyUI_LayerStyle_Advance.git || true && \
-      git clone https://github.com/jags111/ComfyUI_JPS-Nodes.git || true && \
-      git clone https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git || true && \
-      git clone https://github.com/RES4LYF/ComfyUI-RES4LYF.git RES4LYF || true && \
-      git clone https://github.com/pythongosssss/comfyui-custom-scripts.git || true && \
-      git clone https://github.com/adieyal/comfyui-dynamicprompts.git || true && \
-      git clone https://github.com/pythongosssss/comfyui-image-selector.git || true && \
-      git clone https://github.com/rgthree/rgthree-comfy.git || true && \
-      git clone https://github.com/oneoffcoder/comfyui-havocs-call-custom-nodes.git comfyui_HavocsCall_Custom_Nodes || true && \
-      git clone https://github.com/wasdennnoch/was-node-suite-comfyui.git || true && \
-      git clone https://github.com/cg-use-everywhere/cg-image-picker.git || true && \
-      git clone https://github.com/cg-use-everywhere/cg-use-everywhere.git || true && \
-      git clone https://github.com/rgtjf/comfy-plasma.git || true && \
-      git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git || true && \
-      git clone https://github.com/BadCafeCode/masquerade-nodes-comfyui.git || true && \
-      git clone https://github.com/bash-j/mikey_nodes.git || true && \
-      cd /comfyui && \
-      find custom_nodes -maxdepth 2 -name "requirements.txt" -type f | while read req; do \
+COPY --chown=root:root custom_nodes/ custom_nodes/
+RUN if [ "$SKIP_NODE_INSTALL" = "true" ]; then \
+      echo "Skipping custom nodes installation (will use Network Volume)"; \
+      rm -rf custom_nodes && mkdir -p custom_nodes; \
+    else \
+      echo "Installing dependencies for custom_nodes from project"; \
+      find custom_nodes -maxdepth 2 -name "requirements.txt" -type f 2>/dev/null | while read req; do \
         echo "Installing dependencies from $req"; \
         uv pip install -r "$req" || true; \
       done && \
-      uv pip install segment-anything-2 || true && \
+      uv pip install segment-anything-2 || true; \
       uv pip install rembg || true; \
-    else \
-      echo "Skipping custom nodes installation (will use Network Volume)"; \
-      mkdir -p custom_nodes; \
     fi
 
 # Support for the network volume
