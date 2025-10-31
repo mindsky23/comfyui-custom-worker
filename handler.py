@@ -666,7 +666,9 @@ def handler(job):
                 errors.append(warning_msg)
 
         print(f"worker-comfyui - Processing {len(outputs)} output nodes...")
+        print(f"worker-comfyui - Output structure: {json.dumps(outputs, indent=2, default=str)}")
         for node_id, node_output in outputs.items():
+            print(f"worker-comfyui - Node {node_id} output keys: {list(node_output.keys())}")
             if "images" in node_output:
                 print(
                     f"worker-comfyui - Node {node_id} contains {len(node_output['images'])} image(s)"
@@ -689,10 +691,19 @@ def handler(job):
                         errors.append(warn_msg)
                         continue
 
+                    # Check if this is a video file (.mp4, .webm, etc.)
+                    file_extension = os.path.splitext(filename)[1].lower() if filename else ".png"
+                    is_video = file_extension in [".mp4", ".webm", ".avi", ".mov", ".mkv"]
+                    
+                    if is_video:
+                        print(f"worker-comfyui - Processing video file: {filename} (type: {img_type})")
+                    
+                    # Use get_image_data for both images and videos (ComfyUI /view endpoint supports both)
                     image_bytes = get_image_data(filename, subfolder, img_type)
 
                     if image_bytes:
-                        file_extension = os.path.splitext(filename)[1] or ".png"
+                        if not file_extension:
+                            file_extension = ".png" if not is_video else ".mp4"
 
                         if os.environ.get("BUCKET_ENDPOINT_URL"):
                             try:
