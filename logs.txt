@@ -1,459 +1,500 @@
-2025-10-31  13:22:02.158 | info | k7zqif17j8co2r | worker-comfyui - Connecting to websocket: ws://127.0.0.1:8188/ws?clientId=2afcd75a-9ac0-421a-8c31-4a3a0495a4fe\n
-2025-10-31  13:22:02.158 | info | k7zqif17j8co2r | worker-comfyui - image(s) upload complete\n
-2025-10-31  13:22:02.158 | info | k7zqif17j8co2r | worker-comfyui - Successfully uploaded 91771d9aa876d0d6f931ca1ab14b8a30.jpg\n
-2025-10-31  13:22:02.158 | info | k7zqif17j8co2r | worker-comfyui - Uploading 1 image(s)...\n
-2025-10-31  13:22:02.158 | info | k7zqif17j8co2r | worker-comfyui - API is reachable\n
-2025-10-31  13:22:02.158 | info | k7zqif17j8co2r | worker-comfyui - Checking API server at http://127.0.0.1:8188/...\n
-2025-10-31  13:22:02.158 | info | k7zqif17j8co2r | Started.
-2025-10-31  13:22:02.158 | info | k7zqif17j8co2r | Jobs in progress: 1
-2025-10-31  13:22:01.979 | info | k7zqif17j8co2r | Jobs in queue: 1
-2025-10-31  13:22:01.979 | info | k7zqif17j8co2r | --- Starting Serverless Worker |  Version 1.7.13 ---\n
-2025-10-31  13:22:01.574 | info | k7zqif17j8co2r | worker-comfyui - Starting handler...\n
-2025-10-31  13:22:01.574 | info | k7zqif17j8co2r | 2025-10-31 10:21:59 | worker-comfyui: Starting RunPod Handler\n
-2025-10-31  13:21:59.622 | info | k7zqif17j8co2r | Will assume non-transactional DDL.\n
-2025-10-31  13:21:59.622 | info | k7zqif17j8co2r | Context impl SQLiteImpl.\n
-2025-10-31  13:21:59.324 | info | k7zqif17j8co2r | \n
-2025-10-31  13:21:59.039 | info | k7zqif17j8co2r | [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m220[0m [32mnodes successfully.[0m\n
-2025-10-31  13:21:59.039 | info | k7zqif17j8co2r | [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/comfyui/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m\n
-2025-10-31  13:21:58.693 | info | k7zqif17j8co2r |   if output_path.endswith("ComfyUI/output") or output_path.endswith("ComfyUI\output"):\n
-2025-10-31  13:21:58.693 | info | k7zqif17j8co2r | /comfyui/custom_nodes/was-node-suite-comfyui/WAS_Node_Suite.py:7355: SyntaxWarning: invalid escape sequence '\o'\n
-2025-10-31  13:21:58.693 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/was-node-suite-comfyui\n
-2025-10-31  13:21:58.693 | info | k7zqif17j8co2r | \n
-2025-10-31  13:21:58.693 | info | k7zqif17j8co2r | [92m[rgthree-comfy] Loaded 48 epic nodes. 🎉[0m\n
-2025-10-31  13:21:57.664 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/cg-image-picker\n
-2025-10-31  13:21:57.542 | info | k7zqif17j8co2r | (RES4LYF) Init\n
-2025-10-31  13:21:57.542 | info | k7zqif17j8co2r |   labels.append("$Δ \hat{t}$")\n
-2025-10-31  13:21:57.542 | info | k7zqif17j8co2r | /comfyui/custom_nodes/RES4LYF/helper_sigma_preview_image_preproc.py:850: SyntaxWarning: invalid escape sequence '\h'\n
-2025-10-31  13:21:57.378 | info | k7zqif17j8co2r | Using pytorch attention\n
-2025-10-31  13:21:57.378 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/RES4LYF\n
-2025-10-31  13:21:57.378 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI_essentials\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI_UltimateSDUpscale\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI_LayerStyle_Advance\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r | Cannot import /comfyui/custom_nodes/ComfyUI_LayerStyle module for custom nodes: cannot import name 'draw_rounded_rectangle' from '/comfyui/custom_nodes/ComfyUI_LayerStyle.py.imagefunc' (/comfyui/custom_nodes/ComfyUI_LayerStyle/py/imagefunc.py)\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r | \n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r | ImportError: cannot import name 'draw_rounded_rectangle' from '/comfyui/custom_nodes/ComfyUI_LayerStyle.py.imagefunc' (/comfyui/custom_nodes/ComfyUI_LayerStyle/py/imagefunc.py)\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |     from .imagefunc import draw_rounded_rectangle, gaussian_blur, mask_area, max_inscribed_rect, min_bounding_rect\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |   File "/comfyui/custom_nodes/ComfyUI_LayerStyle/py/rounded_rectangle.py", line 4, in <module>\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |   File "<frozen importlib._bootstrap_external>", line 995, in exec_module\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |     return _bootstrap._gcd_import(name[level:], package, level)\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r | 
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |   File "/comfyui/custom_nodes/ComfyUI_LayerStyle/__init__.py", line 63, in <module>\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |   File "<frozen importlib._bootstrap_external>", line 995, in exec_module\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |     module_spec.loader.exec_module(module)\n
-2025-10-31  13:21:57.057 | info | k7zqif17j8co2r |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | Traceback (most recent call last):\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | # 😺dzNodes:: Copying dz_parse-css.js to extensions folder\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | # 😺dzNodes:: Copying dz_node_palette.js to extensions folder\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | # 😺dzNodes:: Copying dz_mtb_widgets.js to extensions folder\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | # 😺dzNodes:: Copying dz_debug.js to extensions folder\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | # 😺dzNodes:: Copying dz_comfy_shared.js to extensions folder\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | # 😺dzNodes: Update to javascripts files detected\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | # 😺dzNodes: Making the "/comfyui/web/extensions/dzNodes" folder\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI_LayerStyle\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI_JPS-Nodes\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | ------------------------------------------\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | ** For help, please see the wiki at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | ** For changes, please see patch notes at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | ------------------------------------------\n
-2025-10-31  13:21:56.944 | info | k7zqif17j8co2r | [34mComfyroll Studio v1.76 : [92m 175 Nodes Loaded[0m\n
-2025-10-31  13:21:56.518 | info | k7zqif17j8co2r | ------------------------------------------\n
-2025-10-31  13:21:56.518 | info | k7zqif17j8co2r |   resolved_font_path = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "fonts\Roboto-Regular.ttf")\n
-2025-10-31  13:21:56.518 | info | k7zqif17j8co2r | /comfyui/custom_nodes/ComfyUI_Comfyroll_CustomNodes/nodes/nodes_xygrid.py:256: SyntaxWarning: invalid escape sequence '\R'\n
-2025-10-31  13:21:56.518 | info | k7zqif17j8co2r | found 2 files\n
-2025-10-31  13:21:56.518 | info | k7zqif17j8co2r | recursive file list on directory /runpod-volume/models/controlnet\n
-2025-10-31  13:21:56.518 | info | k7zqif17j8co2r | found 1 files\n
-2025-10-31  13:21:56.518 | info | k7zqif17j8co2r | recursive file list on directory /comfyui/models/controlnet\n
-2025-10-31  13:21:56.518 | info | k7zqif17j8co2r |   def make_list(self, source_folder, start_index, max_rows, folder_path="C:\Windows\Fonts"):\n
-2025-10-31  13:21:56.518 | info | k7zqif17j8co2r | /comfyui/custom_nodes/ComfyUI_Comfyroll_CustomNodes/nodes/nodes_list.py:393: SyntaxWarning: invalid escape sequence '\W'\n
-2025-10-31  13:21:56.518 | info | k7zqif17j8co2r |   "optional": {"folder_path": ("STRING", {"default": "C:\Windows\Fonts", "multiline": False}),\n
-2025-10-31  13:21:56.518 | info | k7zqif17j8co2r | /comfyui/custom_nodes/ComfyUI_Comfyroll_CustomNodes/nodes/nodes_list.py:383: SyntaxWarning: invalid escape sequence '\W'\n
-2025-10-31  13:21:56.518 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI_Comfyroll_CustomNodes\n
-2025-10-31  13:21:56.387 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-segment-anything-2\n
-2025-10-31  13:21:56.387 | info | k7zqif17j8co2r | sageattention package is not installed, sageattention will not be available\n
-2025-10-31  13:21:56.173 | info | k7zqif17j8co2r | Warning: Could not load sageattention: No module named 'sageattention'\n
-2025-10-31  13:21:56.173 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-WanVideoWrapper\n
-2025-10-31  13:21:56.061 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-WanAnimatePreprocess\n
-2025-10-31  13:21:56.061 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-VideoHelperSuite\n
-2025-10-31  13:21:56.061 | info | k7zqif17j8co2r | [ComfyUI-VibeVoice] APEX FusedRMSNorm not available, using native implementation\n
-2025-10-31  13:21:56.060 | info | k7zqif17j8co2r | [ComfyUI-VibeVoice] Discovered VibeVoice models: ['VibeVoice-1.5B', 'VibeVoice-Large']\n
-2025-10-31  13:21:56.060 | info | k7zqif17j8co2r | [ComfyUI-VibeVoice] Scanning for VibeVoice models in: /comfyui/models/tts/VibeVoice\n
-2025-10-31  13:21:56.060 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-VibeVoice\n
-2025-10-31  13:21:56.060 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-TeaCache\n
-2025-10-31  13:21:56.060 | info | k7zqif17j8co2r | [34m[ComfyUI-RMBG][0m v[93m2.9.0[0m | [93m32 nodes[0m [92mLoaded[0m\n
-2025-10-31  13:21:56.060 | info | k7zqif17j8co2r |   """\n
-2025-10-31  13:21:55.877 | info | k7zqif17j8co2r | /opt/venv/lib/python3.12/site-packages/groundingdino/models/GroundingDINO/utils.py:59: SyntaxWarning: invalid escape sequence '\s'\n
-2025-10-31  13:21:47.593 | info | k7zqif17j8co2r | 2025-10-31 10:21:47 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (20s)\n
-2025-10-31  13:21:47.593 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-RMBG\n
-2025-10-31  13:21:47.593 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Logic\n
-2025-10-31  13:21:47.593 | info | k7zqif17j8co2r | Set up system temp directory: /tmp/latentsync_aaea2137\n
-2025-10-31  13:21:42.711 | info | k7zqif17j8co2r | Setting JobRuntime:name=app\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r | Setting JobRuntime:name=UNKNOWN_NAME\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r | ### Loading: ComfyUI-Impact-Pack (V8.25.1)\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Impact-Pack\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r | Cannot import /comfyui/custom_nodes/ComfyUI-GGUF-FantasyTalking module for custom nodes: (unicode error) 'unicodeescape' codec can't decode bytes in position 149-150: truncated \UXXXXXXXX escape (nodes.py, line 608)\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r | \n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r | SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 149-150: truncated \UXXXXXXXX escape\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r |     ^^^^\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r |     """\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r |   File "/comfyui/custom_nodes/ComfyUI-GGUF-FantasyTalking/nodes.py", line 608\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r |     from .nodes import NODE_CLASS_MAPPINGS\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r |   File "/comfyui/custom_nodes/ComfyUI-GGUF-FantasyTalking/__init__.py", line 7, in <module>\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r |   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r |   File "<frozen importlib._bootstrap_external>", line 995, in exec_module\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r |     module_spec.loader.exec_module(module)\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r | Traceback (most recent call last):\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-GGUF-FantasyTalking\n
-2025-10-31  13:21:42.534 | info | k7zqif17j8co2r | ComfyUI-GGUF: Allowing full torch compile\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-GGUF\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Frame-Interpolation\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | Loaded backend Agg version v2.2.\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Florence2\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | [34m[ComfyUI-Easy-Use] web root: [0m/comfyui/custom_nodes/ComfyUI-Easy-Use/web_version/v2 [92mLoaded[0m\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | [34m[ComfyUI-Easy-Use] server: [0mv1.3.4 [92mLoaded[0m\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | Popen(['git', 'rev-list', 'HEAD', '--'], cwd=/comfyui, stdin=None, shell=False, universal_newlines=False)\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | sys.platform='linux', git_executable='git'\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | found 3 files\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | recursive file list on directory /runpod-volume/models/vae\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | found 1 files\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | recursive file list on directory /comfyui/models/vae\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | found 1 files\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | recursive file list on directory /runpod-volume/models/checkpoints\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | found 1 files\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | recursive file list on directory /comfyui/models/checkpoints\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | found 54 files\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | recursive file list on directory /runpod-volume/models/loras\n
-2025-10-31  13:21:42.035 | info | k7zqif17j8co2r | found 1 files\n
-2025-10-31  13:21:41.910 | info | k7zqif17j8co2r | recursive file list on directory /comfyui/models/loras\n
-2025-10-31  13:21:37.567 | info | k7zqif17j8co2r | 2025-10-31 10:21:37 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (10s)\n
-2025-10-31  13:21:37.451 | info | k7zqif17j8co2r | Loading bitsandbytes native library from: /opt/venv/lib/python3.12/site-packages/bitsandbytes/libbitsandbytes_cuda128.so\n
-2025-10-31  13:21:36.391 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Easy-Use\n
-2025-10-31  13:21:35.994 | info | k7zqif17j8co2r | generated new fontManager\n
-2025-10-31  13:21:35.994 | info | k7zqif17j8co2r | font search path [PosixPath('/opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data/fonts/ttf'), PosixPath('/opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data/fonts/afm'), PosixPath('/opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts')]\n
-2025-10-31  13:21:35.871 | info | k7zqif17j8co2r | CACHEDIR=/root/.cache/matplotlib\n
-2025-10-31  13:21:35.871 | info | k7zqif17j8co2r | platform is linux\n
-2025-10-31  13:21:35.871 | info | k7zqif17j8co2r | interactive is False\n
-2025-10-31  13:21:35.871 | info | k7zqif17j8co2r | CONFIGDIR=/root/.config/matplotlib\n
-2025-10-31  13:21:35.742 | info | k7zqif17j8co2r | matplotlib data path: /opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data\n
-2025-10-31  13:21:35.742 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Detail-Daemon\n
-2025-10-31  13:21:35.742 | info | k7zqif17j8co2r | Failed to find comfy root automatically, please copy the folder /comfyui/custom_nodes/ComfyLiterals/web manually in the web/extensions folder of ComfyUI\n
-2025-10-31  13:21:35.742 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyLiterals\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/websocket_image_save.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | [ComfyUI-Manager] All startup tasks have been completed.\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Using selector: EpollSelector\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | ### ComfyUI Revision: 4113 [560b1bdf] *DETACHED | Released on '2025-10-21'\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Popen(['git', 'cat-file', '--batch'], cwd=/comfyui, stdin=<valid stream>, shell=False, universal_newlines=False)\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Popen(['git', 'cat-file', '--batch-check'], cwd=/comfyui, stdin=<valid stream>, shell=False, universal_newlines=False)\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Popen(['git', 'rev-list', 'HEAD', '--'], cwd=/comfyui, stdin=None, shell=False, universal_newlines=False)\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | sys.platform='linux', git_executable='git'\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | [ComfyUI-Manager] network_mode: offline\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | ### Loading: ComfyUI-Manager (V3.37)\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Manager\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Cannot import /comfyui/comfy_api_nodes/canary.py module for custom nodes: INSTALL NEW VERSION OF PYAV TO USE API NODES.\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | \n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Exception: INSTALL NEW VERSION OF PYAV TO USE API NODES.\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r |     raise Exception("INSTALL NEW VERSION OF PYAV TO USE API NODES.")\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r |   File "/comfyui/comfy_api_nodes/canary.py", line 5, in <module>\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r |   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r |   File "<frozen importlib._bootstrap_external>", line 995, in exec_module\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r |     module_spec.loader.exec_module(module)\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Traceback (most recent call last):\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_api_nodes/canary.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | found 1 files\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | recursive file list on directory /comfyui/models/audio_encoders\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_audio_encoder.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_easycache.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_model_patch.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_chroma_radiance.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_qwen.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_context_windows.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_tcfg.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_edit_model.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_camera_trajectory.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_string.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_ace.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_preview_any.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_apg.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_fresca.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_hidream.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_optimalsteps.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_cfg.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_primitive.py\n
-2025-10-31  13:21:35.640 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_hunyuan3d.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_lotus.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_wan.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_lumina2.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_video.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_cosmos.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_load_3d.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_hooks.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_lt.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_mahiro.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_slg.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_mochi.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_torch_compile.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_lora_extract.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_flux.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_eps.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_hunyuan.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_controlnet.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_gits.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | found 1 files\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | recursive file list on directory /runpod-volume/models/clip\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | found 1 files\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | recursive file list on directory /comfyui/models/clip\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | found 1 files\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | recursive file list on directory /comfyui/models/text_encoders\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_sd3.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_audio.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_webcam.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_advanced_samplers.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_attention_multiply.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_align_your_steps.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_pag.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_model_merging_model_specific.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_ip2p.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_differential_diffusion.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_stable_cascade.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_morphology.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_cond.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_pixart.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | found 1 files\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | recursive file list on directory /comfyui/models/photomaker\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_photomaker.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_sdupscale.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_stable3d.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_perpneg.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_sag.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_train.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_video_model.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_images.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_model_downscale.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_model_advanced.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_hypertile.py\n
-2025-10-31  13:21:35.534 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_custom_sampler.py\n
-2025-10-31  13:21:35.426 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_freelunch.py\n
-2025-10-31  13:21:35.426 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_canny.py\n
-2025-10-31  13:21:35.425 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_clip_sdxl.py\n
-2025-10-31  13:21:35.425 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_tomesd.py\n
-2025-10-31  13:21:35.425 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_model_merging.py\n
-2025-10-31  13:21:35.425 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_rebatch.py\n
-2025-10-31  13:21:35.425 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_compositing.py\n
-2025-10-31  13:21:35.425 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_mask.py\n
-2025-10-31  13:21:35.425 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_post_processing.py\n
-2025-10-31  13:21:35.425 | info | k7zqif17j8co2r | found 2 files\n
-2025-10-31  13:21:35.425 | info | k7zqif17j8co2r | recursive file list on directory /runpod-volume/models/upscale_models\n
-2025-10-31  13:21:35.425 | info | k7zqif17j8co2r | found 1 files\n
-2025-10-31  13:21:35.425 | info | k7zqif17j8co2r | recursive file list on directory /comfyui/models/upscale_models\n
-2025-10-31  13:21:35.425 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_upscale_model.py\n
-2025-10-31  13:21:34.745 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_hypernetwork.py\n
-2025-10-31  13:21:34.745 | info | k7zqif17j8co2r | Trying to load custom node /comfyui/comfy_extras/nodes_latent.py\n
-2025-10-31  13:21:34.745 | info | k7zqif17j8co2r | [Prompt Server] web root: /opt/venv/lib/python3.12/site-packages/comfyui_frontend_package/static\n
-2025-10-31  13:21:34.744 | info | k7zqif17j8co2r | ComfyUI frontend version: 1.28.7\n
-2025-10-31  13:21:34.744 | info | k7zqif17j8co2r | Using selector: EpollSelector\n
-2025-10-31  13:21:34.744 | info | k7zqif17j8co2r | ComfyUI version: 0.3.66\n
-2025-10-31  13:21:34.432 | info | k7zqif17j8co2r | Python version: 3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]\n
-2025-10-31  13:21:32.648 | info | k7zqif17j8co2r | Using pytorch attention\n
-2025-10-31  13:21:32.647 | info | k7zqif17j8co2r | working around nvidia conv3d memory bug.\n
-2025-10-31  13:21:32.647 | info | k7zqif17j8co2r | Device: cuda:0 NVIDIA RTX 2000 Ada Generation : cudaMallocAsync\n
-2025-10-31  13:21:32.647 | info | k7zqif17j8co2r | Set vram state to: NORMAL_VRAM\n
-2025-10-31  13:21:32.647 | info | k7zqif17j8co2r | pytorch version: 2.9.0+cu128\n
-2025-10-31  13:21:31.617 | info | k7zqif17j8co2r | Total VRAM 16076 MB, total RAM 257571 MB\n
-2025-10-31  13:21:31.474 | info | k7zqif17j8co2r | Checkpoint files will always be loaded safely.\n
-2025-10-31  13:21:31.474 | info | k7zqif17j8co2r | \n
-2025-10-31  13:21:31.474 | info | k7zqif17j8co2r |    2.3 seconds: /comfyui/custom_nodes/ComfyUI-Manager\n
-2025-10-31  13:21:31.474 | info | k7zqif17j8co2r |    0.0 seconds: /comfyui/custom_nodes/ComfyUI-Easy-Use\n
-2025-10-31  13:21:31.474 | info | k7zqif17j8co2r |    0.0 seconds: /comfyui/custom_nodes/rgthree-comfy\n
-2025-10-31  13:21:31.474 | info | k7zqif17j8co2r | Prestartup times for custom nodes:\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | \n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | ** Log path: /comfyui/user/comfyui.log\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | ** ComfyUI-Manager config path: /comfyui/user/default/ComfyUI-Manager/config.ini\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | ** User directory: /comfyui/user\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | ** ComfyUI Base Folder Path: /comfyui\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | ** ComfyUI Path: /comfyui\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | ** Python executable: /opt/venv/bin/python\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | ** Python version: 3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | ** Platform: Linux\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | ** ComfyUI startup time: 2025-10-31 10:21:29.304\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | ## ComfyUI-Manager: installing dependencies done.\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | Popen(['git', 'version'], cwd=/, stdin=None, shell=False, universal_newlines=False)\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | Popen(['git', 'version'], cwd=/, stdin=None, shell=False, universal_newlines=False)\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | [DONE] Security scan\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | [START] Security scan\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | 2025-10-31 10:21:28 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (1s)\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | Adding extra search path unet /runpod-volume/models/unet\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | Adding extra search path vae /runpod-volume/models/vae\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | Adding extra search path upscale_models /runpod-volume/models/upscale_models\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | Adding extra search path loras /runpod-volume/models/loras\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | Adding extra search path embeddings /runpod-volume/models/embeddings\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | Adding extra search path controlnet /runpod-volume/models/controlnet\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | Adding extra search path configs /runpod-volume/models/configs\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | Adding extra search path clip_vision /runpod-volume/models/clip_vision\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | Adding extra search path clip /runpod-volume/models/clip\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | Adding extra search path checkpoints /runpod-volume/models/checkpoints\n
-2025-10-31  13:21:30.226 | info | k7zqif17j8co2r | 2025-10-31 10:21:27 | worker-comfyui: ComfyUI PID=682\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r | 2025-10-31 10:21:27 | worker-comfyui: Starting ComfyUI\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - was-node-suite-comfyui\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - rgthree-comfy\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - mikey_nodes\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - masquerade-nodes-comfyui\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - comfyui_controlnet_aux\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - comfyui_HavocsCall_Custom_Nodes\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - comfyui-image-selector\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - comfyui-dynamicprompts\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - comfyui-custom-scripts\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - comfy-plasma\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - cg-use-everywhere\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - cg-image-picker\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - __pycache__\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - RES4LYF\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI_essentials\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI_UltimateSDUpscale\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI_LayerStyle_Advance\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI_LayerStyle\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI_JPS-Nodes\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI_Comfyroll_CustomNodes\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-segment-anything-2\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-WanVideoWrapper\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-WanAnimatePreprocess\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-VideoHelperSuite\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-VibeVoice\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-TeaCache\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-RMBG\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-Manager\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-Logic\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-LatentSyncWrapper\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-KJNodes\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-Impact-Pack\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-GGUF-FantasyTalking\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-GGUF\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-Frame-Interpolation\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-Florence2\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-Easy-Use\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyUI-Detail-Daemon\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |   - ComfyLiterals\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r | 2025-10-31 10:21:27 | worker-comfyui: Listing custom_nodes (depth=1)\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r | warning: The package `opencv-python-headless==4.11.0.86` does not have an extra named `ffmpeg`\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |  + fairscale==0.4.13\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r |  - fairscale==0.4.0\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r | Installed 1 package in 44ms\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r | Uninstalled 1 package in 4ms\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r | Resolved 81 packages in 595ms\n
-2025-10-31  13:21:30.225 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | 2025-10-31 10:21:26 | worker-comfyui: pip install -r custom_nodes/was-node-suite-comfyui/requirements.txt\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Audited in 8ms\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | warning: Requirements file `custom_nodes/rgthree-comfy/requirements.txt` does not contain any dependencies\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | 2025-10-31 10:21:26 | worker-comfyui: pip install -r custom_nodes/rgthree-comfy/requirements.txt\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Audited 25 packages in 14ms\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | 2025-10-31 10:21:26 | worker-comfyui: pip install -r custom_nodes/comfyui_controlnet_aux/requirements.txt\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Audited 1 package in 8ms\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | 2025-10-31 10:21:26 | worker-comfyui: pip install -r custom_nodes/comfyui-dynamicprompts/requirements.txt\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Audited 4 packages in 9ms\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | 2025-10-31 10:21:26 | worker-comfyui: pip install -r custom_nodes/RES4LYF/requirements.txt\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Audited 5 packages in 15ms\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | 2025-10-31 10:21:26 | worker-comfyui: pip install -r custom_nodes/ComfyUI_essentials/requirements.txt\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  + pydantic-core==2.33.2\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  - pydantic-core==2.16.3\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  + pydantic==2.11.10\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  - pydantic==2.6.4\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  + httpx==0.28.1\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  - httpx==0.27.2\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Installed 3 packages in 43ms\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Uninstalled 3 packages in 3ms\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Prepared 1 package in 51ms\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Resolved 170 packages in 263ms\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | 2025-10-31 10:21:26 | worker-comfyui: pip install -r custom_nodes/ComfyUI_LayerStyle_Advance/requirements.txt\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  + timm==0.6.13\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  - timm==1.0.21\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  + supervision==0.26.1\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  - supervision==0.6.0\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  + pydantic-core==2.16.3\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  - pydantic-core==2.33.2\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  + pydantic==2.6.4\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  - pydantic==2.11.10\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  + httpx==0.27.2\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  - httpx==0.28.1\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  + fairscale==0.4.0\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  - fairscale==0.4.13\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Installed 6 packages in 61ms\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Uninstalled 6 packages in 28ms\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r | Prepared 3 packages in 142ms\n
-2025-10-31  13:21:30.224 | info | k7zqif17j8co2r |  Downloading pydantic-core\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Downloading pydantic-core (2.1MiB)\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Resolved 240 packages in 1.49s\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | 2025-10-31 10:21:24 | worker-comfyui: pip install -r custom_nodes/ComfyUI_LayerStyle/requirements.txt\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Audited 11 packages in 12ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | 2025-10-31 10:21:24 | worker-comfyui: pip install -r custom_nodes/ComfyUI-WanVideoWrapper/requirements.txt\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Audited 3 packages in 8ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | 2025-10-31 10:21:24 | worker-comfyui: pip install -r custom_nodes/ComfyUI-WanAnimatePreprocess/requirements.txt\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Audited 2 packages in 8ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | 2025-10-31 10:21:24 | worker-comfyui: pip install -r custom_nodes/ComfyUI-VideoHelperSuite/requirements.txt\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Audited 17 packages in 13ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | 2025-10-31 10:21:24 | worker-comfyui: pip install -r custom_nodes/ComfyUI-VibeVoice/requirements.txt\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Audited 2 packages in 10ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | 2025-10-31 10:21:24 | worker-comfyui: pip install -r custom_nodes/ComfyUI-TeaCache/requirements.txt\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r |  + supervision==0.6.0\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r |  - supervision==0.26.1\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Installed 1 package in 14ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Uninstalled 1 package in 13ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Resolved 103 packages in 291ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | 2025-10-31 10:21:24 | worker-comfyui: pip install -r custom_nodes/ComfyUI-RMBG/requirements.txt\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r |  ~ decord==0.6.0\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Installed 1 package in 22ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Uninstalled 1 package in 5ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Resolved 84 packages in 211ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | 2025-10-31 10:21:23 | worker-comfyui: pip install -r custom_nodes/ComfyUI-LatentSyncWrapper/requirements.txt\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Audited 7 packages in 10ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | 2025-10-31 10:21:23 | worker-comfyui: pip install -r custom_nodes/ComfyUI-KJNodes/requirements.txt\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Audited 66 packages in 1ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Resolved 66 packages in 519ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | 2025-10-31 10:21:23 | worker-comfyui: pip install -r custom_nodes/ComfyUI-Impact-Pack/requirements.txt\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Audited 7 packages in 11ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | 2025-10-31 10:21:23 | worker-comfyui: pip install -r custom_nodes/ComfyUI-GGUF-FantasyTalking/requirements.txt\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Audited 3 packages in 8ms\n
-2025-10-31  13:21:30.223 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | 2025-10-31 10:21:23 | worker-comfyui: pip install -r custom_nodes/ComfyUI-GGUF/requirements.txt\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | Audited 6 packages in 12ms\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | 2025-10-31 10:21:23 | worker-comfyui: pip install -r custom_nodes/ComfyUI-Florence2/requirements.txt\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r |  + timm==1.0.21\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r |  - timm==0.6.13\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | Installed 1 package in 87ms\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | Uninstalled 1 package in 13ms\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | Resolved 72 packages in 193ms\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | 2025-10-31 10:21:22 | worker-comfyui: pip install -r custom_nodes/ComfyUI-Easy-Use/requirements.txt\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | Audited 1 package in 8ms\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | 2025-10-31 10:21:22 | worker-comfyui: pip install -r custom_nodes/ComfyUI-Detail-Daemon/requirements.txt\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | Audited 11 packages in 64ms\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | Using Python 3.12.3 environment at: /opt/venv\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | 2025-10-31 10:21:22 | worker-comfyui: pip install -r custom_nodes/ComfyUI-Manager/requirements.txt\n
-2025-10-31  13:21:30.222 | info | k7zqif17j8co2r | 2025-10-31 10:21:22 | worker-comfyui: Installing dependencies for copied custom_nodes\n
+2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | Finished.
+2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | worker-comfyui - Job failed with no output images.\n
+2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | worker-comfyui - Job completed with errors/warnings: ["Workflow execution error: Node Type: KSamplerAdvanced, Node ID: 6, Message: No module named 'sageattention'\n"]\n
+2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | worker-comfyui - Closing websocket connection.\n
+2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | worker-comfyui - Processing 0 output nodes...\n
+2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | worker-comfyui - No outputs found in history for prompt 4c16a8b0-4fef-4ea6-aeff-d5745469e284.\n
+2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | worker-comfyui - Fetching history for prompt 4c16a8b0-4fef-4ea6-aeff-d5745469e284...\n
+2025-10-31  13:58:23.013 | info | aht3bnuynpclkc | \n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc | worker-comfyui - Execution error received: Node Type: KSamplerAdvanced, Node ID: 6, Message: No module named 'sageattention'\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc | Prompt executed in 140.32 seconds\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc | \n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc | ModuleNotFoundError: No module named 'sageattention'\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     from sageattention import sageattn\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/custom_nodes/ComfyUI-KJNodes/nodes/model_optimization_nodes.py", line 95, in _patch_modules\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |            ^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     return fn(*args, **kwargs)\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/opt/venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 1044, in _fn\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     self._patch_modules(False, sage_attention)\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/custom_nodes/ComfyUI-KJNodes/nodes/model_optimization_nodes.py", line 239, in patch_attention_enable\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |            ^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     return fn(*args, **kwargs)\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/opt/venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 1044, in _fn\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     callback(self)\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/comfy/model_patcher.py", line 1038, in pre_run\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     self.model_patcher.pre_run()\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/comfy/samplers.py", line 996, in outer_sample\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     return self.original(*args, **kwargs)\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/comfy/patcher_extension.py", line 112, in execute\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     output = executor.execute(noise, latent_image, sampler, sigmas, denoise_mask, callback, disable_pbar, seed)\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/comfy/samplers.py", line 1029, in sample\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     return cfg_guider.sample(noise, latent_image, sampler, sigmas, denoise_mask, callback, disable_pbar, seed)\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/comfy/samplers.py", line 1044, in sample\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |     return sample(self.model, noise, positive, negative, cfg, self.device, sampler, sigmas, self.model_options, latent_image=latent_image, denoise_mask=denoise_mask, callback=callback, disable_pbar=disable_pbar, seed=seed)\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |   File "/comfyui/comfy/samplers.py", line 1154, in sample\n
+2025-10-31  13:58:22.754 | info | aht3bnuynpclkc |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |     samples = sampler.sample(noise, positive, negative, cfg=cfg, latent_image=latent_image, start_step=start_step, last_step=last_step, force_full_denoise=force_full_denoise, denoise_mask=noise_mask, sigmas=sigmas, callback=callback, disable_pbar=disable_pbar, seed=seed)\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |   File "/comfyui/comfy/sample.py", line 45, in sample\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |     samples = comfy.sample.sample(model, noise, steps, cfg, sampler_name, scheduler, positive, negative, latent_image,\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |   File "/comfyui/nodes.py", line 1492, in common_ksampler\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |     return common_ksampler(model, noise_seed, steps, cfg, sampler_name, scheduler, positive, negative, latent_image, denoise=denoise, disable_noise=disable_noise, start_step=start_at_step, last_step=end_at_step, force_full_denoise=force_full_denoise)\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |   File "/comfyui/nodes.py", line 1559, in sample\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |              ^^^^^^^^^^^\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |     result = f(**inputs)\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |   File "/comfyui/execution.py", line 277, in process_inputs\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |     await process_inputs(input_dict, i)\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |   File "/comfyui/execution.py", line 289, in _async_map_node_over_list\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |     return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, hidden_inputs=hidden_inputs)\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |   File "/comfyui/execution.py", line 315, in get_output_data\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |     output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, hidden_inputs=hidden_inputs)\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc |   File "/comfyui/execution.py", line 496, in execute\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc | Traceback (most recent call last):\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc | !!! Exception during processing !!! No module named 'sageattention'\n
+2025-10-31  13:58:22.753 | info | aht3bnuynpclkc | Restoring initial comfy attention\n
+2025-10-31  13:58:22.230 | info | aht3bnuynpclkc | Patching comfy attention to use sageattn\n
+2025-10-31  13:58:17.602 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  13:58:07.593 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  13:57:57.583 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  13:57:47.573 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  13:57:37.563 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.14.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.14.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.15.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.15.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.15.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.15.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.16.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.16.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.16.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.16.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.17.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.17.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.17.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.17.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.18.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.18.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.18.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.18.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.19.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.19.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.19.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.19.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.2.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.554 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.2.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.2.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.2.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.20.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.20.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.20.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.20.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.21.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.21.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.21.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.21.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.22.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.22.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.22.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.22.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.23.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.23.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.23.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.23.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.24.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.24.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.24.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.24.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.25.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.25.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.25.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.25.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.26.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.26.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:27.553 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.26.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.26.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.27.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.27.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.27.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.27.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.28.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.28.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.28.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.28.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.29.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.29.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.29.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.009 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.29.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.3.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.3.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.3.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.3.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.30.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.30.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.30.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.30.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.31.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.31.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.31.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.31.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.32.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.32.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.32.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.32.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.33.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.33.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.33.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.33.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.34.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.34.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.34.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.34.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.35.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.008 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.35.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.35.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.35.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.36.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.36.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.36.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.36.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.37.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.37.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.37.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.37.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.38.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.38.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.38.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.38.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.39.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.39.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.39.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.39.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.4.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.4.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.4.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.4.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.5.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.5.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.5.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.007 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.5.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.6.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.6.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.6.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.6.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.7.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.7.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.7.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.7.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.8.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.8.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.8.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.8.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.9.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.9.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.9.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.9.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.0.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.1.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.10.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.11.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.12.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.13.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.14.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.15.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.16.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.17.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.006 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.18.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.19.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.2.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.20.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.21.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.22.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.23.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.24.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.25.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.26.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.27.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.28.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.29.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.3.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.30.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.31.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.32.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.33.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.34.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.35.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.36.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.37.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.38.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.39.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.4.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.5.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.6.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.005 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.7.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.004 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.8.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.004 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.9.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-10-31  13:57:24.004 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.head.head Linear(in_features=5120, out_features=64, bias=True)\n
+2025-10-31  13:57:23.904 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.time_embedding.0 Linear(in_features=256, out_features=5120, bias=True)\n
+2025-10-31  13:57:23.904 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.patch_embedding Conv3d(36, 5120, kernel_size=(1, 2, 2), stride=(1, 2, 2))\n
+2025-10-31  13:57:23.904 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.blocks.9.self_attn.v Linear(in_features=5120, out_features=5120, bias=True)\n
+2025-10-31  13:57:23.756 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.text_embedding.2 Linear(in_features=5120, out_features=5120, bias=True)\n
+2025-10-31  13:57:23.649 | info | aht3bnuynpclkc | lowvram: loaded module regularly diffusion_model.time_embedding.2 Linear(in_features=5120, out_features=5120, bias=True)\n
+2025-10-31  13:57:21.026 | info | aht3bnuynpclkc | 0 models unloaded.\n
+2025-10-31  13:57:20.408 | info | aht3bnuynpclkc | Unloading WanVAE\n
+2025-10-31  13:57:20.408 | info | aht3bnuynpclkc | Unloading WanTEModel\n
+2025-10-31  13:57:17.616 | info | aht3bnuynpclkc | Requested to load WAN21\n
+2025-10-31  13:57:17.616 | info | aht3bnuynpclkc | adm 0\n
+2025-10-31  13:57:17.616 | info | aht3bnuynpclkc | model_type FLOW\n
+2025-10-31  13:57:17.616 | info | aht3bnuynpclkc | model weight dtype torch.float16, manual cast: None\n
+2025-10-31  13:57:14.663 | info | aht3bnuynpclkc | gguf qtypes: F16 (694), Q5_K (400), F32 (1)\n
+2025-10-31  13:57:09.627 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  13:56:59.617 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.8.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.8.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.9.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.9.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.3.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.4.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.4.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.8.resample.1 Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.4.residual.2 CausalConv3d(192, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.6.residual.2 CausalConv3d(192, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.middle.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.middle.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.middle.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.middle.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.1.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.1.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.4.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.5.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.5.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.6.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly decoder.upsamples.6.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.10.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.10.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.6.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.7.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.608 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.7.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.9.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.downsamples.9.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.middle.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.middle.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.middle.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | lowvram: loaded module regularly encoder.middle.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.16.layer.1.DenseReluDense.wi_0\n
+2025-10-31  13:56:49.607 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.15.layer.1.DenseReluDense.wo\n
+2025-10-31  13:56:41.924 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.14.layer.1.DenseReluDense.wi_1\n
+2025-10-31  13:56:41.697 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.11.layer.1.DenseReluDense.wo\n
+2025-10-31  13:56:41.466 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.1.layer.1.DenseReluDense.wi_0\n
+2025-10-31  13:56:41.246 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.7.layer.0.SelfAttention.q\n
+2025-10-31  13:56:41.139 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.o\n
+2025-10-31  13:56:40.923 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.21.layer.0.SelfAttention.v\n
+2025-10-31  13:56:40.709 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.o\n
+2025-10-31  13:56:40.493 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.v\n
+2025-10-31  13:56:40.281 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.v\n
+2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | freed umt5xxl.transformer.encoder.block.0.layer.0.SelfAttention.relative_attention_bias\n
+2025-10-31  13:56:40.180 | info | aht3bnuynpclkc | Unloading WanTEModel\n
+2025-10-31  13:56:40.079 | info | aht3bnuynpclkc | Requested to load WanVAE\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.218 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.217 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.0.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.216 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.1.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.10.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.11.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.15.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.16.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.17.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.18.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.19.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.2.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.20.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.21.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.22.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.215 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.23.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.3.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.4.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.5.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.6.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.7.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.8.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.1.DenseReluDense.wi_0 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.1.DenseReluDense.wi_1 Linear(in_features=4096, out_features=10240, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.9.layer.1.DenseReluDense.wo Linear(in_features=10240, out_features=4096, bias=False)\n
+2025-10-31  13:56:38.214 | info | aht3bnuynpclkc | lowvram: loaded module regularly umt5xxl.transformer.shared Embedding(256384, 4096)\n
+2025-10-31  13:56:36.752 | info | aht3bnuynpclkc | Requested to load WanTEModel\n
+2025-10-31  13:56:27.842 | info | aht3bnuynpclkc | clip unexpected: ['spiece_model']\n
+2025-10-31  13:56:24.209 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  13:56:14.200 | info | aht3bnuynpclkc | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-10-31  13:56:14.200 | info | aht3bnuynpclkc | CLIP/text encoder model load device: cuda:0, offload device: cpu, current: cpu, dtype: torch.float16\n
+2025-10-31  13:56:05.496 | info | aht3bnuynpclkc | Model doesn't have a device attribute.\n
+2025-10-31  13:56:04.736 | info | aht3bnuynpclkc | Using scaled fp8: fp8 matrix mult: False, scale input: False\n
+2025-10-31  13:56:04.736 | info | aht3bnuynpclkc | adm 0\n
+2025-10-31  13:56:04.736 | info | aht3bnuynpclkc | model_type FLOW\n
+2025-10-31  13:56:04.736 | info | aht3bnuynpclkc | model weight dtype torch.float16, manual cast: None\n
+2025-10-31  13:56:03.649 | info | aht3bnuynpclkc | gguf qtypes: F16 (694), Q5_K (400), F32 (1)\n
+2025-10-31  13:56:03.649 | info | aht3bnuynpclkc | VAE load device: cuda:0, offload device: cpu, dtype: torch.bfloat16\n
+2025-10-31  13:56:03.089 | info | aht3bnuynpclkc | Model doesn't have a device attribute.\n
+2025-10-31  13:56:03.089 | info | aht3bnuynpclkc | Using pytorch attention in VAE\n
+2025-10-31  13:56:02.158 | info | aht3bnuynpclkc | got prompt\n
+2025-10-31  13:56:02.158 | info | aht3bnuynpclkc | worker-comfyui - Websocket connected\n
+2025-10-31  13:56:02.158 | info | aht3bnuynpclkc | worker-comfyui - Connecting to websocket: ws://127.0.0.1:8188/ws?clientId=0709b250-efaa-4da9-8936-b48423c550e7\n
+2025-10-31  13:56:02.158 | info | aht3bnuynpclkc | worker-comfyui - image(s) upload complete\n
+2025-10-31  13:56:02.158 | info | aht3bnuynpclkc | worker-comfyui - Successfully uploaded 91771d9aa876d0d6f931ca1ab14b8a30.jpg\n
+2025-10-31  13:56:02.158 | info | aht3bnuynpclkc | worker-comfyui - Uploading 1 image(s)...\n

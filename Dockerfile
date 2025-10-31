@@ -176,6 +176,10 @@ RUN if [ "$SKIP_NODE_INSTALL" = "true" ]; then \
       uv pip install --no-cache-dir rembg || true; \
     fi
 
+# Install sageattention for CUDA kernel optimization (required by ComfyUI-KJNodes)
+# This is installed regardless of SKIP_NODE_INSTALL since it is needed at runtime
+RUN uv pip install --no-cache-dir sageattention || true
+
 # Support for the network volume
 ADD src/extra_model_paths.yaml ./
 
