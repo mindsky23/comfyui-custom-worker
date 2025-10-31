@@ -36,7 +36,3 @@ custom_nodes/**/._*
 custom_nodes/**/*.log
 custom_nodes/**/*.log.*
 
-# Development speed-up: exclude all custom_nodes from build context
-# Nodes will be copied from Network Volume at runtime (handled in src/start.sh)
-custom_nodes/**
-
