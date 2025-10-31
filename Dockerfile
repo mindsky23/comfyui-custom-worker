@@ -202,11 +202,11 @@ RUN if [ "$SKIP_SAGEATTENTION" != "true" ]; then \
         echo "Skipping sageattention installation during build (will install at runtime)"; \
     fi
 
-# Support for the network volume
-ADD src/extra_model_paths.yaml ./
-
 # Go back to the root
 WORKDIR /
+
+# Support for the network volume
+ADD src/extra_model_paths.yaml /comfyui/extra_model_paths.yaml
 
 # Install Python runtime dependencies for the handler
 RUN uv pip install --no-cache-dir runpod requests websocket-client
@@ -222,12 +222,6 @@ ENV PIP_NO_INPUT=1
 COPY scripts/comfy-manager-set-mode.sh /usr/local/bin/comfy-manager-set-mode
 RUN chmod +x /usr/local/bin/comfy-manager-set-mode
 
-# Set the default command to run when starting the container
-# Install sageattention at runtime if not already installed during build
-# Set Python include path and CUDA architecture explicitly for compilation
-# TORCH_CUDA_ARCH_LIST ensures compilation works even if GPU is not detected during install
-CMD ["bash", "-c", "export CFLAGS=\"-I/usr/include/python3.12\" && export CPATH=\"/usr/include/python3.12\" && export TORCH_CUDA_ARCH_LIST=\"8.0;8.6;8.9\" && uv pip install --no-cache-dir sageattention || pip install --no-cache-dir sageattention || python3 -m pip install --no-cache-dir sageattention || true && /start.sh"]
-
 # Stage 2: Download models
 FROM base AS downloader
 
@@ -241,8 +235,18 @@ WORKDIR /comfyui
 # Create necessary directories upfront
 RUN mkdir -p models/checkpoints models/vae models/unet models/clip
 
-# Stage 3: Final image
+# Stage 3: Final image (this is the default target stage)
 FROM base AS final
 
-# Copy models from stage 2 to the final image
+# Copy models from stage 2 to the final image (optional - models can be in Network Volume)
 COPY --from=downloader /comfyui/models /comfyui/models
+
+# Ensure all necessary files and scripts are in place
+# These should already be copied in base stage, but we verify
+WORKDIR /
+
+# Set the default command to run when starting the container
+# Install sageattention at runtime if not already installed during build
+# Set Python include path and CUDA architecture explicitly for compilation
+# TORCH_CUDA_ARCH_LIST ensures compilation works even if GPU is not detected during install
+CMD ["bash", "-c", "export CFLAGS=\"-I/usr/include/python3.12\" && export CPATH=\"/usr/include/python3.12\" && export TORCH_CUDA_ARCH_LIST=\"8.0;8.6;8.9\" && uv pip install --no-cache-dir sageattention || pip install --no-cache-dir sageattention || python3 -m pip install --no-cache-dir sageattention || true && /start.sh"]
