@@ -84,30 +84,32 @@ RUN chmod +x /usr/local/bin/comfy-node-install
 
 # Mandatory install of required custom nodes via comfy-cli (using registry names)
 # See https://registry.comfy.org/ for correct node names
+# Note: comfy-node-install uses registry names (often lowercase), which we'll rename later
 RUN comfy-node-install \
     ComfyLiterals \
-    ComfyUI-Detail-Daemon \
-    ComfyUI-Easy-Use \
+    comfyui-detail-daemon \
+    comfyui-easy-use \
+    comfyui-florence2 \
     comfyui-frame-interpolation \
     ComfyUI-GGUF \
     ComfyUI-GGUF-FantasyTalking \
-    ComfyUI-Impact-Pack \
+    comfyui-impact-pack \
     comfyui-kjnodes \
     ComfyUI-LatentSyncWrapper \
-    ComfyUI-Logic \
+    comfyui-logic \
     ComfyUI-Manager \
-    ComfyUI-RMBG \
-    ComfyUI-segment-anything-2 \
+    comfyui-rmbg \
+    comfyui-segment-anything-2 \
     ComfyUI-VibeVoice \
-    ComfyUI-VideoHelperSuite \
+    comfyui-videohelpersuite \
     ComfyUI-WanAnimatePreprocess \
     ComfyUI-WanVideoWrapper \
     ComfyUI_Comfyroll_CustomNodes \
     comfyui_essentials \
-    ComfyUI_LayerStyle \
+    comfyui_layerstyle \
     ComfyUI_LayerStyle_Advance \
     ComfyUI_JPS-Nodes \
-    ComfyUI_UltimateSDUpscale \
+    comfyui_ultimatesdupscale \
     comfyui-custom-scripts \
     comfyui-image-selector \
     rgthree-comfy \
@@ -130,6 +132,26 @@ RUN cd custom_nodes && \
     comfy-node-install havocscall_custom_nodes || true && \
     # DynamicPrompts - direct git clone (correct URL)
     git clone https://github.com/adieyal/comfyui-dynamicprompts.git comfyui-dynamicprompts || true
+
+# Rename directories to match what ComfyUI expects
+# comfy-node-install creates directories with registry names (often lowercase), but ComfyUI looks for real repo names
+# Rename only if source exists and target doesn't exist (safe to run multiple times)
+RUN cd /comfyui/custom_nodes && \
+    ([ -d "comfyui-detail-daemon" ] && [ ! -d "ComfyUI-Detail-Daemon" ] && mv comfyui-detail-daemon ComfyUI-Detail-Daemon) || true && \
+    ([ -d "comfyui-easy-use" ] && [ ! -d "ComfyUI-Easy-Use" ] && mv comfyui-easy-use ComfyUI-Easy-Use) || true && \
+    ([ -d "comfyui-florence2" ] && [ ! -d "ComfyUI-Florence2" ] && mv comfyui-florence2 ComfyUI-Florence2) || true && \
+    ([ -d "comfyui-frame-interpolation" ] && [ ! -d "ComfyUI-Frame-Interpolation" ] && mv comfyui-frame-interpolation ComfyUI-Frame-Interpolation) || true && \
+    ([ -d "comfyui-impact-pack" ] && [ ! -d "ComfyUI-Impact-Pack" ] && mv comfyui-impact-pack ComfyUI-Impact-Pack) || true && \
+    ([ -d "comfyui-kjnodes" ] && [ ! -d "ComfyUI-KJNodes" ] && mv comfyui-kjnodes ComfyUI-KJNodes) || true && \
+    ([ -d "comfyui-logic" ] && [ ! -d "ComfyUI-Logic" ] && mv comfyui-logic ComfyUI-Logic) || true && \
+    ([ -d "comfyui-rmbg" ] && [ ! -d "ComfyUI-RMBG" ] && mv comfyui-rmbg ComfyUI-RMBG) || true && \
+    ([ -d "comfyui-segment-anything-2" ] && [ ! -d "ComfyUI-segment-anything-2" ] && mv comfyui-segment-anything-2 ComfyUI-segment-anything-2) || true && \
+    ([ -d "comfyui-videohelpersuite" ] && [ ! -d "ComfyUI-VideoHelperSuite" ] && mv comfyui-videohelpersuite ComfyUI-VideoHelperSuite) || true && \
+    ([ -d "comfyui_layerstyle" ] && [ ! -d "ComfyUI_LayerStyle" ] && mv comfyui_layerstyle ComfyUI_LayerStyle) || true && \
+    ([ -d "comfyui_ultimatesdupscale" ] && [ ! -d "ComfyUI_UltimateSDUpscale" ] && mv comfyui_ultimatesdupscale ComfyUI_UltimateSDUpscale) || true && \
+    ([ -d "comfyui_essentials" ] && [ ! -d "ComfyUI_essentials" ] && mv comfyui_essentials ComfyUI_essentials) || true && \
+    ([ -d "havocscall_custom_nodes" ] && [ ! -d "comfyui_HavocsCall_Custom_Nodes" ] && mv havocscall_custom_nodes comfyui_HavocsCall_Custom_Nodes) || true && \
+    ([ -d "teacache" ] && [ ! -d "ComfyUI-TeaCache" ] && mv teacache ComfyUI-TeaCache) || true
 
 # Copy custom nodes from project directory (optional - will be overridden by Network Volume if available)
 # Set SKIP_NODE_INSTALL=true to skip installation during build
