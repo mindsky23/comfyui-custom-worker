@@ -82,45 +82,46 @@ WORKDIR /comfyui
 COPY scripts/comfy-node-install.sh /usr/local/bin/comfy-node-install
 RUN chmod +x /usr/local/bin/comfy-node-install
 
-# Mandatory install of required custom nodes via comfy-cli (registry or URLs)
+# Mandatory install of required custom nodes via comfy-cli (using registry names)
+# See https://registry.comfy.org/ for correct node names
 RUN comfy-node-install \
-    https://github.com/ltdrdata/ComfyLiterals \
-    https://github.com/pythongosssss/ComfyUI-Detail-Daemon \
-    https://github.com/wasdennnoch/ComfyUI-Easy-Use \
-    https://github.com/Fannovel16/comfyui-frame-interpolation \
-    https://github.com/pythongosssss/ComfyUI-GGUF \
-    https://github.com/FantasyTalking/ComfyUI-GGUF-FantasyTalking \
-    https://github.com/ltdrdata/ComfyUI-Impact-Pack \
-    https://github.com/kijai/ComfyUI-KJNodes \
-    https://github.com/JonVeg/ComfyUI-LatentSyncWrapper \
-    https://github.com/pythongosssss/ComfyUI-Logic \
-    https://github.com/ltdrdata/ComfyUI-Manager \
-    https://github.com/biegert/ComfyUI-RMBG \
-    https://github.com/adelelhedi/ComfyUI-segment-anything-2 \
-    https://github.com/pythongosssss/ComfyUI-TeaCache \
-    https://github.com/VibeVoice/ComfyUI-VibeVoice \
-    https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite \
-    https://github.com/Wan-Animate/ComfyUI-WanAnimatePreprocess \
-    https://github.com/Wan-Animate/ComfyUI-WanVideoWrapper \
-    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes \
-    https://github.com/cubiq/ComfyUI_essentials \
-    https://github.com/Fannovel16/ComfyUI_LayerStyle \
-    https://github.com/Fannovel16/ComfyUI_LayerStyle_Advance \
-    https://github.com/jags111/ComfyUI_JPS-Nodes \
-    https://github.com/ssitu/ComfyUI_UltimateSDUpscale \
-    https://github.com/RES4LYF/ComfyUI-RES4LYF \
-    https://github.com/pythongosssss/comfyui-custom-scripts \
-    https://github.com/adieyal/comfyui-dynamicprompts \
-    https://github.com/pythongosssss/comfyui-image-selector \
-    https://github.com/rgthree/rgthree-comfy \
-    https://github.com/oneoffcoder/comfyui-havocs-call-custom-nodes \
-    https://github.com/wasdennnoch/was-node-suite-comfyui \
-    https://github.com/cg-use-everywhere/cg-image-picker \
-    https://github.com/cg-use-everywhere/cg-use-everywhere \
-    https://github.com/rgtjf/comfy-plasma \
-    https://github.com/Fannovel16/comfyui_controlnet_aux \
-    https://github.com/BadCafeCode/masquerade-nodes-comfyui \
-    https://github.com/bash-j/mikey_nodes
+    ComfyLiterals \
+    ComfyUI-Detail-Daemon \
+    ComfyUI-Easy-Use \
+    comfyui-frame-interpolation \
+    ComfyUI-GGUF \
+    ComfyUI-GGUF-FantasyTalking \
+    ComfyUI-Impact-Pack \
+    comfyui-kjnodes \
+    ComfyUI-LatentSyncWrapper \
+    ComfyUI-Logic \
+    ComfyUI-Manager \
+    ComfyUI-RMBG \
+    ComfyUI-segment-anything-2 \
+    ComfyUI-TeaCache \
+    ComfyUI-VibeVoice \
+    ComfyUI-VideoHelperSuite \
+    ComfyUI-WanAnimatePreprocess \
+    ComfyUI-WanVideoWrapper \
+    ComfyUI_Comfyroll_CustomNodes \
+    comfyui_essentials \
+    ComfyUI_LayerStyle \
+    ComfyUI_LayerStyle_Advance \
+    ComfyUI_JPS-Nodes \
+    ComfyUI_UltimateSDUpscale \
+    ComfyUI-RES4LYF \
+    comfyui-custom-scripts \
+    comfyui-dynamicprompts \
+    comfyui-image-selector \
+    rgthree-comfy \
+    comfyui-havocs-call-custom-nodes \
+    was-node-suite-comfyui \
+    cg-image-picker \
+    cg-use-everywhere \
+    comfy-plasma \
+    comfyui_controlnet_aux \
+    masquerade-nodes-comfyui \
+    mikey_nodes
 
 # Copy custom nodes from project directory (optional - will be overridden by Network Volume if available)
 # Set SKIP_NODE_INSTALL=true to skip installation during build
