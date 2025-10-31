@@ -1,485 +1,500 @@
-2025-10-31T07:42:06.020682036Z ==========
-2025-10-31T07:42:06.020725439Z == CUDA ==
-2025-10-31T07:42:06.020860465Z ==========
-2025-10-31T07:42:06.026591073Z CUDA Version 12.6.3
-2025-10-31T07:42:06.028049722Z Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
-2025-10-31T07:42:06.029982701Z This container image and its contents are governed by the NVIDIA Deep Learning Container License.
-2025-10-31T07:42:06.029989153Z By pulling and using the container, you accept the terms and conditions of this license:
-2025-10-31T07:42:06.029994844Z https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
-2025-10-31T07:42:06.030005815Z A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
-2025-10-31T07:42:06.069664524Z worker-comfyui - ComfyUI-Manager network_mode set to 'offline' in /comfyui/user/default/ComfyUI-Manager/config.ini
-2025-10-31T07:42:06.070952018Z worker-comfyui: No custom_nodes found in Network Volume, using nodes from image
-2025-10-31T07:42:06.070983347Z worker-comfyui: Starting ComfyUI
-2025-10-31T07:42:06.071533401Z worker-comfyui: Starting RunPod Handler
-2025-10-31T07:42:06.158526539Z Adding extra search path checkpoints /runpod-volume/models/checkpoints
-2025-10-31T07:42:06.158552889Z Adding extra search path clip /runpod-volume/models/clip
-2025-10-31T07:42:06.158580351Z Adding extra search path clip_vision /runpod-volume/models/clip_vision
-2025-10-31T07:42:06.158587625Z Adding extra search path configs /runpod-volume/models/configs
-2025-10-31T07:42:06.158594328Z Adding extra search path controlnet /runpod-volume/models/controlnet
-2025-10-31T07:42:06.158601061Z Adding extra search path embeddings /runpod-volume/models/embeddings
-2025-10-31T07:42:06.158610859Z Adding extra search path loras /runpod-volume/models/loras
-2025-10-31T07:42:06.158646747Z Adding extra search path upscale_models /runpod-volume/models/upscale_models
-2025-10-31T07:42:06.158664832Z Adding extra search path vae /runpod-volume/models/vae
-2025-10-31T07:42:06.158680401Z Adding extra search path unet /runpod-volume/models/unet
-2025-10-31T07:42:07.347394207Z [START] Security scan
-2025-10-31T07:42:07.347418884Z [DONE] Security scan
-2025-10-31T07:42:07.347424925Z Popen(['git', 'version'], cwd=/, stdin=None, shell=False, universal_newlines=False)
-2025-10-31T07:42:07.351170756Z Popen(['git', 'version'], cwd=/, stdin=None, shell=False, universal_newlines=False)
-2025-10-31T07:42:07.359217209Z ## ComfyUI-Manager: installing dependencies done.
-2025-10-31T07:42:07.359245443Z ** ComfyUI startup time: 2025-10-31 07:42:07.359
-2025-10-31T07:42:07.359303373Z ** Platform: Linux
-2025-10-31T07:42:07.359350693Z ** Python version: 3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]
-2025-10-31T07:42:07.359460100Z ** Python executable: /opt/venv/bin/python
-2025-10-31T07:42:07.359477123Z ** ComfyUI Path: /comfyui
-2025-10-31T07:42:07.359563186Z ** ComfyUI Base Folder Path: /comfyui
-2025-10-31T07:42:07.359600747Z ** User directory: /comfyui/user
-2025-10-31T07:42:07.359662174Z ** ComfyUI-Manager config path: /comfyui/user/default/ComfyUI-Manager/config.ini
-2025-10-31T07:42:07.359726025Z ** Log path: /comfyui/user/comfyui.log
-2025-10-31T07:42:08.392254474Z Prestartup times for custom nodes:
-2025-10-31T07:42:08.392344865Z    0.0 seconds: /comfyui/custom_nodes/rgthree-comfy
-2025-10-31T07:42:08.392412564Z    2.2 seconds: /comfyui/custom_nodes/ComfyUI-Manager
-2025-10-31T07:42:08.815458639Z worker-comfyui - Starting handler...
-2025-10-31T07:42:08.815533030Z --- Starting Serverless Worker |  Version 1.7.13 ---
-2025-10-31T07:42:09.234460387Z {"requestId": null, "message": "Jobs in queue: 1", "level": "INFO"}
-2025-10-31T07:42:09.234517355Z {"requestId": null, "message": "Jobs in progress: 1", "level": "INFO"}
-2025-10-31T07:42:09.234677329Z {"requestId": "64804bfe-798c-466c-927f-6a1ae9582e8d-e2", "message": "Started.", "level": "INFO"}
-2025-10-31T07:42:09.234693430Z worker-comfyui - Checking API server at http://127.0.0.1:8188/...
-2025-10-31T07:42:09.919778240Z Checkpoint files will always be loaded safely.
-2025-10-31T07:42:10.128038393Z Total VRAM 16102 MB, total RAM 515610 MB
-2025-10-31T07:42:10.128072438Z pytorch version: 2.9.0+cu128
-2025-10-31T07:42:10.128508836Z Set vram state to: NORMAL_VRAM
-2025-10-31T07:42:10.128790551Z Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
-2025-10-31T07:42:10.189175212Z working around nvidia conv3d memory bug.
-2025-10-31T07:42:11.364305774Z Using pytorch attention
-2025-10-31T07:42:13.384273745Z Python version: 3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]
-2025-10-31T07:42:13.384313621Z ComfyUI version: 0.3.66
-2025-10-31T07:42:13.384672021Z Using selector: EpollSelector
-2025-10-31T07:42:13.387622902Z ComfyUI frontend version: 1.28.7
-2025-10-31T07:42:13.388219895Z [Prompt Server] web root: /opt/venv/lib/python3.12/site-packages/comfyui_frontend_package/static
-2025-10-31T07:42:13.388524985Z Trying to load custom node /comfyui/comfy_extras/nodes_latent.py
-2025-10-31T07:42:13.613100859Z Trying to load custom node /comfyui/comfy_extras/nodes_hypernetwork.py
-2025-10-31T07:42:13.615251000Z Trying to load custom node /comfyui/comfy_extras/nodes_upscale_model.py
-2025-10-31T07:42:13.668444961Z recursive file list on directory /comfyui/models/upscale_models
-2025-10-31T07:42:13.668601649Z found 1 files
-2025-10-31T07:42:13.668777753Z Trying to load custom node /comfyui/comfy_extras/nodes_post_processing.py
-2025-10-31T07:42:13.669347675Z Trying to load custom node /comfyui/comfy_extras/nodes_mask.py
-2025-10-31T07:42:13.674577542Z Trying to load custom node /comfyui/comfy_extras/nodes_compositing.py
-2025-10-31T07:42:13.676977327Z Trying to load custom node /comfyui/comfy_extras/nodes_rebatch.py
-2025-10-31T07:42:13.678744592Z Trying to load custom node /comfyui/comfy_extras/nodes_model_merging.py
-2025-10-31T07:42:13.681944716Z Trying to load custom node /comfyui/comfy_extras/nodes_tomesd.py
-2025-10-31T07:42:13.683913223Z Trying to load custom node /comfyui/comfy_extras/nodes_clip_sdxl.py
-2025-10-31T07:42:13.685080929Z Trying to load custom node /comfyui/comfy_extras/nodes_canny.py
-2025-10-31T07:42:14.060766306Z Trying to load custom node /comfyui/comfy_extras/nodes_freelunch.py
-2025-10-31T07:42:14.062253308Z Trying to load custom node /comfyui/comfy_extras/nodes_custom_sampler.py
-2025-10-31T07:42:14.069994783Z Trying to load custom node /comfyui/comfy_extras/nodes_hypertile.py
-2025-10-31T07:42:14.071243172Z Trying to load custom node /comfyui/comfy_extras/nodes_model_advanced.py
-2025-10-31T07:42:14.074180468Z Trying to load custom node /comfyui/comfy_extras/nodes_model_downscale.py
-2025-10-31T07:42:14.075223097Z Trying to load custom node /comfyui/comfy_extras/nodes_images.py
-2025-10-31T07:42:14.080458355Z Trying to load custom node /comfyui/comfy_extras/nodes_video_model.py
-2025-10-31T07:42:14.082694389Z Trying to load custom node /comfyui/comfy_extras/nodes_train.py
-2025-10-31T07:42:14.089678586Z Trying to load custom node /comfyui/comfy_extras/nodes_sag.py
-2025-10-31T07:42:14.091410934Z Trying to load custom node /comfyui/comfy_extras/nodes_perpneg.py
-2025-10-31T07:42:14.092987277Z Trying to load custom node /comfyui/comfy_extras/nodes_stable3d.py
-2025-10-31T07:42:14.095058117Z Trying to load custom node /comfyui/comfy_extras/nodes_sdupscale.py
-2025-10-31T07:42:14.096035442Z Trying to load custom node /comfyui/comfy_extras/nodes_photomaker.py
-2025-10-31T07:42:14.098033816Z recursive file list on directory /comfyui/models/photomaker
-2025-10-31T07:42:14.098162961Z found 1 files
-2025-10-31T07:42:14.098312264Z Trying to load custom node /comfyui/comfy_extras/nodes_pixart.py
-2025-10-31T07:42:14.099029726Z Trying to load custom node /comfyui/comfy_extras/nodes_cond.py
-2025-10-31T07:42:14.099996782Z Trying to load custom node /comfyui/comfy_extras/nodes_morphology.py
-2025-10-31T07:42:14.101302340Z Trying to load custom node /comfyui/comfy_extras/nodes_stable_cascade.py
-2025-10-31T07:42:14.102812797Z Trying to load custom node /comfyui/comfy_extras/nodes_differential_diffusion.py
-2025-10-31T07:42:14.103747622Z Trying to load custom node /comfyui/comfy_extras/nodes_ip2p.py
-2025-10-31T07:42:14.104685963Z Trying to load custom node /comfyui/comfy_extras/nodes_model_merging_model_specific.py
-2025-10-31T07:42:14.107197470Z Trying to load custom node /comfyui/comfy_extras/nodes_pag.py
-2025-10-31T07:42:14.108060749Z Trying to load custom node /comfyui/comfy_extras/nodes_align_your_steps.py
-2025-10-31T07:42:14.109117595Z Trying to load custom node /comfyui/comfy_extras/nodes_attention_multiply.py
-2025-10-31T07:42:14.110935656Z Trying to load custom node /comfyui/comfy_extras/nodes_advanced_samplers.py
-2025-10-31T07:42:14.112422548Z Trying to load custom node /comfyui/comfy_extras/nodes_webcam.py
-2025-10-31T07:42:14.113050640Z Trying to load custom node /comfyui/comfy_extras/nodes_audio.py
-2025-10-31T07:42:14.118151523Z Trying to load custom node /comfyui/comfy_extras/nodes_sd3.py
-2025-10-31T07:42:14.121624715Z recursive file list on directory /comfyui/models/text_encoders
-2025-10-31T07:42:14.121689909Z found 1 files
-2025-10-31T07:42:14.121760814Z recursive file list on directory /comfyui/models/clip
-2025-10-31T07:42:14.121853850Z found 1 files
-2025-10-31T07:42:14.122192183Z Trying to load custom node /comfyui/comfy_extras/nodes_gits.py
-2025-10-31T07:42:14.132174220Z Trying to load custom node /comfyui/comfy_extras/nodes_controlnet.py
-2025-10-31T07:42:14.133303674Z Trying to load custom node /comfyui/comfy_extras/nodes_hunyuan.py
-2025-10-31T07:42:14.135483281Z Trying to load custom node /comfyui/comfy_extras/nodes_eps.py
-2025-10-31T07:42:14.136720991Z Trying to load custom node /comfyui/comfy_extras/nodes_flux.py
-2025-10-31T07:42:14.138315598Z Trying to load custom node /comfyui/comfy_extras/nodes_lora_extract.py
-2025-10-31T07:42:14.139990998Z Trying to load custom node /comfyui/comfy_extras/nodes_torch_compile.py
-2025-10-31T07:42:14.141927824Z Trying to load custom node /comfyui/comfy_extras/nodes_mochi.py
-2025-10-31T07:42:14.142681806Z Trying to load custom node /comfyui/comfy_extras/nodes_slg.py
-2025-10-31T07:42:14.143047680Z Trying to load custom node /comfyui/comfy_extras/nodes_mahiro.py
-2025-10-31T07:42:14.143873027Z Trying to load custom node /comfyui/comfy_extras/nodes_lt.py
-2025-10-31T07:42:14.148240747Z Trying to load custom node /comfyui/comfy_extras/nodes_hooks.py
-2025-10-31T07:42:14.153705831Z Trying to load custom node /comfyui/comfy_extras/nodes_load_3d.py
-2025-10-31T07:42:14.155806128Z Trying to load custom node /comfyui/comfy_extras/nodes_cosmos.py
-2025-10-31T07:42:14.157775426Z Trying to load custom node /comfyui/comfy_extras/nodes_video.py
-2025-10-31T07:42:14.160592553Z Trying to load custom node /comfyui/comfy_extras/nodes_lumina2.py
-2025-10-31T07:42:14.161954128Z Trying to load custom node /comfyui/comfy_extras/nodes_wan.py
-2025-10-31T07:42:14.176821188Z Trying to load custom node /comfyui/comfy_extras/nodes_lotus.py
-2025-10-31T07:42:14.181994297Z Trying to load custom node /comfyui/comfy_extras/nodes_hunyuan3d.py
-2025-10-31T07:42:14.186807494Z Trying to load custom node /comfyui/comfy_extras/nodes_primitive.py
-2025-10-31T07:42:14.187964159Z Trying to load custom node /comfyui/comfy_extras/nodes_cfg.py
-2025-10-31T07:42:14.189080518Z Trying to load custom node /comfyui/comfy_extras/nodes_optimalsteps.py
-2025-10-31T07:42:14.190144518Z Trying to load custom node /comfyui/comfy_extras/nodes_hidream.py
-2025-10-31T07:42:14.191291615Z Trying to load custom node /comfyui/comfy_extras/nodes_fresca.py
-2025-10-31T07:42:14.192378589Z Trying to load custom node /comfyui/comfy_extras/nodes_apg.py
-2025-10-31T07:42:14.193451836Z Trying to load custom node /comfyui/comfy_extras/nodes_preview_any.py
-2025-10-31T07:42:14.194088685Z Trying to load custom node /comfyui/comfy_extras/nodes_ace.py
-2025-10-31T07:42:14.195048336Z Trying to load custom node /comfyui/comfy_extras/nodes_string.py
-2025-10-31T07:42:14.198013645Z Trying to load custom node /comfyui/comfy_extras/nodes_camera_trajectory.py
-2025-10-31T07:42:14.200726705Z Trying to load custom node /comfyui/comfy_extras/nodes_edit_model.py
-2025-10-31T07:42:14.201452563Z Trying to load custom node /comfyui/comfy_extras/nodes_tcfg.py
-2025-10-31T07:42:14.202435689Z Trying to load custom node /comfyui/comfy_extras/nodes_context_windows.py
-2025-10-31T07:42:14.203787134Z Trying to load custom node /comfyui/comfy_extras/nodes_qwen.py
-2025-10-31T07:42:14.205200226Z Trying to load custom node /comfyui/comfy_extras/nodes_chroma_radiance.py
-2025-10-31T07:42:14.206555709Z Trying to load custom node /comfyui/comfy_extras/nodes_model_patch.py
-2025-10-31T07:42:14.209408635Z Trying to load custom node /comfyui/comfy_extras/nodes_easycache.py
-2025-10-31T07:42:14.213841228Z Trying to load custom node /comfyui/comfy_extras/nodes_audio_encoder.py
-2025-10-31T07:42:14.220130547Z recursive file list on directory /comfyui/models/audio_encoders
-2025-10-31T07:42:14.220183888Z found 1 files
-2025-10-31T07:42:14.220419245Z Trying to load custom node /comfyui/comfy_api_nodes/canary.py
-2025-10-31T07:42:14.221156234Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_ideogram.py
-2025-10-31T07:42:14.598810908Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_openai.py
-2025-10-31T07:42:14.605157144Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_minimax.py
-2025-10-31T07:42:14.608362408Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_veo2.py
-2025-10-31T07:42:14.610537347Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_kling.py
-2025-10-31T07:42:14.621897961Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_bfl.py
-2025-10-31T07:42:14.640989079Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_bytedance.py
-2025-10-31T07:42:14.655104443Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_luma.py
-2025-10-31T07:42:14.670158989Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_recraft.py
-2025-10-31T07:42:14.682938697Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_pixverse.py
-2025-10-31T07:42:14.858520722Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_stability.py
-2025-10-31T07:42:14.875421794Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_pika.py
-2025-10-31T07:42:14.886168022Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_runway.py
-2025-10-31T07:42:14.889540072Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_sora.py
-2025-10-31T07:42:14.891842453Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_tripo.py
-2025-10-31T07:42:14.918262963Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_moonvalley.py
-2025-10-31T07:42:14.922400137Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_rodin.py
-2025-10-31T07:42:14.931762268Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_gemini.py
-2025-10-31T07:42:14.938080451Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_vidu.py
-2025-10-31T07:42:14.944783925Z Trying to load custom node /comfyui/comfy_api_nodes/nodes_wan.py
-2025-10-31T07:42:14.958671306Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-Manager
-2025-10-31T07:42:14.976666624Z ### Loading: ComfyUI-Manager (V3.37)
-2025-10-31T07:42:14.976947918Z [ComfyUI-Manager] network_mode: offline
-2025-10-31T07:42:14.977078375Z sys.platform='linux', git_executable='git'
-2025-10-31T07:42:14.977695807Z Popen(['git', 'rev-list', 'HEAD', '--'], cwd=/comfyui, stdin=None, shell=False, universal_newlines=False)
-2025-10-31T07:42:15.023703287Z Popen(['git', 'cat-file', '--batch-check'], cwd=/comfyui, stdin=<valid stream>, shell=False, universal_newlines=False)
-2025-10-31T07:42:15.026433630Z Popen(['git', 'cat-file', '--batch'], cwd=/comfyui, stdin=<valid stream>, shell=False, universal_newlines=False)
-2025-10-31T07:42:15.029404379Z ### ComfyUI Revision: 4113 [560b1bdf] *DETACHED | Released on '2025-10-21'
-2025-10-31T07:42:15.041301061Z Using selector: EpollSelector
-2025-10-31T07:42:15.046328504Z [ComfyUI-Manager] All startup tasks have been completed.
-2025-10-31T07:42:15.050472580Z Trying to load custom node /comfyui/custom_nodes/websocket_image_save.py
-2025-10-31T07:42:15.051237202Z Trying to load custom node /comfyui/custom_nodes/rgthree-comfy
-2025-10-31T07:42:15.066703109Z recursive file list on directory /comfyui/models/checkpoints
-2025-10-31T07:42:15.066773723Z found 1 files
-2025-10-31T07:42:15.093515834Z [92m[rgthree-comfy] Loaded 48 exciting nodes. 🎉[0m
-2025-10-31T07:42:15.094880875Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-Detail-Daemon
-2025-10-31T07:42:15.095575944Z Traceback (most recent call last):
-2025-10-31T07:42:15.095594179Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.095600731Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.095606362Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.095625328Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.095630879Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.095636209Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Detail-Daemon/__init__.py'
-2025-10-31T07:42:15.095724326Z Cannot import /comfyui/custom_nodes/ComfyUI-Detail-Daemon module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Detail-Daemon/__init__.py'
-2025-10-31T07:42:15.095765705Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-Easy-Use
-2025-10-31T07:42:15.096132942Z Traceback (most recent call last):
-2025-10-31T07:42:15.096140236Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.096148361Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.096154503Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.096160394Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.096165744Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.096171385Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Easy-Use/__init__.py'
-2025-10-31T07:42:15.096183307Z Cannot import /comfyui/custom_nodes/ComfyUI-Easy-Use module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Easy-Use/__init__.py'
-2025-10-31T07:42:15.096257087Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-Florence2
-2025-10-31T07:42:15.096555584Z Traceback (most recent call last):
-2025-10-31T07:42:15.096570633Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.096577185Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.096582705Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.096588737Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.096593997Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.096600409Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Florence2/__init__.py'
-2025-10-31T07:42:15.096613484Z Cannot import /comfyui/custom_nodes/ComfyUI-Florence2 module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Florence2/__init__.py'
-2025-10-31T07:42:15.096677916Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-Frame-Interpolation
-2025-10-31T07:42:15.097000769Z Traceback (most recent call last):
-2025-10-31T07:42:15.097008203Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.097014235Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.097019875Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.097025616Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.097031046Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.097036677Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Frame-Interpolation/__init__.py'
-2025-10-31T07:42:15.097048550Z Cannot import /comfyui/custom_nodes/ComfyUI-Frame-Interpolation module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Frame-Interpolation/__init__.py'
-2025-10-31T07:42:15.097076072Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-GGUF
-2025-10-31T07:42:15.164729680Z ComfyUI-GGUF: Allowing full torch compile
-2025-10-31T07:42:15.169283314Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-Impact-Pack
-2025-10-31T07:42:15.169649389Z Traceback (most recent call last):
-2025-10-31T07:42:15.169658646Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.169661692Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.169664557Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.169675779Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.169678474Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.169680929Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Impact-Pack/__init__.py'
-2025-10-31T07:42:15.169691238Z Cannot import /comfyui/custom_nodes/ComfyUI-Impact-Pack module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Impact-Pack/__init__.py'
-2025-10-31T07:42:15.169768635Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-KJNodes
-2025-10-31T07:42:15.170088542Z Traceback (most recent call last):
-2025-10-31T07:42:15.170091889Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.170095115Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.170097890Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.170100745Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.170103360Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.170105985Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-KJNodes/__init__.py'
-2025-10-31T07:42:15.170114181Z Cannot import /comfyui/custom_nodes/ComfyUI-KJNodes module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-KJNodes/__init__.py'
-2025-10-31T07:42:15.170226775Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-Logic
-2025-10-31T07:42:15.170521604Z Traceback (most recent call last):
-2025-10-31T07:42:15.170529960Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.170533106Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.170535871Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.170538576Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.170541201Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.170544087Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Logic/__init__.py'
-2025-10-31T07:42:15.170549948Z Cannot import /comfyui/custom_nodes/ComfyUI-Logic module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Logic/__init__.py'
-2025-10-31T07:42:15.170681788Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-RMBG
-2025-10-31T07:42:15.170943345Z Traceback (most recent call last):
-2025-10-31T07:42:15.170947122Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.170949787Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.170952222Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.170954887Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.170957432Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.170960177Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-RMBG/__init__.py'
-2025-10-31T07:42:15.170969254Z Cannot import /comfyui/custom_nodes/ComfyUI-RMBG module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-RMBG/__init__.py'
-2025-10-31T07:42:15.171075967Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-TeaCache
-2025-10-31T07:42:15.171354385Z Traceback (most recent call last):
-2025-10-31T07:42:15.171357090Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.171359555Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.171362110Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.171364544Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.171367310Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.171375034Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-TeaCache/__init__.py'
-2025-10-31T07:42:15.171379743Z Cannot import /comfyui/custom_nodes/ComfyUI-TeaCache module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-TeaCache/__init__.py'
-2025-10-31T07:42:15.171503799Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-VideoHelperSuite
-2025-10-31T07:42:15.171794851Z Traceback (most recent call last):
-2025-10-31T07:42:15.171805241Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.171811573Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.171817504Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.171823125Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.171828806Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.171834266Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-VideoHelperSuite/__init__.py'
-2025-10-31T07:42:15.171849896Z Cannot import /comfyui/custom_nodes/ComfyUI-VideoHelperSuite module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-VideoHelperSuite/__init__.py'
-2025-10-31T07:42:15.171923185Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-segment-anything-2
-2025-10-31T07:42:15.172223034Z Traceback (most recent call last):
-2025-10-31T07:42:15.172230819Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.172236389Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.172241679Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.172247400Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.172252580Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.172257830Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-segment-anything-2/__init__.py'
-2025-10-31T07:42:15.172268801Z Cannot import /comfyui/custom_nodes/ComfyUI-segment-anything-2 module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-segment-anything-2/__init__.py'
-2025-10-31T07:42:15.172347290Z Trying to load custom node /comfyui/custom_nodes/ComfyUI_LayerStyle
-2025-10-31T07:42:15.172643833Z Traceback (most recent call last):
-2025-10-31T07:42:15.172657398Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.172663260Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.172669141Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.172674731Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.172680232Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.172685572Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI_LayerStyle/__init__.py'
-2025-10-31T07:42:15.172696402Z Cannot import /comfyui/custom_nodes/ComfyUI_LayerStyle module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI_LayerStyle/__init__.py'
-2025-10-31T07:42:15.172733453Z Trying to load custom node /comfyui/custom_nodes/ComfyUI_UltimateSDUpscale
-2025-10-31T07:42:15.173051767Z Traceback (most recent call last):
-2025-10-31T07:42:15.173055224Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.173058109Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.173060744Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.173063850Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.173066445Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.173069000Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI_UltimateSDUpscale/__init__.py'
-2025-10-31T07:42:15.173079189Z Cannot import /comfyui/custom_nodes/ComfyUI_UltimateSDUpscale module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI_UltimateSDUpscale/__init__.py'
-2025-10-31T07:42:15.173187014Z Trying to load custom node /comfyui/custom_nodes/ComfyUI_essentials
-2025-10-31T07:42:15.173421739Z Traceback (most recent call last):
-2025-10-31T07:42:15.173426348Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.173428933Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.173431528Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.173434043Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.173436688Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.173439743Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI_essentials/__init__.py'
-2025-10-31T07:42:15.173483727Z Cannot import /comfyui/custom_nodes/ComfyUI_essentials module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI_essentials/__init__.py'
-2025-10-31T07:42:15.173561875Z Trying to load custom node /comfyui/custom_nodes/comfyui-custom-scripts
-2025-10-31T07:42:15.192006356Z Trying to load custom node /comfyui/custom_nodes/comfyui-image-selector
-2025-10-31T07:42:15.194483318Z Trying to load custom node /comfyui/custom_nodes/comfyui_HavocsCall_Custom_Nodes
-2025-10-31T07:42:15.194813595Z Traceback (most recent call last):
-2025-10-31T07:42:15.194825387Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:15.194831649Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:15.194837400Z   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
-2025-10-31T07:42:15.194843662Z   File "<frozen importlib._bootstrap_external>", line 1128, in get_code
-2025-10-31T07:42:15.194849623Z   File "<frozen importlib._bootstrap_external>", line 1186, in get_data
-2025-10-31T07:42:15.194855033Z FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/comfyui_HavocsCall_Custom_Nodes/__init__.py'
-2025-10-31T07:42:15.194870623Z Cannot import /comfyui/custom_nodes/comfyui_HavocsCall_Custom_Nodes module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/comfyui_HavocsCall_Custom_Nodes/__init__.py'
-2025-10-31T07:42:15.194919616Z Trying to load custom node /comfyui/custom_nodes/RES4LYF
-2025-10-31T07:42:15.633628071Z Using pytorch attention
-2025-10-31T07:42:15.745301096Z /comfyui/custom_nodes/RES4LYF/helper_sigma_preview_image_preproc.py:850: SyntaxWarning: invalid escape sequence '\h'
-2025-10-31T07:42:15.745338377Z   labels.append("$Δ \hat{t}$")
-2025-10-31T07:42:15.944959302Z matplotlib data path: /opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data
-2025-10-31T07:42:15.949328966Z CONFIGDIR=/root/.config/matplotlib
-2025-10-31T07:42:15.951342418Z interactive is False
-2025-10-31T07:42:15.951375521Z platform is linux
-2025-10-31T07:42:16.102138115Z CACHEDIR=/root/.cache/matplotlib
-2025-10-31T07:42:16.102526612Z font search path [PosixPath('/opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data/fonts/ttf'), PosixPath('/opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data/fonts/afm'), PosixPath('/opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts')]
-2025-10-31T07:42:16.271968071Z generated new fontManager
-2025-10-31T07:42:16.790441204Z Loaded backend Agg version v2.2.
-2025-10-31T07:42:16.813602338Z (RES4LYF) Init
-2025-10-31T07:42:16.813801686Z (RES4LYF) Importing beta samplers.
-2025-10-31T07:42:16.932219173Z (RES4LYF) Importing legacy samplers.
-2025-10-31T07:42:16.935399850Z Trying to load custom node /comfyui/custom_nodes/cg-image-picker
-2025-10-31T07:42:16.940019569Z Trying to load custom node /comfyui/custom_nodes/comfyui-dynamicprompts
-2025-10-31T07:42:17.461699148Z Trying to load custom node /comfyui/custom_nodes/havocscall_custom_nodes
-2025-10-31T07:42:17.472185172Z Trying to load custom node /comfyui/custom_nodes/teacache
-2025-10-31T07:42:18.539081537Z Loading bitsandbytes native library from: /opt/venv/lib/python3.12/site-packages/bitsandbytes/libbitsandbytes_cuda128.so
-2025-10-31T07:42:20.621764212Z Trying to load custom node /comfyui/custom_nodes/ComfyLiterals
-2025-10-31T07:42:20.624933217Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-GGUF-FantasyTalking
-2025-10-31T07:42:20.628538040Z Traceback (most recent call last):
-2025-10-31T07:42:20.628572715Z   File "/comfyui/nodes.py", line 2131, in load_custom_node
-2025-10-31T07:42:20.628581292Z     module_spec.loader.exec_module(module)
-2025-10-31T07:42:20.628587974Z   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
-2025-10-31T07:42:20.628594306Z   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-2025-10-31T07:42:20.628599566Z   File "/comfyui/custom_nodes/ComfyUI-GGUF-FantasyTalking/__init__.py", line 7, in <module>
-2025-10-31T07:42:20.628605377Z     from .nodes import NODE_CLASS_MAPPINGS
-2025-10-31T07:42:20.628610697Z   File "/comfyui/custom_nodes/ComfyUI-GGUF-FantasyTalking/nodes.py", line 608
-2025-10-31T07:42:20.628616068Z     """
-2025-10-31T07:42:20.628624103Z     ^^^^
-2025-10-31T07:42:20.628631056Z SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 149-150: truncated \UXXXXXXXX escape
-2025-10-31T07:42:20.628684818Z Cannot import /comfyui/custom_nodes/ComfyUI-GGUF-FantasyTalking module for custom nodes: (unicode error) 'unicodeescape' codec can't decode bytes in position 149-150: truncated \UXXXXXXXX escape (nodes.py, line 608)
-2025-10-31T07:42:20.628701259Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-LatentSyncWrapper
-2025-10-31T07:42:20.636008810Z Set up system temp directory: /tmp/latentsync_ec0085c8
-2025-10-31T07:42:20.778630832Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-VibeVoice
-2025-10-31T07:42:20.781924313Z [ComfyUI-VibeVoice] Scanning for VibeVoice models in: /comfyui/models/tts/VibeVoice
-2025-10-31T07:42:20.782113052Z [ComfyUI-VibeVoice] Discovered VibeVoice models: ['VibeVoice-1.5B', 'VibeVoice-Large']
-2025-10-31T07:42:20.806206074Z [ComfyUI-VibeVoice] APEX FusedRMSNorm not available, using native implementation
-2025-10-31T07:42:20.844072411Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-WanAnimatePreprocess
-2025-10-31T07:42:20.877514180Z Trying to load custom node /comfyui/custom_nodes/ComfyUI-WanVideoWrapper
-2025-10-31T07:42:20.988610089Z Warning: Could not load sageattention: No module named 'sageattention'
-2025-10-31T07:42:20.988633573Z sageattention package is not installed, sageattention will not be available
-2025-10-31T07:42:21.322869361Z Trying to load custom node /comfyui/custom_nodes/ComfyUI_Comfyroll_CustomNodes
-2025-10-31T07:42:21.335094296Z /comfyui/custom_nodes/ComfyUI_Comfyroll_CustomNodes/nodes/nodes_list.py:383: SyntaxWarning: invalid escape sequence '\W'
-2025-10-31T07:42:21.335123933Z   "optional": {"folder_path": ("STRING", {"default": "C:\Windows\Fonts", "multiline": False}),
-2025-10-31T07:42:21.335258077Z /comfyui/custom_nodes/ComfyUI_Comfyroll_CustomNodes/nodes/nodes_list.py:393: SyntaxWarning: invalid escape sequence '\W'
-2025-10-31T07:42:21.335264770Z   def make_list(self, source_folder, start_index, max_rows, folder_path="C:\Windows\Fonts"):
-2025-10-31T07:42:21.345119065Z recursive file list on directory /comfyui/models/controlnet
-2025-10-31T07:42:21.345286282Z found 1 files
-2025-10-31T07:42:21.356381613Z /comfyui/custom_nodes/ComfyUI_Comfyroll_CustomNodes/nodes/nodes_xygrid.py:256: SyntaxWarning: invalid escape sequence '\R'
-2025-10-31T07:42:21.356402954Z   resolved_font_path = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "fonts\Roboto-Regular.ttf")
-2025-10-31T07:42:21.426812273Z ------------------------------------------
-2025-10-31T07:42:21.426833604Z [34mComfyroll Studio v1.76 : [92m 175 Nodes Loaded[0m
-2025-10-31T07:42:21.426850065Z ------------------------------------------
-2025-10-31T07:42:21.426864001Z ** For changes, please see patch notes at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md
-2025-10-31T07:42:21.426908606Z ** For help, please see the wiki at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki
-2025-10-31T07:42:21.426942019Z ------------------------------------------
-2025-10-31T07:42:21.428381943Z Trying to load custom node /comfyui/custom_nodes/ComfyUI_JPS-Nodes
-2025-10-31T07:42:21.454649282Z Trying to load custom node /comfyui/custom_nodes/ComfyUI_LayerStyle_Advance
-2025-10-31T07:42:21.509852909Z # 😺dzNodes: LayerStyle -> [1;33mCannot import name 'guidedFilter' from 'cv2.ximgproc'
-2025-10-31T07:42:21.509875031Z A few nodes cannot works properly, while most nodes are not affected. Please REINSTALL package 'opencv-contrib-python'.
-2025-10-31T07:42:21.509881312Z For detail refer to [4mhttps://github.com/chflame163/ComfyUI_LayerStyle/issues/5[0m[m
-2025-10-31T07:42:22.562688183Z /opt/venv/lib/python3.12/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
-2025-10-31T07:42:22.562720154Z   warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
-2025-10-31T07:42:22.739720762Z Trying to load custom node /comfyui/custom_nodes/cg-use-everywhere
-2025-10-31T07:42:22.743055973Z Trying to load custom node /comfyui/custom_nodes/comfy-plasma
-2025-10-31T07:42:22.755596377Z Trying to load custom node /comfyui/custom_nodes/comfyui-frame-interpolation
-2025-10-31T07:42:22.789043685Z Trying to load custom node /comfyui/custom_nodes/comfyui-kjnodes
-2025-10-31T07:42:22.907912178Z Trying to load custom node /comfyui/custom_nodes/comfyui_controlnet_aux
-2025-10-31T07:42:22.913676430Z [36;20m[/comfyui/custom_nodes/comfyui_controlnet_aux] | INFO -> Using ckpts path: /comfyui/custom_nodes/comfyui_controlnet_aux/ckpts[0m
-2025-10-31T07:42:22.913855360Z [36;20m[/comfyui/custom_nodes/comfyui_controlnet_aux] | INFO -> Using symlinks: False[0m
-2025-10-31T07:42:22.914075898Z [36;20m[/comfyui/custom_nodes/comfyui_controlnet_aux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'CPUExecutionProvider', 'CoreMLExecutionProvider'][0m
-2025-10-31T07:42:22.961998814Z /comfyui/custom_nodes/comfyui_controlnet_aux/node_wrappers/dwpose.py:26: UserWarning: DWPose: Onnxruntime not found or doesn't come with acceleration providers, switch to OpenCV with CPU device. DWPose might run very slowly
-2025-10-31T07:42:22.962024142Z   warnings.warn("DWPose: Onnxruntime not found or doesn't come with acceleration providers, switch to OpenCV with CPU device. DWPose might run very slowly")
-2025-10-31T07:42:22.983378977Z Trying to load custom node /comfyui/custom_nodes/comfyui_essentials
-2025-10-31T07:42:23.013643024Z Trying to load custom node /comfyui/custom_nodes/masquerade-nodes-comfyui
-2025-10-31T07:42:23.024727695Z Trying to load custom node /comfyui/custom_nodes/mikey_nodes
-2025-10-31T07:42:23.079968121Z Trying to load custom node /comfyui/custom_nodes/was-node-suite-comfyui
-2025-10-31T07:42:23.126995948Z /comfyui/custom_nodes/was-node-suite-comfyui/WAS_Node_Suite.py:7355: SyntaxWarning: invalid escape sequence '\o'
-2025-10-31T07:42:23.127028569Z   if output_path.endswith("ComfyUI/output") or output_path.endswith("ComfyUI\output"):
-2025-10-31T07:42:23.827550262Z [34mWAS Node Suite: [0mCreated default conf file at `/comfyui/custom_nodes/was-node-suite-comfyui/was_suite_config.json`.[0m
-2025-10-31T07:42:24.247545987Z [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
-2025-10-31T07:42:24.247605960Z [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/comfyui/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
-2025-10-31T07:42:24.634403349Z [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m220[0m [32mnodes successfully.[0m
-2025-10-31T07:42:24.634440319Z 	[3m[93m"The only limit to our realization of tomorrow will be our doubts of today."[0m[3m - Franklin D. Roosevelt[0m
-2025-10-31T07:42:24.640326172Z Import times for custom nodes:
-2025-10-31T07:42:24.640468602Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI_essentials
-2025-10-31T07:42:24.640548424Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI-TeaCache
-2025-10-31T07:42:24.640641400Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI-segment-anything-2
-2025-10-31T07:42:24.640700653Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI_UltimateSDUpscale
-2025-10-31T07:42:24.640807115Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI-Frame-Interpolation
-2025-10-31T07:42:24.640918206Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI-RMBG
-2025-10-31T07:42:24.640977448Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI_LayerStyle
-2025-10-31T07:42:24.641110681Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI-Logic
-2025-10-31T07:42:24.641170294Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI-KJNodes
-2025-10-31T07:42:24.641273430Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI-VideoHelperSuite
-2025-10-31T07:42:24.641315600Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI-Florence2
-2025-10-31T07:42:24.641414427Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI-Easy-Use
-2025-10-31T07:42:24.641510159Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/comfyui_HavocsCall_Custom_Nodes
-2025-10-31T07:42:24.641603066Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI-Impact-Pack
-2025-10-31T07:42:24.641676966Z    0.0 seconds: /comfyui/custom_nodes/websocket_image_save.py
-2025-10-31T07:42:24.641803115Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI-Detail-Daemon
-2025-10-31T07:42:24.641860644Z    0.0 seconds: /comfyui/custom_nodes/comfyui-image-selector
-2025-10-31T07:42:24.641922853Z    0.0 seconds: /comfyui/custom_nodes/ComfyLiterals
-2025-10-31T07:42:24.642046197Z    0.0 seconds: /comfyui/custom_nodes/cg-use-everywhere
-2025-10-31T07:42:24.642099849Z    0.0 seconds (IMPORT FAILED): /comfyui/custom_nodes/ComfyUI-GGUF-FantasyTalking
-2025-10-31T07:42:24.642177857Z    0.0 seconds: /comfyui/custom_nodes/cg-image-picker
-2025-10-31T07:42:24.642262207Z    0.0 seconds: /comfyui/custom_nodes/havocscall_custom_nodes
-2025-10-31T07:42:24.642347268Z    0.0 seconds: /comfyui/custom_nodes/masquerade-nodes-comfyui
-2025-10-31T07:42:24.642443882Z    0.0 seconds: /comfyui/custom_nodes/comfy-plasma
-2025-10-31T07:42:24.642518914Z    0.0 seconds: /comfyui/custom_nodes/comfyui-custom-scripts
-2025-10-31T07:42:24.642596161Z    0.0 seconds: /comfyui/custom_nodes/ComfyUI_JPS-Nodes
-2025-10-31T07:42:24.642681913Z    0.0 seconds: /comfyui/custom_nodes/comfyui_essentials
-2025-10-31T07:42:24.642776343Z    0.0 seconds: /comfyui/custom_nodes/comfyui-frame-interpolation
-2025-10-31T07:42:24.642861524Z    0.0 seconds: /comfyui/custom_nodes/ComfyUI-WanAnimatePreprocess
-2025-10-31T07:42:24.642942238Z    0.0 seconds: /comfyui/custom_nodes/rgthree-comfy
-2025-10-31T07:42:24.643040805Z    0.1 seconds: /comfyui/custom_nodes/mikey_nodes
-2025-10-31T07:42:24.643108934Z    0.1 seconds: /comfyui/custom_nodes/ComfyUI-VibeVoice
-2025-10-31T07:42:24.643185529Z    0.1 seconds: /comfyui/custom_nodes/ComfyUI-GGUF
-2025-10-31T07:42:24.643251495Z    0.1 seconds: /comfyui/custom_nodes/comfyui_controlnet_aux
-2025-10-31T07:42:24.643412370Z    0.1 seconds: /comfyui/custom_nodes/ComfyUI-Manager
-2025-10-31T07:42:24.643422679Z    0.1 seconds: /comfyui/custom_nodes/ComfyUI_Comfyroll_CustomNodes
-2025-10-31T07:42:24.643509845Z    0.1 seconds: /comfyui/custom_nodes/comfyui-kjnodes
-2025-10-31T07:42:24.643601168Z    0.1 seconds: /comfyui/custom_nodes/ComfyUI-LatentSyncWrapper
-2025-10-31T07:42:24.643696128Z    0.4 seconds: /comfyui/custom_nodes/ComfyUI-WanVideoWrapper
-2025-10-31T07:42:24.643764057Z    0.5 seconds: /comfyui/custom_nodes/comfyui-dynamicprompts
-2025-10-31T07:42:24.643844851Z    1.3 seconds: /comfyui/custom_nodes/ComfyUI_LayerStyle_Advance
-2025-10-31T07:42:24.643929882Z    1.6 seconds: /comfyui/custom_nodes/was-node-suite-comfyui
-2025-10-31T07:42:24.644010826Z    1.7 seconds: /comfyui/custom_nodes/RES4LYF
-2025-10-31T07:42:24.644119953Z    3.1 seconds: /comfyui/custom_nodes/teacache
-2025-10-31T07:42:24.989982781Z Database URL: sqlite:////comfyui/user/comfyui.db
-2025-10-31T07:42:24.999346475Z Context impl SQLiteImpl.
-2025-10-31T07:42:24.999386160Z Will assume non-transactional DDL.
-2025-10-31T07:42:25.000169557Z No target revision found.
-2025-10-31T07:42:25.002902505Z Found example workflow folder 'workflows' for custom node 'RES4LYF', consider renaming it to 'example_workflows'
-2025-10-31T07:42:25.003301051Z Found example workflow folder 'examples' for custom node 'teacache', consider renaming it to 'example_workflows'
-2025-10-31T07:42:25.004082475Z Found example workflow folder 'workflows' for custom node 'ComfyUI_Comfyroll_CustomNodes', consider renaming it to 'example_workflows'
-2025-10-31T07:42:25.004328001Z Found example workflow folder 'workflow' for custom node 'ComfyUI_LayerStyle_Advance', consider renaming it to 'example_workflows'
-2025-10-31T07:42:25.004906368Z Found example workflow folder 'examples' for custom node 'comfyui_controlnet_aux', consider renaming it to 'example_workflows'
-2025-10-31T07:42:25.005172033Z Found example workflow folder 'examples' for custom node 'masquerade-nodes-comfyui', consider renaming it to 'example_workflows'
-2025-10-31T07:42:25.018089853Z Starting server
-2025-10-31T07:42:25.018346099Z To see the GUI go to: http://127.0.0.1:8188
-2025-10-31T07:42:25.051105042Z worker-comfyui - API is reachable
-2025-10-31T07:42:25.051120271Z worker-comfyui - Uploading 1 image(s)...
-2025-10-31T07:42:25.055933357Z worker-comfyui - Successfully uploaded 91771d9aa876d0d6f931ca1ab14b8a30.jpg
-2025-10-31T07:42:25.055946822Z worker-comfyui - image(s) upload complete
-2025-10-31T07:42:25.056189002Z worker-comfyui - Connecting to websocket: ws://127.0.0.1:8188/ws?clientId=bd2f50e8-4501-43cf-99b5-1e7380119939
-2025-10-31T07:42:25.058393396Z worker-comfyui - Websocket connected
-2025-10-31T07:42:25.059900457Z got prompt
-2025-10-31T07:42:25.060295086Z invalid prompt: {'type': 'invalid_prompt', 'message': 'Cannot execute because node easy cleanGpuUsed does not exist.', 'details': "Node ID '#16'", 'extra_info': {}}
-2025-10-31T07:42:25.060872823Z worker-comfyui - ComfyUI returned 400. Response body: {"error": {"type": "invalid_prompt", "message": "Cannot execute because node easy cleanGpuUsed does not exist.", "details": "Node ID '#16'", "extra_info": {}}, "node_errors": {}}
-2025-10-31T07:42:25.060892450Z worker-comfyui - Parsed error data: {'error': {'type': 'invalid_prompt', 'message': 'Cannot execute because node easy cleanGpuUsed does not exist.', 'details': "Node ID '#16'", 'extra_info': {}}, 'node_errors': {}}
-2025-10-31T07:42:25.060935802Z worker-comfyui - Unexpected error queuing workflow: Cannot execute because node easy cleanGpuUsed does not exist.. Raw response: {"error": {"type": "invalid_prompt", "message": "Cannot execute because node easy cleanGpuUsed does not exist.", "details": "Node ID '#16'", "extra_info": {}}, "node_errors": {}}
-2025-10-31T07:42:25.060947564Z worker-comfyui - Value Error: Cannot execute because node easy cleanGpuUsed does not exist.. Raw response: {"error": {"type": "invalid_prompt", "message": "Cannot execute because node easy cleanGpuUsed does not exist.", "details": "Node ID '#16'", "extra_info": {}}, "node_errors": {}}
-2025-10-31T07:42:25.063182657Z Traceback (most recent call last):
-2025-10-31T07:42:25.063200952Z   File "/handler.py", line 572, in handler
-2025-10-31T07:42:25.063207154Z     raise e
-2025-10-31T07:42:25.063212574Z   File "/handler.py", line 554, in handler
-2025-10-31T07:42:25.063217964Z     queued_workflow = queue_workflow(
-2025-10-31T07:42:25.063223455Z                       ^^^^^^^^^^^^^^^
-2025-10-31T07:42:25.063228805Z   File "/handler.py", line 430, in queue_workflow
-2025-10-31T07:42:25.063234766Z     raise ValueError(f"{error_message}. Raw response: {response.text}")
-2025-10-31T07:42:25.063240797Z ValueError: Cannot execute because node easy cleanGpuUsed does not exist.. Raw response: {"error": {"type": "invalid_prompt", "message": "Cannot execute because node easy cleanGpuUsed does not exist.", "details": "Node ID '#16'", "extra_info": {}}, "node_errors": {}}
-2025-10-31T07:42:25.063384270Z worker-comfyui - Closing websocket connection.
-2025-10-31T07:42:25.289045314Z {"requestId": "64804bfe-798c-466c-927f-6a1ae9582e8d-e2", "message": "Finished.", "level": "INFO"}
+2025-10-31  12:03:21.101 | info | i7eih8j8urymcn | Finished.
+2025-10-31  12:03:20.891 | info | i7eih8j8urymcn | worker-comfyui - Failed to connect to server at http://127.0.0.1:8188/ after 500 attempts.\n
+2025-10-31  12:03:20.891 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/custom_nodes/ComfyUI-RMBG\n
+2025-10-31  12:03:11.068 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Logic\n
+2025-10-31  12:03:11.068 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/custom_nodes/ComfyUI-KJNodes\n
+2025-10-31  12:03:11.068 | info | i7eih8j8urymcn | [Impact Pack] Wildcards loading done.\n
+2025-10-31  12:03:10.942 | info | i7eih8j8urymcn | [Impact Pack] custom_wildcards path not found: /comfyui/custom_nodes/comfyui-impact-pack/custom_wildcards. Using default path.\n
+2025-10-31  12:03:10.942 | info | i7eih8j8urymcn | Setting JobRuntime:name=app\n
+2025-10-31  12:03:10.823 | info | i7eih8j8urymcn | Setting JobRuntime:name=UNKNOWN_NAME\n
+2025-10-31  12:03:10.823 | info | i7eih8j8urymcn | ### Loading: ComfyUI-Impact-Pack (V8.25.1)\n
+2025-10-31  12:03:10.823 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Impact-Pack\n
+2025-10-31  12:03:10.823 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Frame-Interpolation\n
+2025-10-31  12:03:10.823 | info | i7eih8j8urymcn | Loaded backend Agg version v2.2.\n
+2025-10-31  12:03:10.268 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Florence2\n
+2025-10-31  12:03:09.734 | info | i7eih8j8urymcn | generated new fontManager\n
+2025-10-31  12:03:09.734 | info | i7eih8j8urymcn | font search path [PosixPath('/opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data/fonts/ttf'), PosixPath('/opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data/fonts/afm'), PosixPath('/opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts')]\n
+2025-10-31  12:03:09.558 | info | i7eih8j8urymcn | CACHEDIR=/root/.cache/matplotlib\n
+2025-10-31  12:03:09.558 | info | i7eih8j8urymcn | platform is linux\n
+2025-10-31  12:03:09.558 | info | i7eih8j8urymcn | interactive is False\n
+2025-10-31  12:03:09.558 | info | i7eih8j8urymcn | CONFIGDIR=/root/.config/matplotlib\n
+2025-10-31  12:03:09.382 | info | i7eih8j8urymcn | matplotlib data path: /opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data\n
+2025-10-31  12:03:09.382 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Detail-Daemon\n
+2025-10-31  12:03:09.382 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/custom_nodes/comfyui-image-selector\n
+2025-10-31  12:03:09.382 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/custom_nodes/comfyui-custom-scripts\n
+2025-10-31  12:03:09.382 | info | i7eih8j8urymcn | ComfyUI-GGUF: Allowing full torch compile\n
+2025-10-31  12:03:09.382 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/custom_nodes/ComfyUI-GGUF\n
+2025-10-31  12:03:09.382 | info | i7eih8j8urymcn | \n
+2025-10-31  12:03:09.382 | info | i7eih8j8urymcn | [92m[rgthree-comfy] Loaded 48 exciting nodes. 🎉[0m\n
+2025-10-31  12:03:09.382 | info | i7eih8j8urymcn | \n
+2025-10-31  12:03:09.382 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/custom_nodes/rgthree-comfy\n
+2025-10-31  12:03:09.382 | info | i7eih8j8urymcn | [34m[ComfyUI-Easy-Use] web root: [0m/comfyui/custom_nodes/ComfyUI-Easy-Use/web_version/v2 [92mLoaded[0m\n
+2025-10-31  12:03:09.162 | info | i7eih8j8urymcn | [34m[ComfyUI-Easy-Use] server: [0mv1.3.4 [92mLoaded[0m\n
+2025-10-31  12:03:09.162 | info | i7eih8j8urymcn | Popen(['git', 'rev-list', 'HEAD', '--'], cwd=/comfyui, stdin=None, shell=False, universal_newlines=False)\n
+2025-10-31  12:03:09.162 | info | i7eih8j8urymcn | sys.platform='linux', git_executable='git'\n
+2025-10-31  12:03:09.162 | info | i7eih8j8urymcn | found 1 files\n
+2025-10-31  12:03:09.162 | info | i7eih8j8urymcn | recursive file list on directory /comfyui/models/vae\n
+2025-10-31  12:03:09.162 | info | i7eih8j8urymcn | found 1 files\n
+2025-10-31  12:03:09.161 | info | i7eih8j8urymcn | recursive file list on directory /comfyui/models/checkpoints\n
+2025-10-31  12:03:09.161 | info | i7eih8j8urymcn | found 1 files\n
+2025-10-31  12:03:09.043 | info | i7eih8j8urymcn | recursive file list on directory /comfyui/models/loras\n
+2025-10-31  12:03:02.925 | info | i7eih8j8urymcn | Loading bitsandbytes native library from: /opt/venv/lib/python3.12/site-packages/bitsandbytes/libbitsandbytes_cuda128.so\n
+2025-10-31  12:03:02.925 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Easy-Use\n
+2025-10-31  12:03:02.925 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/custom_nodes/websocket_image_save.py\n
+2025-10-31  12:03:02.925 | info | i7eih8j8urymcn | [ComfyUI-Manager] All startup tasks have been completed.\n
+2025-10-31  12:03:02.925 | info | i7eih8j8urymcn | Using selector: EpollSelector\n
+2025-10-31  12:03:02.925 | info | i7eih8j8urymcn | ### ComfyUI Revision: 4113 [560b1bdf] *DETACHED | Released on '2025-10-21'\n
+2025-10-31  12:03:02.925 | info | i7eih8j8urymcn | Popen(['git', 'cat-file', '--batch'], cwd=/comfyui, stdin=<valid stream>, shell=False, universal_newlines=False)\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | Popen(['git', 'cat-file', '--batch-check'], cwd=/comfyui, stdin=<valid stream>, shell=False, universal_newlines=False)\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | Popen(['git', 'rev-list', 'HEAD', '--'], cwd=/comfyui, stdin=None, shell=False, universal_newlines=False)\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | sys.platform='linux', git_executable='git'\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | [ComfyUI-Manager] network_mode: offline\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | ### Loading: ComfyUI-Manager (V3.37)\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Manager\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | Cannot import /comfyui/comfy_api_nodes/canary.py module for custom nodes: INSTALL NEW VERSION OF PYAV TO USE API NODES.\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | \n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | Exception: INSTALL NEW VERSION OF PYAV TO USE API NODES.\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn |     raise Exception("INSTALL NEW VERSION OF PYAV TO USE API NODES.")\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn |   File "/comfyui/comfy_api_nodes/canary.py", line 5, in <module>\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn |   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn |   File "<frozen importlib._bootstrap_external>", line 995, in exec_module\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn |     module_spec.loader.exec_module(module)\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | Traceback (most recent call last):\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_api_nodes/canary.py\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | found 1 files\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | recursive file list on directory /comfyui/models/audio_encoders\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_audio_encoder.py\n
+2025-10-31  12:03:01.767 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_easycache.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_model_patch.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_chroma_radiance.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_qwen.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_context_windows.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_tcfg.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_edit_model.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_camera_trajectory.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_string.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_ace.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_preview_any.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_apg.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_fresca.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_hidream.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_optimalsteps.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_cfg.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_primitive.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_hunyuan3d.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_lotus.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_wan.py\n
+2025-10-31  12:03:01.766 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_lumina2.py\n
+2025-10-31  12:03:01.630 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_video.py\n
+2025-10-31  12:03:01.630 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_cosmos.py\n
+2025-10-31  12:03:01.630 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_load_3d.py\n
+2025-10-31  12:03:01.630 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_hooks.py\n
+2025-10-31  12:03:01.630 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_lt.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_mahiro.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_slg.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_mochi.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_torch_compile.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_lora_extract.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_flux.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_eps.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_hunyuan.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_controlnet.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_gits.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | found 1 files\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | recursive file list on directory /comfyui/models/clip\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | found 1 files\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | recursive file list on directory /comfyui/models/text_encoders\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_sd3.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_audio.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_webcam.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_advanced_samplers.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_attention_multiply.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_align_your_steps.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_pag.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_model_merging_model_specific.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_ip2p.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_differential_diffusion.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_stable_cascade.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_morphology.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_cond.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_pixart.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | found 1 files\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | recursive file list on directory /comfyui/models/photomaker\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_photomaker.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_sdupscale.py\n
+2025-10-31  12:03:01.629 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_stable3d.py\n
+2025-10-31  12:03:01.628 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_perpneg.py\n
+2025-10-31  12:03:01.628 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_sag.py\n
+2025-10-31  12:03:01.628 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_train.py\n
+2025-10-31  12:03:01.628 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_video_model.py\n
+2025-10-31  12:03:01.628 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_images.py\n
+2025-10-31  12:03:01.628 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_model_downscale.py\n
+2025-10-31  12:03:01.628 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_model_advanced.py\n
+2025-10-31  12:03:01.628 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_hypertile.py\n
+2025-10-31  12:03:01.628 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_custom_sampler.py\n
+2025-10-31  12:03:01.527 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_freelunch.py\n
+2025-10-31  12:03:01.527 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_canny.py\n
+2025-10-31  12:03:01.527 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_clip_sdxl.py\n
+2025-10-31  12:03:01.527 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_tomesd.py\n
+2025-10-31  12:03:01.527 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_model_merging.py\n
+2025-10-31  12:03:01.527 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_rebatch.py\n
+2025-10-31  12:03:01.526 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_compositing.py\n
+2025-10-31  12:03:01.526 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_mask.py\n
+2025-10-31  12:03:01.526 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_post_processing.py\n
+2025-10-31  12:03:01.526 | info | i7eih8j8urymcn | found 1 files\n
+2025-10-31  12:03:01.526 | info | i7eih8j8urymcn | recursive file list on directory /comfyui/models/upscale_models\n
+2025-10-31  12:03:01.526 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_upscale_model.py\n
+2025-10-31  12:03:01.033 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_hypernetwork.py\n
+2025-10-31  12:03:01.033 | info | i7eih8j8urymcn | Trying to load custom node /comfyui/comfy_extras/nodes_latent.py\n
+2025-10-31  12:03:01.033 | info | i7eih8j8urymcn | [Prompt Server] web root: /opt/venv/lib/python3.12/site-packages/comfyui_frontend_package/static\n
+2025-10-31  12:03:01.033 | info | i7eih8j8urymcn | ComfyUI frontend version: 1.28.7\n
+2025-10-31  12:03:01.033 | info | i7eih8j8urymcn | Using selector: EpollSelector\n
+2025-10-31  12:03:01.033 | info | i7eih8j8urymcn | ComfyUI version: 0.3.66\n
+2025-10-31  12:03:00.780 | info | i7eih8j8urymcn | Python version: 3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]\n
+2025-10-31  12:02:58.533 | info | i7eih8j8urymcn | Using pytorch attention\n
+2025-10-31  12:02:58.533 | info | i7eih8j8urymcn | working around nvidia conv3d memory bug.\n
+2025-10-31  12:02:58.533 | info | i7eih8j8urymcn | Device: cuda:0 NVIDIA RTX A4500 : cudaMallocAsync\n
+2025-10-31  12:02:58.533 | info | i7eih8j8urymcn | Set vram state to: NORMAL_VRAM\n
+2025-10-31  12:02:58.532 | info | i7eih8j8urymcn | pytorch version: 2.9.0+cu128\n
+2025-10-31  12:02:57.233 | info | i7eih8j8urymcn | Total VRAM 20070 MB, total RAM 257585 MB\n
+2025-10-31  12:02:56.917 | info | i7eih8j8urymcn | Checkpoint files will always be loaded safely.\n
+2025-10-31  12:02:56.917 | info | i7eih8j8urymcn | \n
+2025-10-31  12:02:56.917 | info | i7eih8j8urymcn |    3.0 seconds: /comfyui/custom_nodes/ComfyUI-Manager\n
+2025-10-31  12:02:56.916 | info | i7eih8j8urymcn |    0.0 seconds: /comfyui/custom_nodes/ComfyUI-Easy-Use\n
+2025-10-31  12:02:56.916 | info | i7eih8j8urymcn |    0.0 seconds: /comfyui/custom_nodes/rgthree-comfy\n
+2025-10-31  12:02:56.916 | info | i7eih8j8urymcn | Prestartup times for custom nodes:\n
+2025-10-31  12:02:55.307 | info | i7eih8j8urymcn | \n
+2025-10-31  12:02:55.307 | info | i7eih8j8urymcn | worker-comfyui - Checking API server at http://127.0.0.1:8188/...\n
+2025-10-31  12:02:55.307 | info | i7eih8j8urymcn | Started.
+2025-10-31  12:02:55.307 | info | i7eih8j8urymcn | Jobs in progress: 1
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | Jobs in queue: 1
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | --- Starting Serverless Worker |  Version 1.7.13 ---\n
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | worker-comfyui - Starting handler...\n
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | ** Log path: /comfyui/user/comfyui.log\n
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | ** ComfyUI-Manager config path: /comfyui/user/default/ComfyUI-Manager/config.ini\n
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | ** User directory: /comfyui/user\n
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | ** ComfyUI Base Folder Path: /comfyui\n
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | ** ComfyUI Path: /comfyui\n
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | ** Python executable: /opt/venv/bin/python\n
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | ** Python version: 3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]\n
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | ** Platform: Linux\n
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | ** ComfyUI startup time: 2025-10-31 09:02:54.085\n
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | ## ComfyUI-Manager: installing dependencies done.\n
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | Popen(['git', 'version'], cwd=/, stdin=None, shell=False, universal_newlines=False)\n
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | Popen(['git', 'version'], cwd=/, stdin=None, shell=False, universal_newlines=False)\n
+2025-10-31  12:02:55.137 | info | i7eih8j8urymcn | [DONE] Security scan\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | [START] Security scan\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | Adding extra search path unet /runpod-volume/models/unet\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | Adding extra search path vae /runpod-volume/models/vae\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | Adding extra search path upscale_models /runpod-volume/models/upscale_models\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | Adding extra search path loras /runpod-volume/models/loras\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | Adding extra search path embeddings /runpod-volume/models/embeddings\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | Adding extra search path controlnet /runpod-volume/models/controlnet\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | Adding extra search path configs /runpod-volume/models/configs\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | Adding extra search path clip_vision /runpod-volume/models/clip_vision\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | Adding extra search path clip /runpod-volume/models/clip\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | Adding extra search path checkpoints /runpod-volume/models/checkpoints\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | worker-comfyui: Starting RunPod Handler\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | worker-comfyui: Starting ComfyUI\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | worker-comfyui: No custom_nodes found in Network Volume, using nodes from image\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | worker-comfyui - ComfyUI-Manager network_mode set to 'offline' in /comfyui/user/default/ComfyUI-Manager/config.ini\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | \n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | \n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | By pulling and using the container, you accept the terms and conditions of this license:\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | This container image and its contents are governed by the NVIDIA Deep Learning Container License.\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | \n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | \n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | CUDA Version 12.6.3\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | \n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | ==========\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | == CUDA ==\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | ==========\n
+2025-10-31  12:02:55.136 | info | i7eih8j8urymcn | \n
+2025-10-31  10:42:25.289 | info | 94fr0cdfto1bfc | Context impl SQLiteImpl.\n
+2025-10-31  10:42:24.990 | info | 94fr0cdfto1bfc | Import times for custom nodes:\n
+2025-10-31  10:42:24.990 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:24.990 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:24.990 | info | 94fr0cdfto1bfc | 	[3m[93m"The only limit to our realization of tomorrow will be our doubts of today."[0m[3m - Franklin D. Roosevelt[0m\n
+2025-10-31  10:42:24.990 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:24.634 | info | 94fr0cdfto1bfc | [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m220[0m [32mnodes successfully.[0m\n
+2025-10-31  10:42:24.634 | info | 94fr0cdfto1bfc | [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/comfyui/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m\n
+2025-10-31  10:42:24.247 | info | 94fr0cdfto1bfc | [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m\n
+2025-10-31  10:42:23.827 | info | 94fr0cdfto1bfc | [34mWAS Node Suite: [0mCreated default conf file at `/comfyui/custom_nodes/was-node-suite-comfyui/was_suite_config.json`.[0m\n
+2025-10-31  10:42:23.827 | info | 94fr0cdfto1bfc |   if output_path.endswith("ComfyUI/output") or output_path.endswith("ComfyUI\output"):\n
+2025-10-31  10:42:23.013 | info | 94fr0cdfto1bfc | [36;20m[/comfyui/custom_nodes/comfyui_controlnet_aux] | INFO -> Using ckpts path: /comfyui/custom_nodes/comfyui_controlnet_aux/ckpts[0m\n
+2025-10-31  10:42:22.908 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/comfy-plasma\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/havocscall_custom_nodes\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/comfyui-dynamicprompts\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/cg-image-picker\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | (RES4LYF) Importing legacy samplers.\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | (RES4LYF) Importing beta samplers.\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | (RES4LYF) Init\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | Loaded backend Agg version v2.2.\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | generated new fontManager\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | font search path [PosixPath('/opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data/fonts/ttf'), PosixPath('/opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data/fonts/afm'), PosixPath('/opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts')]\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | CACHEDIR=/root/.cache/matplotlib\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | platform is linux\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | interactive is False\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | CONFIGDIR=/root/.config/matplotlib\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | matplotlib data path: /opt/venv/lib/python3.12/site-packages/matplotlib/mpl-data\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc |   labels.append("$Δ \hat{t}$")\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | /comfyui/custom_nodes/RES4LYF/helper_sigma_preview_image_preproc.py:850: SyntaxWarning: invalid escape sequence '\h'\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | Using pytorch attention\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/RES4LYF\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/comfyui_HavocsCall_Custom_Nodes module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/comfyui_HavocsCall_Custom_Nodes/__init__.py'\n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.571 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/comfyui_HavocsCall_Custom_Nodes/__init__.py'\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/comfyui_HavocsCall_Custom_Nodes\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/comfyui-image-selector\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/comfyui-custom-scripts\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/ComfyUI_essentials module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI_essentials/__init__.py'\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI_essentials/__init__.py'\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI_essentials\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/ComfyUI_UltimateSDUpscale module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI_UltimateSDUpscale/__init__.py'\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI_UltimateSDUpscale/__init__.py'\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI_UltimateSDUpscale\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/ComfyUI_LayerStyle module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI_LayerStyle/__init__.py'\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI_LayerStyle/__init__.py'\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.570 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI_LayerStyle\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/ComfyUI-segment-anything-2 module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-segment-anything-2/__init__.py'\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-segment-anything-2/__init__.py'\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI-segment-anything-2\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/ComfyUI-VideoHelperSuite module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-VideoHelperSuite/__init__.py'\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-VideoHelperSuite/__init__.py'\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI-VideoHelperSuite\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/ComfyUI-TeaCache module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-TeaCache/__init__.py'\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-TeaCache/__init__.py'\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.569 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI-TeaCache\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/ComfyUI-RMBG module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-RMBG/__init__.py'\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-RMBG/__init__.py'\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI-RMBG\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/ComfyUI-Logic module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Logic/__init__.py'\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Logic/__init__.py'\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Logic\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/ComfyUI-KJNodes module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-KJNodes/__init__.py'\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-KJNodes/__init__.py'\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI-KJNodes\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/ComfyUI-Impact-Pack module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Impact-Pack/__init__.py'\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Impact-Pack/__init__.py'\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.568 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Impact-Pack\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | ComfyUI-GGUF: Allowing full torch compile\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI-GGUF\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/ComfyUI-Frame-Interpolation module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Frame-Interpolation/__init__.py'\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Frame-Interpolation/__init__.py'\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Frame-Interpolation\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/ComfyUI-Florence2 module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Florence2/__init__.py'\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Florence2/__init__.py'\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Florence2\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/ComfyUI-Easy-Use module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Easy-Use/__init__.py'\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Easy-Use/__init__.py'\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.567 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Easy-Use\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Cannot import /comfyui/custom_nodes/ComfyUI-Detail-Daemon module for custom nodes: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Detail-Daemon/__init__.py'\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | FileNotFoundError: [Errno 2] No such file or directory: '/comfyui/custom_nodes/ComfyUI-Detail-Daemon/__init__.py'\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1186, in get_data\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 1128, in get_code\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc |   File "<frozen importlib._bootstrap_external>", line 991, in exec_module\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc |     module_spec.loader.exec_module(module)\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc |   File "/comfyui/nodes.py", line 2131, in load_custom_node\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Traceback (most recent call last):\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Detail-Daemon\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | [92m[rgthree-comfy] Loaded 48 exciting nodes. 🎉[0m\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | \n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | found 1 files\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | recursive file list on directory /comfyui/models/checkpoints\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/rgthree-comfy\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/websocket_image_save.py\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | [ComfyUI-Manager] All startup tasks have been completed.\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Using selector: EpollSelector\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | ### ComfyUI Revision: 4113 [560b1bdf] *DETACHED | Released on '2025-10-21'\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Popen(['git', 'cat-file', '--batch'], cwd=/comfyui, stdin=<valid stream>, shell=False, universal_newlines=False)\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Popen(['git', 'cat-file', '--batch-check'], cwd=/comfyui, stdin=<valid stream>, shell=False, universal_newlines=False)\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Popen(['git', 'rev-list', 'HEAD', '--'], cwd=/comfyui, stdin=None, shell=False, universal_newlines=False)\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | sys.platform='linux', git_executable='git'\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | [ComfyUI-Manager] network_mode: offline\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | ### Loading: ComfyUI-Manager (V3.37)\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/custom_nodes/ComfyUI-Manager\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_wan.py\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_vidu.py\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_gemini.py\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_rodin.py\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_moonvalley.py\n
+2025-10-31  10:42:22.566 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_tripo.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_sora.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_runway.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_pika.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_stability.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_pixverse.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_recraft.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_luma.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_bytedance.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_bfl.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_kling.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_veo2.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_minimax.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_openai.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/nodes_ideogram.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_api_nodes/canary.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | found 1 files\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | recursive file list on directory /comfyui/models/audio_encoders\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_audio_encoder.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_easycache.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_model_patch.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_chroma_radiance.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_qwen.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_context_windows.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_tcfg.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_edit_model.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_camera_trajectory.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_string.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_ace.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_preview_any.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_apg.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_fresca.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_hidream.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_optimalsteps.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_cfg.py\n
+2025-10-31  10:42:22.565 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_primitive.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_hunyuan3d.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_lotus.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_wan.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_lumina2.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_video.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_cosmos.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_load_3d.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_hooks.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_lt.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_mahiro.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_slg.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_mochi.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_torch_compile.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_lora_extract.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_flux.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_eps.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_hunyuan.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_controlnet.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_gits.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | found 1 files\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | recursive file list on directory /comfyui/models/clip\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | found 1 files\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | recursive file list on directory /comfyui/models/text_encoders\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_sd3.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_audio.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_webcam.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_advanced_samplers.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_attention_multiply.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_align_your_steps.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_pag.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_model_merging_model_specific.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_ip2p.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_differential_diffusion.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_stable_cascade.py\n
+2025-10-31  10:42:22.564 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_morphology.py\n
+2025-10-31  10:42:22.563 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_cond.py\n
+2025-10-31  10:42:22.563 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_pixart.py\n
+2025-10-31  10:42:22.563 | info | 94fr0cdfto1bfc | found 1 files\n
+2025-10-31  10:42:22.563 | info | 94fr0cdfto1bfc | recursive file list on directory /comfyui/models/photomaker\n
+2025-10-31  10:42:22.563 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_photomaker.py\n
+2025-10-31  10:42:22.563 | info | 94fr0cdfto1bfc | Trying to load custom node /comfyui/comfy_extras/nodes_sdupscale.py\n

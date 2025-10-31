@@ -136,22 +136,25 @@ RUN cd custom_nodes && \
 # Rename directories to match what ComfyUI expects
 # comfy-node-install creates directories with registry names (often lowercase), but ComfyUI looks for real repo names
 # Rename only if source exists and target doesn't exist (safe to run multiple times)
-RUN cd /comfyui/custom_nodes && \
-    ([ -d "comfyui-detail-daemon" ] && [ ! -d "ComfyUI-Detail-Daemon" ] && mv comfyui-detail-daemon ComfyUI-Detail-Daemon) || true && \
-    ([ -d "comfyui-easy-use" ] && [ ! -d "ComfyUI-Easy-Use" ] && mv comfyui-easy-use ComfyUI-Easy-Use) || true && \
-    ([ -d "comfyui-florence2" ] && [ ! -d "ComfyUI-Florence2" ] && mv comfyui-florence2 ComfyUI-Florence2) || true && \
-    ([ -d "comfyui-frame-interpolation" ] && [ ! -d "ComfyUI-Frame-Interpolation" ] && mv comfyui-frame-interpolation ComfyUI-Frame-Interpolation) || true && \
-    ([ -d "comfyui-impact-pack" ] && [ ! -d "ComfyUI-Impact-Pack" ] && mv comfyui-impact-pack ComfyUI-Impact-Pack) || true && \
-    ([ -d "comfyui-kjnodes" ] && [ ! -d "ComfyUI-KJNodes" ] && mv comfyui-kjnodes ComfyUI-KJNodes) || true && \
-    ([ -d "comfyui-logic" ] && [ ! -d "ComfyUI-Logic" ] && mv comfyui-logic ComfyUI-Logic) || true && \
-    ([ -d "comfyui-rmbg" ] && [ ! -d "ComfyUI-RMBG" ] && mv comfyui-rmbg ComfyUI-RMBG) || true && \
-    ([ -d "comfyui-segment-anything-2" ] && [ ! -d "ComfyUI-segment-anything-2" ] && mv comfyui-segment-anything-2 ComfyUI-segment-anything-2) || true && \
-    ([ -d "comfyui-videohelpersuite" ] && [ ! -d "ComfyUI-VideoHelperSuite" ] && mv comfyui-videohelpersuite ComfyUI-VideoHelperSuite) || true && \
-    ([ -d "comfyui_layerstyle" ] && [ ! -d "ComfyUI_LayerStyle" ] && mv comfyui_layerstyle ComfyUI_LayerStyle) || true && \
-    ([ -d "comfyui_ultimatesdupscale" ] && [ ! -d "ComfyUI_UltimateSDUpscale" ] && mv comfyui_ultimatesdupscale ComfyUI_UltimateSDUpscale) || true && \
-    ([ -d "comfyui_essentials" ] && [ ! -d "ComfyUI_essentials" ] && mv comfyui_essentials ComfyUI_essentials) || true && \
-    ([ -d "havocscall_custom_nodes" ] && [ ! -d "comfyui_HavocsCall_Custom_Nodes" ] && mv havocscall_custom_nodes comfyui_HavocsCall_Custom_Nodes) || true && \
-    ([ -d "teacache" ] && [ ! -d "ComfyUI-TeaCache" ] && mv teacache ComfyUI-TeaCache) || true
+RUN set -e && \
+    cd /comfyui/custom_nodes && \
+    if [ -d "comfyui-detail-daemon" ] && [ ! -d "ComfyUI-Detail-Daemon" ]; then mv comfyui-detail-daemon ComfyUI-Detail-Daemon; fi && \
+    if [ -d "comfyui-easy-use" ] && [ ! -d "ComfyUI-Easy-Use" ]; then mv comfyui-easy-use ComfyUI-Easy-Use; fi && \
+    if [ -d "comfyui-florence2" ] && [ ! -d "ComfyUI-Florence2" ]; then mv comfyui-florence2 ComfyUI-Florence2; fi && \
+    if [ -d "comfyui-frame-interpolation" ] && [ ! -d "ComfyUI-Frame-Interpolation" ]; then mv comfyui-frame-interpolation ComfyUI-Frame-Interpolation; fi && \
+    if [ -d "comfyui-impact-pack" ] && [ ! -d "ComfyUI-Impact-Pack" ]; then mv comfyui-impact-pack ComfyUI-Impact-Pack; fi && \
+    if [ -d "comfyui-kjnodes" ] && [ ! -d "ComfyUI-KJNodes" ]; then mv comfyui-kjnodes ComfyUI-KJNodes; fi && \
+    if [ -d "comfyui-logic" ] && [ ! -d "ComfyUI-Logic" ]; then mv comfyui-logic ComfyUI-Logic; fi && \
+    if [ -d "comfyui-rmbg" ] && [ ! -d "ComfyUI-RMBG" ]; then mv comfyui-rmbg ComfyUI-RMBG; fi && \
+    if [ -d "comfyui-segment-anything-2" ] && [ ! -d "ComfyUI-segment-anything-2" ]; then mv comfyui-segment-anything-2 ComfyUI-segment-anything-2; fi && \
+    if [ -d "comfyui-videohelpersuite" ] && [ ! -d "ComfyUI-VideoHelperSuite" ]; then mv comfyui-videohelpersuite ComfyUI-VideoHelperSuite; fi && \
+    if [ -d "comfyui_layerstyle" ] && [ ! -d "ComfyUI_LayerStyle" ]; then mv comfyui_layerstyle ComfyUI_LayerStyle; fi && \
+    if [ -d "comfyui_ultimatesdupscale" ] && [ ! -d "ComfyUI_UltimateSDUpscale" ]; then mv comfyui_ultimatesdupscale ComfyUI_UltimateSDUpscale; fi && \
+    if [ -d "comfyui_essentials" ] && [ ! -d "ComfyUI_essentials" ]; then mv comfyui_essentials ComfyUI_essentials; fi && \
+    if [ -d "havocscall_custom_nodes" ] && [ ! -d "comfyui_HavocsCall_Custom_Nodes" ]; then mv havocscall_custom_nodes comfyui_HavocsCall_Custom_Nodes; fi && \
+    if [ -d "teacache" ] && [ ! -d "ComfyUI-TeaCache" ]; then mv teacache ComfyUI-TeaCache; fi && \
+    echo "Directory renaming completed" && \
+    ls -la | head -20
 
 # Copy custom nodes from project directory (optional - will be overridden by Network Volume if available)
 # Set SKIP_NODE_INSTALL=true to skip installation during build
