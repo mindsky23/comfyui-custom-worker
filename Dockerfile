@@ -56,6 +56,20 @@ RUN if [ -n "${CUDA_VERSION_FOR_COMFY}" ]; then \
       /usr/bin/yes | comfy --workspace /comfyui install --version "${COMFYUI_VERSION}" --nvidia; \
     fi
 
+# Optionally install custom nodes via comfy-cli (registry)
+# Usage example:
+#   docker build --build-arg ENABLE_COMFY_NODE_INSTALL=true \
+#                --build-arg COMFY_CUSTOM_NODES="comfyui-easy-use comfyui_essentials rgthree-comfy" \
+#                -t my-img:tag .
+ARG ENABLE_COMFY_NODE_INSTALL=false
+ARG COMFY_CUSTOM_NODES="comfyui-easy-use comfyui_essentials rgthree-comfy"
+RUN if [ "$ENABLE_COMFY_NODE_INSTALL" = "true" ]; then \
+      echo "Installing custom nodes from registry: $COMFY_CUSTOM_NODES" && \
+      comfy-node-install $COMFY_CUSTOM_NODES; \
+    else \
+      echo "Skipping comfy-node-install (ENABLE_COMFY_NODE_INSTALL=false)"; \
+    fi
+
 # Upgrade PyTorch if needed (for newer CUDA versions)
 RUN if [ "$ENABLE_PYTORCH_UPGRADE" = "true" ]; then \
       uv pip install --force-reinstall torch torchvision torchaudio --index-url ${PYTORCH_INDEX_URL}; \
@@ -63,6 +77,46 @@ RUN if [ "$ENABLE_PYTORCH_UPGRADE" = "true" ]; then \
 
 # Change working directory to ComfyUI
 WORKDIR /comfyui
+
+# Mandatory install of required custom nodes via comfy-cli (registry or URLs)
+RUN comfy-node-install \
+    https://github.com/ltdrdata/ComfyLiterals \
+    https://github.com/pythongosssss/ComfyUI-Detail-Daemon \
+    https://github.com/wasdennnoch/ComfyUI-Easy-Use \
+    https://github.com/Fannovel16/comfyui-frame-interpolation \
+    https://github.com/pythongosssss/ComfyUI-GGUF \
+    https://github.com/FantasyTalking/ComfyUI-GGUF-FantasyTalking \
+    https://github.com/ltdrdata/ComfyUI-Impact-Pack \
+    https://github.com/kijai/ComfyUI-KJNodes \
+    https://github.com/JonVeg/ComfyUI-LatentSyncWrapper \
+    https://github.com/pythongosssss/ComfyUI-Logic \
+    https://github.com/ltdrdata/ComfyUI-Manager \
+    https://github.com/biegert/ComfyUI-RMBG \
+    https://github.com/adelelhedi/ComfyUI-segment-anything-2 \
+    https://github.com/pythongosssss/ComfyUI-TeaCache \
+    https://github.com/VibeVoice/ComfyUI-VibeVoice \
+    https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite \
+    https://github.com/Wan-Animate/ComfyUI-WanAnimatePreprocess \
+    https://github.com/Wan-Animate/ComfyUI-WanVideoWrapper \
+    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes \
+    https://github.com/cubiq/ComfyUI_essentials \
+    https://github.com/Fannovel16/ComfyUI_LayerStyle \
+    https://github.com/Fannovel16/ComfyUI_LayerStyle_Advance \
+    https://github.com/jags111/ComfyUI_JPS-Nodes \
+    https://github.com/ssitu/ComfyUI_UltimateSDUpscale \
+    https://github.com/RES4LYF/ComfyUI-RES4LYF \
+    https://github.com/pythongosssss/comfyui-custom-scripts \
+    https://github.com/adieyal/comfyui-dynamicprompts \
+    https://github.com/pythongosssss/comfyui-image-selector \
+    https://github.com/rgthree/rgthree-comfy \
+    https://github.com/oneoffcoder/comfyui-havocs-call-custom-nodes \
+    https://github.com/wasdennnoch/was-node-suite-comfyui \
+    https://github.com/cg-use-everywhere/cg-image-picker \
+    https://github.com/cg-use-everywhere/cg-use-everywhere \
+    https://github.com/rgtjf/comfy-plasma \
+    https://github.com/Fannovel16/comfyui_controlnet_aux \
+    https://github.com/BadCafeCode/masquerade-nodes-comfyui \
+    https://github.com/bash-j/mikey_nodes
 
 # Copy custom nodes from project directory (optional - will be overridden by Network Volume if available)
 # Set SKIP_NODE_INSTALL=true to skip installation during build

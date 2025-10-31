@@ -1,0 +1,93 @@
+# Minimal image to validate custom node installation only (no models)
+
+ARG BASE_IMAGE=nvidia/cuda:12.6.3-cudnn-runtime-ubuntu24.04
+FROM ${BASE_IMAGE} as base
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PIP_PREFER_BINARY=1 \
+    PYTHONUNBUFFERED=1
+
+RUN apt-get update && apt-get install -y \
+    python3.12 python3.12-venv git wget \
+    libgl1 libglib2.0-0 libsm6 libxext6 libxrender1 ffmpeg \
+  && ln -sf /usr/bin/python3.12 /usr/bin/python \
+  && ln -sf /usr/bin/pip3 /usr/bin/pip \
+  && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
+
+# uv for fast/isolated installs
+RUN wget -qO- https://astral.sh/uv/install.sh | sh \
+  && ln -s /root/.local/bin/uv /usr/local/bin/uv \
+  && uv venv /opt/venv
+ENV PATH="/opt/venv/bin:${PATH}"
+
+# comfy-cli + ComfyUI (no models)
+RUN uv pip install --no-cache-dir comfy-cli pip setuptools wheel
+ARG COMFYUI_VERSION=latest
+RUN /usr/bin/yes | comfy --workspace /comfyui install --version "${COMFYUI_VERSION}" --nvidia
+
+WORKDIR /comfyui
+
+# Mandatory install of your required nodes via comfy-node-install helper
+COPY scripts/comfy-node-install.sh /usr/local/bin/comfy-node-install
+RUN chmod +x /usr/local/bin/comfy-node-install
+
+RUN comfy-node-install \
+    https://github.com/ltdrdata/ComfyLiterals \
+    https://github.com/pythongosssss/ComfyUI-Detail-Daemon \
+    https://github.com/wasdennnoch/ComfyUI-Easy-Use \
+    https://github.com/Fannovel16/comfyui-frame-interpolation \
+    https://github.com/pythongosssss/ComfyUI-GGUF \
+    https://github.com/FantasyTalking/ComfyUI-GGUF-FantasyTalking \
+    https://github.com/ltdrdata/ComfyUI-Impact-Pack \
+    https://github.com/kijai/ComfyUI-KJNodes \
+    https://github.com/JonVeg/ComfyUI-LatentSyncWrapper \
+    https://github.com/pythongosssss/ComfyUI-Logic \
+    https://github.com/ltdrdata/ComfyUI-Manager \
+    https://github.com/biegert/ComfyUI-RMBG \
+    https://github.com/adelelhedi/ComfyUI-segment-anything-2 \
+    https://github.com/pythongosssss/ComfyUI-TeaCache \
+    https://github.com/VibeVoice/ComfyUI-VibeVoice \
+    https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite \
+    https://github.com/Wan-Animate/ComfyUI-WanAnimatePreprocess \
+    https://github.com/Wan-Animate/ComfyUI-WanVideoWrapper \
+    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes \
+    https://github.com/cubiq/ComfyUI_essentials \
+    https://github.com/Fannovel16/ComfyUI_LayerStyle \
+    https://github.com/Fannovel16/ComfyUI_LayerStyle_Advance \
+    https://github.com/jags111/ComfyUI_JPS-Nodes \
+    https://github.com/ssitu/ComfyUI_UltimateSDUpscale \
+    https://github.com/RES4LYF/ComfyUI-RES4LYF \
+    https://github.com/pythongosssss/comfyui-custom-scripts \
+    https://github.com/adieyal/comfyui-dynamicprompts \
+    https://github.com/pythongosssss/comfyui-image-selector \
+    https://github.com/rgthree/rgthree-comfy \
+    https://github.com/oneoffcoder/comfyui-havocs-call-custom-nodes \
+    https://github.com/wasdennnoch/was-node-suite-comfyui \
+    https://github.com/cg-use-everywhere/cg-image-picker \
+    https://github.com/cg-use-everywhere/cg-use-everywhere \
+    https://github.com/rgtjf/comfy-plasma \
+    https://github.com/Fannovel16/comfyui_controlnet_aux \
+    https://github.com/BadCafeCode/masquerade-nodes-comfyui \
+    https://github.com/bash-j/mikey_nodes
+
+# Verify: ensure each node directory exists and has at least one .py file
+RUN set -euo pipefail; \
+  echo "Verifying custom nodes..."; \
+  missing=0; \
+  for d in custom_nodes/*; do \
+    [ -d "$d" ] || continue; \
+    pycount=$(find "$d" -type f -name "*.py" | wc -l || true); \
+    if [ "${pycount}" = "0" ]; then \
+      echo "ERROR: Node '$d' has no Python files." >&2; \
+      missing=1; \
+    fi; \
+  done; \
+  if [ "$missing" != "0" ]; then \
+    echo "At least one node appears incomplete." >&2; exit 1; \
+  fi; \
+  echo "All custom nodes present.";
+
+# Final minimal layer
+CMD ["bash", "-lc", "ls -1 custom_nodes | sed -n '1,200p' && echo 'Nodes verified.' && sleep 3600"]
+
+
