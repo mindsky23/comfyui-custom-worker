@@ -78,6 +78,10 @@ RUN if [ "$ENABLE_PYTORCH_UPGRADE" = "true" ]; then \
 # Change working directory to ComfyUI
 WORKDIR /comfyui
 
+# Make comfy-node-install available before installing nodes
+COPY scripts/comfy-node-install.sh /usr/local/bin/comfy-node-install
+RUN chmod +x /usr/local/bin/comfy-node-install
+
 # Mandatory install of required custom nodes via comfy-cli (registry or URLs)
 RUN comfy-node-install \
     https://github.com/ltdrdata/ComfyLiterals \
@@ -150,10 +154,6 @@ RUN uv pip install --no-cache-dir runpod requests websocket-client
 # Add application code and scripts
 ADD src/start.sh handler.py test_input.json ./
 RUN chmod +x /start.sh
-
-# Add script to install custom nodes
-COPY scripts/comfy-node-install.sh /usr/local/bin/comfy-node-install
-RUN chmod +x /usr/local/bin/comfy-node-install
 
 # Prevent pip from asking for confirmation during uninstall steps in custom nodes
 ENV PIP_NO_INPUT=1
