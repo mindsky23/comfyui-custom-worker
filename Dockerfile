@@ -41,11 +41,17 @@ ENV CPATH="/usr/include/python3.12"
 ENV PYTHON_INCLUDE_DIR="/usr/include/python3.12"
 
 # CUDA architecture list for compilation without GPU during build (serverless)
+# Supported GPUs:
+# - 8.9: L40, L40S, RTX 6000 Ada, RTX 4090 (Ada Lovelace) - PRIMARY TARGETS
+# - 12.0: RTX 5090 (Blackwell) - requires CUDA 12.8+ and PyTorch 2.5+
+# Additional architectures for compatibility:
 # - 8.6: RTX A4000, A5000, A6000 (Ampere)
-# - 8.9: RTX 4090 (Ada Lovelace)
 # - 8.0: A100 (Ampere datacenter)
-ARG TORCH_CUDA_ARCH_LIST="8.0;8.6;8.9"
+# Note: For Ada Lovelace GPUs (L40, L40S, RTX 6000 Ada), we MUST include 8.9
+# Note: For RTX 5090 (Blackwell), we include 12.0, but support may be limited in older PyTorch/sageattention versions
+ARG TORCH_CUDA_ARCH_LIST="8.0;8.6;8.9;12.0"
 ENV TORCH_CUDA_ARCH_LIST=${TORCH_CUDA_ARCH_LIST}
+ENV TRITON_CACHE_DIR=/tmp/triton_cache
 
 # Install Python, git and other necessary tools
 RUN apt-get update && apt-get install -y \
@@ -220,6 +226,9 @@ RUN if [ "$SKIP_SAGEATTENTION" != "true" ]; then \
         echo "Base image: devel variant (provides CUDA_HOME, nvcc)" && \
         echo "Compiling for GPU architectures: ${TORCH_CUDA_ARCH_LIST}" && \
         echo "Python headers: CFLAGS=${CFLAGS}, CPATH=${CPATH}" && \
+        echo "CRITICAL: Must include 8.9 (Ada Lovelace: L40, L40S, RTX 6000 Ada, RTX 4090) and 12.0 (Blackwell: RTX 5090) in TORCH_CUDA_ARCH_LIST" && \
+        export TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST}" && \
+        export TRITON_CACHE_DIR=/tmp/triton_cache && \
         timeout 2400 uv pip install --no-cache-dir sageattention==2.2.0 --no-build-isolation || \
         timeout 2400 pip install --no-cache-dir sageattention==2.2.0 --no-build-isolation || \
         (echo "sageattention installation failed during build, will retry at runtime" && true); \
@@ -273,5 +282,8 @@ WORKDIR /
 # Set the default command to run when starting the container
 # Install sageattention at runtime if not already installed during build
 # CFLAGS, CPATH, and TORCH_CUDA_ARCH_LIST are already set globally via ENV above
+# CRITICAL: TORCH_CUDA_ARCH_LIST must include:
+# - 8.9 for Ada Lovelace (L40, L40S, RTX 6000 Ada, RTX 4090)
+# - 12.0 for Blackwell (RTX 5090)
 # Use --no-build-isolation for consistency with build-time installation
-CMD ["bash", "-c", "uv pip install --no-cache-dir sageattention==2.2.0 --no-build-isolation || pip install --no-cache-dir sageattention==2.2.0 --no-build-isolation || python3 -m pip install --no-cache-dir sageattention==2.2.0 --no-build-isolation || true && /start.sh"]
+CMD ["bash", "-c", "export TORCH_CUDA_ARCH_LIST=\"${TORCH_CUDA_ARCH_LIST:-8.0;8.6;8.9;12.0}\" && export TRITON_CACHE_DIR=/tmp/triton_cache && echo \"Runtime sageattention install: compiling for ${TORCH_CUDA_ARCH_LIST}\" && (uv pip install --no-cache-dir sageattention==2.2.0 --no-build-isolation || pip install --no-cache-dir sageattention==2.2.0 --no-build-isolation || python3 -m pip install --no-cache-dir sageattention==2.2.0 --no-build-isolation || echo \"Warning: sageattention installation failed, continuing anyway...\") && /start.sh"]

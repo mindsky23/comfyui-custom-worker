@@ -19,6 +19,7 @@ This project allows you to run ComfyUI workflows as a serverless API endpoint on
 - [API Specification](#api-specification)
 - [Usage](#usage)
 - [Getting the Workflow JSON](#getting-the-workflow-json)
+- [Troubleshooting](#troubleshooting)
 - [Further Documentation](#further-documentation)
 
 ---
@@ -178,6 +179,27 @@ To get the correct `workflow` JSON for the API:
 1.  Open ComfyUI in your browser.
 2.  In the top navigation, select `Workflow > Export (API)`
 3.  A `workflow.json` file will be downloaded. Use the content of this file as the value for the `input.workflow` field in your API requests.
+
+## Troubleshooting
+
+### CUDA Error: "no kernel image is available for execution on the device"
+
+This error occurs when your workflow uses SageAttention, but the CUDA kernel is incompatible with your GPU.
+
+**Solution:** Disable SageAttention in your workflow:
+1. Find the **"Patch Sage Attention KJ"** node in your workflow (category: `KJNodes/experimental`)
+2. Set `sage_attention` to **"disabled"** or remove the node entirely
+3. Save and re-run the workflow
+
+For WAN models (WanVideo, FantasyTalking), set `attention_mode` to `"sdpa"` instead of `"sageattn"`.
+
+### LowVRAM Mode Running Slowly
+
+If you have 24GB+ VRAM (RTX 4090), LowVRAM mode will be much slower than regular mode. The system automatically detects and enables LowVRAM when needed, but if you're seeing excessive slow performance, check your workflow settings to ensure you're using regular model loaders when possible.
+
+### ComfyUI_LayerStyle Import Errors
+
+If you see `cannot import name 'draw_rounded_rectangle'` errors, this has been fixed in the latest build. If the error persists, the ComfyUI_LayerStyle nodes may be incompatible with your ComfyUI version - try updating or removing the nodes.
 
 ## Further Documentation
 
