@@ -20,6 +20,11 @@ elif [ -d "/runpod-volume/ComfyUI/custom_nodes" ] && [ "$(ls -A /runpod-volume/C
     mkdir -p /comfyui/custom_nodes
     cp -rn /runpod-volume/ComfyUI/custom_nodes/* /comfyui/custom_nodes/ 2>/dev/null || true
     VOLUME_NODES_COPIED=true
+elif [ -d "/workplace/ComfyUI/custom_nodes" ] && [ "$(ls -A /workplace/ComfyUI/custom_nodes 2>/dev/null)" ]; then
+    echo "worker-comfyui: Copying custom_nodes from /workplace/ComfyUI/custom_nodes"
+    mkdir -p /comfyui/custom_nodes
+    cp -rn /workplace/ComfyUI/custom_nodes/* /comfyui/custom_nodes/ 2>/dev/null || true
+    VOLUME_NODES_COPIED=true
 elif [ -d "/workspace/custom_nodes" ] && [ "$(ls -A /workspace/custom_nodes 2>/dev/null)" ]; then
     echo "worker-comfyui: Copying custom_nodes from /workspace/custom_nodes"
     mkdir -p /comfyui/custom_nodes

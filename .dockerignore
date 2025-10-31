@@ -1,59 +1,42 @@
-# Git files (safe to exclude - not needed in runtime)
+# SAFE EXCLUSIONS ONLY — leave all assets and docs intact
+
+# Git metadata (never needed at runtime)
 custom_nodes/**/.git
 custom_nodes/**/.gitignore
 custom_nodes/**/.gitattributes
 custom_nodes/**/.github
 custom_nodes/**/.gitmodules
 
-# Python cache (safe to exclude - regenerated automatically)
+# Python cache (recreated automatically)
 custom_nodes/**/__pycache__
 custom_nodes/**/*.pyc
 custom_nodes/**/*.pyo
 custom_nodes/**/*.pyd
 custom_nodes/**/.Python
 
-# Build artifacts (safe to exclude - not needed in runtime)
+# Build artifacts
 custom_nodes/**/build
 custom_nodes/**/dist
 custom_nodes/**/*.egg-info
 custom_nodes/**/.eggs
 
-# IDE and editor files (safe to exclude)
+# IDE/editor junk
 custom_nodes/**/.vscode
 custom_nodes/**/.idea
 custom_nodes/**/*.swp
 custom_nodes/**/*.swo
 custom_nodes/**/*~
 
-# OS files (safe to exclude)
+# OS junk
 custom_nodes/**/.DS_Store
 custom_nodes/**/Thumbs.db
 custom_nodes/**/._*
 
-# Log files (safe to exclude)
+# Logs
 custom_nodes/**/*.log
 custom_nodes/**/*.log.*
 
-# Documentation and examples (safe to exclude)
-custom_nodes/**/README.md
-custom_nodes/**/README*.md
-custom_nodes/**/*.md
-custom_nodes/**/docs/**
-custom_nodes/**/examples/**
-custom_nodes/**/example_workflows/**
-custom_nodes/**/workflows/**
-custom_nodes/**/test/**
-custom_nodes/**/tests/**
-custom_nodes/**/*test*.py
-custom_nodes/**/test_*.json
-
-# Images and media (safe to exclude - not needed for runtime)
-custom_nodes/**/*.png
-custom_nodes/**/*.jpg
-custom_nodes/**/*.jpeg
-custom_nodes/**/*.gif
-custom_nodes/**/*.webp
-custom_nodes/**/*.svg
-custom_nodes/**/images/**
-custom_nodes/**/screenshots/**
+# Development speed-up: exclude all custom_nodes from build context
+# Nodes will be copied from Network Volume at runtime (handled in src/start.sh)
+custom_nodes/**
 

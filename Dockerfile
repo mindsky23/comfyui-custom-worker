@@ -75,9 +75,9 @@ RUN if [ "$SKIP_NODE_INSTALL" = "true" ]; then \
       rm -rf custom_nodes && mkdir -p custom_nodes; \
     else \
       echo "Installing dependencies for custom_nodes from project"; \
-      # Collect all requirements.txt files first, then install in batch for better caching
-      find custom_nodes -maxdepth 2 -name "requirements.txt" -type f 2>/dev/null -exec echo "Found: {}" \; && \
-      find custom_nodes -maxdepth 2 -name "requirements.txt" -type f 2>/dev/null | \
+      # Collect all requirements.txt files (any depth) first, then install in batch for better caching
+      find custom_nodes -name "requirements.txt" -type f 2>/dev/null -exec echo "Found: {}" \; && \
+      find custom_nodes -name "requirements.txt" -type f 2>/dev/null | \
         xargs -I {} uv pip install --no-cache-dir -r {} || true; \
       # Install common dependencies that might be needed
       uv pip install --no-cache-dir segment-anything-2 || true; \
