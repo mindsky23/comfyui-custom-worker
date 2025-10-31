@@ -177,7 +177,17 @@ RUN if [ "$SKIP_NODE_INSTALL" = "true" ]; then \
 
 # Install sageattention for CUDA kernel optimization (required by ComfyUI-KJNodes)
 # This is installed regardless of SKIP_NODE_INSTALL since it is needed at runtime
-RUN uv pip install --no-cache-dir sageattention || true
+# Note: Installation may take 30-40 minutes due to CUDA kernel compilation
+# If build hangs here, it's normal - just wait. The installation will complete.
+# We also install it at runtime as a fallback (see CMD below)
+ARG SKIP_SAGEATTENTION=false
+RUN if [ "$SKIP_SAGEATTENTION" != "true" ]; then \
+        echo "Installing sageattention (this may take 30-40 minutes due to CUDA compilation)..." && \
+        timeout 2400 uv pip install --no-cache-dir sageattention || \
+        (echo "sageattention installation failed during build, will retry at runtime" && true); \
+    else \
+        echo "Skipping sageattention installation during build (will install at runtime)"; \
+    fi
 
 # Support for the network volume
 ADD src/extra_model_paths.yaml ./
