@@ -3,6 +3,7 @@ custom_nodes/**/.git
 custom_nodes/**/.gitignore
 custom_nodes/**/.gitattributes
 custom_nodes/**/.github
+custom_nodes/**/.gitmodules
 
 # Python cache (safe to exclude - regenerated automatically)
 custom_nodes/**/__pycache__
@@ -32,4 +33,27 @@ custom_nodes/**/._*
 # Log files (safe to exclude)
 custom_nodes/**/*.log
 custom_nodes/**/*.log.*
+
+# Documentation and examples (safe to exclude)
+custom_nodes/**/README.md
+custom_nodes/**/README*.md
+custom_nodes/**/*.md
+custom_nodes/**/docs/**
+custom_nodes/**/examples/**
+custom_nodes/**/example_workflows/**
+custom_nodes/**/workflows/**
+custom_nodes/**/test/**
+custom_nodes/**/tests/**
+custom_nodes/**/*test*.py
+custom_nodes/**/test_*.json
+
+# Images and media (safe to exclude - not needed for runtime)
+custom_nodes/**/*.png
+custom_nodes/**/*.jpg
+custom_nodes/**/*.jpeg
+custom_nodes/**/*.gif
+custom_nodes/**/*.webp
+custom_nodes/**/*.svg
+custom_nodes/**/images/**
+custom_nodes/**/screenshots/**
 

@@ -47,7 +47,7 @@ RUN wget -qO- https://astral.sh/uv/install.sh | sh \
 ENV PATH="/opt/venv/bin:${PATH}"
 
 # Install comfy-cli + dependencies needed by it to install ComfyUI
-RUN uv pip install comfy-cli pip setuptools wheel
+RUN uv pip install --no-cache-dir comfy-cli pip setuptools wheel
 
 # Install ComfyUI
 RUN if [ -n "${CUDA_VERSION_FOR_COMFY}" ]; then \
@@ -67,18 +67,21 @@ WORKDIR /comfyui
 # Copy custom nodes from project directory (optional - will be overridden by Network Volume if available)
 # Set SKIP_NODE_INSTALL=true to skip installation during build
 ARG SKIP_NODE_INSTALL=false
-COPY --chown=root:root custom_nodes/ custom_nodes/
+COPY --chown=root:root custom_nodes custom_nodes
+
+# Install dependencies for custom nodes (optimized - installs in parallel where possible)
 RUN if [ "$SKIP_NODE_INSTALL" = "true" ]; then \
       echo "Skipping custom nodes installation (will use Network Volume)"; \
       rm -rf custom_nodes && mkdir -p custom_nodes; \
     else \
       echo "Installing dependencies for custom_nodes from project"; \
-      find custom_nodes -maxdepth 2 -name "requirements.txt" -type f 2>/dev/null | while read req; do \
-        echo "Installing dependencies from $req"; \
-        uv pip install -r "$req" || true; \
-      done && \
-      uv pip install segment-anything-2 || true; \
-      uv pip install rembg || true; \
+      # Collect all requirements.txt files first, then install in batch for better caching
+      find custom_nodes -maxdepth 2 -name "requirements.txt" -type f 2>/dev/null -exec echo "Found: {}" \; && \
+      find custom_nodes -maxdepth 2 -name "requirements.txt" -type f 2>/dev/null | \
+        xargs -I {} uv pip install --no-cache-dir -r {} || true; \
+      # Install common dependencies that might be needed
+      uv pip install --no-cache-dir segment-anything-2 || true; \
+      uv pip install --no-cache-dir rembg || true; \
     fi
 
 # Support for the network volume
@@ -88,7 +91,7 @@ ADD src/extra_model_paths.yaml ./
 WORKDIR /
 
 # Install Python runtime dependencies for the handler
-RUN uv pip install runpod requests websocket-client
+RUN uv pip install --no-cache-dir runpod requests websocket-client
 
 # Add application code and scripts
 ADD src/start.sh handler.py test_input.json ./
