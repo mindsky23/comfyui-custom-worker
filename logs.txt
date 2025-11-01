@@ -1,500 +1,500 @@
-2025-11-01  09:42:33.673 | info | j1o0xmbql5wzpj | 2025-11-01 06:42:33 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (60s)\n
-2025-11-01  09:42:23.656 | info | j1o0xmbql5wzpj | 2025-11-01 06:42:23 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (50s)\n
-2025-11-01  09:42:13.639 | info | j1o0xmbql5wzpj | 2025-11-01 06:42:13 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (40s)\n
-2025-11-01  09:42:03.622 | info | j1o0xmbql5wzpj | 2025-11-01 06:42:03 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (30s)\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | 2025-11-01 06:41:53 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (20s)\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | 2025-11-01 06:41:43 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (10s)\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | [W1101 06:41:35.704520244 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |     torch._C._cuda_init()\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |   File "/opt/venv/lib/python3.12/site-packages/torch/cuda/__init__.py", line 410, in _lazy_init\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |     _lazy_init()\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |   File "/opt/venv/lib/python3.12/site-packages/torch/cuda/__init__.py", line 1069, in current_device\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |     return torch.device(torch.cuda.current_device())\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |   File "/comfyui/comfy/model_management.py", line 187, in get_torch_device\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |                                   ^^^^^^^^^^^^^^^^^^\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |     total_vram = get_total_memory(get_torch_device()) / (1024 * 1024)\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |   File "/comfyui/comfy/model_management.py", line 237, in <module>\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |     import comfy.model_management\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |   File "/comfyui/execution.py", line 15, in <module>\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |     import execution\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |   File "/comfyui/main.py", line 149, in <module>\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | Traceback (most recent call last):\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | Checkpoint files will always be loaded safely.\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | \n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |    1.1 seconds: /comfyui/custom_nodes/ComfyUI-Manager\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |    0.0 seconds: /comfyui/custom_nodes/ComfyUI-Easy-Use\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj |    0.0 seconds: /comfyui/custom_nodes/rgthree-comfy\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | Prestartup times for custom nodes:\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | \n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | 2025-11-01 06:41:34 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (1s)\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | ** Log path: /comfyui/user/comfyui.log\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | ** ComfyUI-Manager config path: /comfyui/user/default/ComfyUI-Manager/config.ini\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | ** User directory: /comfyui/user\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | ** ComfyUI Base Folder Path: /comfyui\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | ** ComfyUI Path: /comfyui\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | ** Python executable: /opt/venv/bin/python\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | ** Python version: 3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | ** Platform: Linux\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | ** ComfyUI startup time: 2025-11-01 06:41:34.315\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | ## ComfyUI-Manager: installing dependencies done.\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | Popen(['git', 'version'], cwd=/, stdin=None, shell=False, universal_newlines=False)\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | Popen(['git', 'version'], cwd=/, stdin=None, shell=False, universal_newlines=False)\n
-2025-11-01  09:41:53.605 | info | j1o0xmbql5wzpj | [DONE] Security scan\n
-2025-11-01  09:41:53.604 | info | j1o0xmbql5wzpj | [START] Security scan\n
-2025-11-01  09:41:28.507 | error | j1o0xmbql5wzpj | worker exited with exit code 1
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | 2025-11-01 06:41:22 | worker-comfyui: Handler not started due to ComfyUI readiness failure\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.939] RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.939]     torch._C._cuda_init()\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.939]   File "/opt/venv/lib/python3.12/site-packages/torch/cuda/__init__.py", line 410, in _lazy_init\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.939]     _lazy_init()\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.939]   File "/opt/venv/lib/python3.12/site-packages/torch/cuda/__init__.py", line 1069, in current_device\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.938]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.938]     return torch.device(torch.cuda.current_device())\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.938]   File "/comfyui/comfy/model_management.py", line 187, in get_torch_device\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.938]                                   ^^^^^^^^^^^^^^^^^^\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.938]     total_vram = get_total_memory(get_torch_device()) / (1024 * 1024)\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.938]   File "/comfyui/comfy/model_management.py", line 237, in <module>\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.937]     import comfy.model_management\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.937]   File "/comfyui/execution.py", line 15, in <module>\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.937]     import execution\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.937]   File "/comfyui/main.py", line 149, in <module>\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.937] Traceback (most recent call last):\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.860] Checkpoint files will always be loaded safely.\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.260] \n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.260]    1.1 seconds: /comfyui/custom_nodes/ComfyUI-Manager\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.260]    0.0 seconds: /comfyui/custom_nodes/ComfyUI-Easy-Use\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.260]    0.0 seconds: /comfyui/custom_nodes/rgthree-comfy\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | Prestartup times for custom nodes:\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:23.260] \n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:22.835] ** Log path: /comfyui/user/comfyui.log\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:22.835] ** ComfyUI-Manager config path: /comfyui/user/default/ComfyUI-Manager/config.ini\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:22.835] ** User directory: /comfyui/user\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:22.835] ** ComfyUI Base Folder Path: /comfyui\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:22.835] ** ComfyUI Path: /comfyui\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:22.835] ** Python executable: /opt/venv/bin/python\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:22.835] ** Python version: 3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:22.835] ** Platform: Linux\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:22.835] ** ComfyUI startup time: 2025-11-01 06:38:22.835\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | ## ComfyUI-Manager: installing dependencies done.\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | [2025-11-01 06:38:22.831] Popen(['git', 'version'], cwd=/, stdin=None, shell=False, universal_newlines=False)\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | Popen(['git', 'version'], cwd=/, stdin=None, shell=False, universal_newlines=False)\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | 2025-11-01 06:41:22 | worker-comfyui: Last 200 lines of /comfyui/user/comfyui.log\n
-2025-11-01  09:41:22.371 | info | j1o0xmbql5wzpj | 2025-11-01 06:41:22 | worker-comfyui: ComfyUI did not become ready within 180s\n
-2025-11-01  09:41:22.356 | info | j1o0xmbql5wzpj | 2025-11-01 06:41:22 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (180s)\n
-2025-11-01  09:41:12.340 | info | j1o0xmbql5wzpj | 2025-11-01 06:41:12 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (170s)\n
-2025-11-01  09:41:02.323 | info | j1o0xmbql5wzpj | 2025-11-01 06:41:02 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (160s)\n
-2025-11-01  09:40:52.306 | info | j1o0xmbql5wzpj | 2025-11-01 06:40:52 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (150s)\n
-2025-11-01  09:40:42.288 | info | j1o0xmbql5wzpj | 2025-11-01 06:40:42 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (140s)\n
-2025-11-01  09:40:32.272 | info | j1o0xmbql5wzpj | 2025-11-01 06:40:32 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (130s)\n
-2025-11-01  09:40:22.254 | info | j1o0xmbql5wzpj | 2025-11-01 06:40:22 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (120s)\n
-2025-11-01  09:40:12.237 | info | j1o0xmbql5wzpj | 2025-11-01 06:40:12 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (110s)\n
-2025-11-01  09:40:02.220 | info | j1o0xmbql5wzpj | 2025-11-01 06:40:02 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (100s)\n
-2025-11-01  09:39:52.204 | info | j1o0xmbql5wzpj | 2025-11-01 06:39:52 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (90s)\n
-2025-11-01  09:39:42.188 | info | j1o0xmbql5wzpj | 2025-11-01 06:39:42 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (80s)\n
-2025-11-01  09:39:32.171 | info | j1o0xmbql5wzpj | 2025-11-01 06:39:32 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (70s)\n
-2025-11-01  09:39:22.154 | info | j1o0xmbql5wzpj | 2025-11-01 06:39:22 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (60s)\n
-2025-11-01  09:39:12.137 | info | j1o0xmbql5wzpj | 2025-11-01 06:39:12 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (50s)\n
-2025-11-01  09:39:02.121 | info | j1o0xmbql5wzpj | 2025-11-01 06:39:02 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (40s)\n
-2025-11-01  09:38:52.104 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:52 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (30s)\n
-2025-11-01  09:38:42.087 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:42 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (20s)\n
-2025-11-01  09:38:32.071 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:32 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (10s)\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj | [W1101 06:38:24.241365224 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj | RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj |     torch._C._cuda_init()\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj |   File "/opt/venv/lib/python3.12/site-packages/torch/cuda/__init__.py", line 410, in _lazy_init\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj |     _lazy_init()\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj |   File "/opt/venv/lib/python3.12/site-packages/torch/cuda/__init__.py", line 1069, in current_device\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj |     return torch.device(torch.cuda.current_device())\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj |   File "/comfyui/comfy/model_management.py", line 187, in get_torch_device\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj |                                   ^^^^^^^^^^^^^^^^^^\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj |     total_vram = get_total_memory(get_torch_device()) / (1024 * 1024)\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj |   File "/comfyui/comfy/model_management.py", line 237, in <module>\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj |     import comfy.model_management\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj |   File "/comfyui/execution.py", line 15, in <module>\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj |     import execution\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj |   File "/comfyui/main.py", line 149, in <module>\n
-2025-11-01  09:38:24.095 | info | j1o0xmbql5wzpj | Traceback (most recent call last):\n
-2025-11-01  09:38:23.861 | info | j1o0xmbql5wzpj | Checkpoint files will always be loaded safely.\n
-2025-11-01  09:38:23.861 | info | j1o0xmbql5wzpj | \n
-2025-11-01  09:38:23.861 | info | j1o0xmbql5wzpj |    1.1 seconds: /comfyui/custom_nodes/ComfyUI-Manager\n
-2025-11-01  09:38:23.861 | info | j1o0xmbql5wzpj |    0.0 seconds: /comfyui/custom_nodes/ComfyUI-Easy-Use\n
-2025-11-01  09:38:23.861 | info | j1o0xmbql5wzpj |    0.0 seconds: /comfyui/custom_nodes/rgthree-comfy\n
-2025-11-01  09:38:23.861 | info | j1o0xmbql5wzpj | Prestartup times for custom nodes:\n
-2025-11-01  09:38:23.262 | info | j1o0xmbql5wzpj | \n
-2025-11-01  09:38:23.262 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:23 | worker-comfyui: Waiting for ComfyUI on 127.0.0.1:8188 (1s)\n
-2025-11-01  09:38:23.262 | info | j1o0xmbql5wzpj | ** Log path: /comfyui/user/comfyui.log\n
-2025-11-01  09:38:23.262 | info | j1o0xmbql5wzpj | ** ComfyUI-Manager config path: /comfyui/user/default/ComfyUI-Manager/config.ini\n
-2025-11-01  09:38:23.262 | info | j1o0xmbql5wzpj | ** User directory: /comfyui/user\n
-2025-11-01  09:38:23.262 | info | j1o0xmbql5wzpj | ** ComfyUI Base Folder Path: /comfyui\n
-2025-11-01  09:38:23.262 | info | j1o0xmbql5wzpj | ** ComfyUI Path: /comfyui\n
-2025-11-01  09:38:23.262 | info | j1o0xmbql5wzpj | ** Python executable: /opt/venv/bin/python\n
-2025-11-01  09:38:23.262 | info | j1o0xmbql5wzpj | ** Python version: 3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]\n
-2025-11-01  09:38:23.262 | info | j1o0xmbql5wzpj | ** Platform: Linux\n
-2025-11-01  09:38:23.262 | info | j1o0xmbql5wzpj | ** ComfyUI startup time: 2025-11-01 06:38:22.835\n
-2025-11-01  09:38:23.262 | info | j1o0xmbql5wzpj | ## ComfyUI-Manager: installing dependencies done.\n
-2025-11-01  09:38:23.262 | info | j1o0xmbql5wzpj | Popen(['git', 'version'], cwd=/, stdin=None, shell=False, universal_newlines=False)\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Popen(['git', 'version'], cwd=/, stdin=None, shell=False, universal_newlines=False)\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | [DONE] Security scan\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | [START] Security scan\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Adding extra search path diffusion_models /runpod-volume/models/diffusion_models\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Adding extra search path text_encoders /runpod-volume/models/text_encoders\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Adding extra search path unet /runpod-volume/models/unet\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Adding extra search path vae /runpod-volume/models/vae\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Adding extra search path upscale_models /runpod-volume/models/upscale_models\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Adding extra search path loras /runpod-volume/models/loras\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Adding extra search path embeddings /runpod-volume/models/embeddings\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Adding extra search path controlnet /runpod-volume/models/controlnet\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Adding extra search path configs /runpod-volume/models/configs\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Adding extra search path clip_vision /runpod-volume/models/clip_vision\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Adding extra search path clip /runpod-volume/models/clip\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Adding extra search path checkpoints /runpod-volume/models/checkpoints\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:22 | worker-comfyui: ComfyUI PID=624\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | [W1101 06:38:21.133817948 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   return torch._C._cuda_getDeviceCount() > 0\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | /opt/venv/lib/python3.12/site-packages/torch/cuda/__init__.py:182: UserWarning: CUDA initialization: CUDA driver initialization failed, you might not have a CUDA gpu. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | CUDA not available, skipping optimizations\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:21 | worker-comfyui: Applying PyTorch performance optimizations for RTX 4090\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:21 | worker-comfyui: Starting ComfyUI\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - was-node-suite-comfyui\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - rgthree-comfy\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - mikey_nodes\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - masquerade-nodes-comfyui\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - comfyui_controlnet_aux\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - comfyui_HavocsCall_Custom_Nodes\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - comfyui-image-selector\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - comfyui-dynamicprompts\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - comfyui-custom-scripts\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - comfy-plasma\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - cg-use-everywhere\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - cg-image-picker\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - __pycache__\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - RES4LYF\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI_essentials\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI_UltimateSDUpscale\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI_LayerStyle_Advance\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI_LayerStyle\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI_JPS-Nodes\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI_Comfyroll_CustomNodes\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-segment-anything-2\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-WanVideoWrapper\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-WanAnimatePreprocess\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-VideoHelperSuite\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-VibeVoice\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-TeaCache\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-RMBG\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-Manager\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-Logic\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-LatentSyncWrapper\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-KJNodes\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-Impact-Pack\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-GGUF-FantasyTalking\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-GGUF\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-Frame-Interpolation\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-Florence2\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-Easy-Use\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyUI-Detail-Daemon\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |   - ComfyLiterals\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:21 | worker-comfyui: Listing custom_nodes (depth=1)\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | warning: The package `opencv-python-headless==4.11.0.86` does not have an extra named `ffmpeg`\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  + fairscale==0.4.13\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  - fairscale==0.4.0\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Installed 1 package in 98ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Uninstalled 1 package in 1ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Resolved 81 packages in 691ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:20 | worker-comfyui: pip install -r custom_nodes/was-node-suite-comfyui/requirements.txt\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Audited in 2ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | warning: Requirements file `custom_nodes/rgthree-comfy/requirements.txt` does not contain any dependencies\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:20 | worker-comfyui: pip install -r custom_nodes/rgthree-comfy/requirements.txt\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Audited 25 packages in 5ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:20 | worker-comfyui: pip install -r custom_nodes/comfyui_controlnet_aux/requirements.txt\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Audited 1 package in 2ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:20 | worker-comfyui: pip install -r custom_nodes/comfyui-dynamicprompts/requirements.txt\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Audited 4 packages in 3ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:20 | worker-comfyui: pip install -r custom_nodes/RES4LYF/requirements.txt\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Audited 5 packages in 6ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:20 | worker-comfyui: pip install -r custom_nodes/ComfyUI_essentials/requirements.txt\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  + pydantic-core==2.33.2\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  - pydantic-core==2.16.3\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  + pydantic==2.11.10\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  - pydantic==2.6.4\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  + httpx==0.28.1\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  - httpx==0.27.2\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Installed 3 packages in 77ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Uninstalled 3 packages in 1ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Prepared 1 package in 47ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Resolved 170 packages in 256ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:19 | worker-comfyui: pip install -r custom_nodes/ComfyUI_LayerStyle_Advance/requirements.txt\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  + timm==0.6.13\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  - timm==1.0.21\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  + supervision==0.26.1\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  - supervision==0.6.0\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  + pydantic-core==2.16.3\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  - pydantic-core==2.33.2\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  + pydantic==2.6.4\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  - pydantic==2.11.10\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  + httpx==0.27.2\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  - httpx==0.28.1\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  + fairscale==0.4.0\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  - fairscale==0.4.13\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Installed 6 packages in 192ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Uninstalled 6 packages in 28ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Prepared 3 packages in 115ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  Downloading pydantic-core\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Downloading pydantic-core (2.1MiB)\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Resolved 240 packages in 1.35s\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:18 | worker-comfyui: pip install -r custom_nodes/ComfyUI_LayerStyle/requirements.txt\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Audited 11 packages in 4ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:18 | worker-comfyui: pip install -r custom_nodes/ComfyUI-WanVideoWrapper/requirements.txt\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Audited 3 packages in 3ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:18 | worker-comfyui: pip install -r custom_nodes/ComfyUI-WanAnimatePreprocess/requirements.txt\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Audited 2 packages in 2ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:18 | worker-comfyui: pip install -r custom_nodes/ComfyUI-VideoHelperSuite/requirements.txt\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Audited 17 packages in 5ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:18 | worker-comfyui: pip install -r custom_nodes/ComfyUI-VibeVoice/requirements.txt\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Audited 2 packages in 4ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:18 | worker-comfyui: pip install -r custom_nodes/ComfyUI-TeaCache/requirements.txt\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  + supervision==0.6.0\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj |  - supervision==0.26.1\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Installed 1 package in 24ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Uninstalled 1 package in 10ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Resolved 103 packages in 368ms\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.261 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:17 | worker-comfyui: pip install -r custom_nodes/ComfyUI-RMBG/requirements.txt\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj |  ~ decord==0.6.0\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Installed 1 package in 40ms\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Uninstalled 1 package in 7ms\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Resolved 84 packages in 235ms\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:17 | worker-comfyui: pip install -r custom_nodes/ComfyUI-LatentSyncWrapper/requirements.txt\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Audited 7 packages in 4ms\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:17 | worker-comfyui: pip install -r custom_nodes/ComfyUI-KJNodes/requirements.txt\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Audited 66 packages in 0.42ms\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Resolved 66 packages in 447ms\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:16 | worker-comfyui: pip install -r custom_nodes/ComfyUI-Impact-Pack/requirements.txt\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Audited 7 packages in 4ms\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:16 | worker-comfyui: pip install -r custom_nodes/ComfyUI-GGUF-FantasyTalking/requirements.txt\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Audited 3 packages in 3ms\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:16 | worker-comfyui: pip install -r custom_nodes/ComfyUI-GGUF/requirements.txt\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Audited 6 packages in 5ms\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:16 | worker-comfyui: pip install -r custom_nodes/ComfyUI-Florence2/requirements.txt\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj |  + timm==1.0.21\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj |  - timm==0.6.13\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Installed 1 package in 189ms\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Uninstalled 1 package in 8ms\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Resolved 72 packages in 185ms\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:16 | worker-comfyui: pip install -r custom_nodes/ComfyUI-Easy-Use/requirements.txt\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Audited 1 package in 3ms\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:16 | worker-comfyui: pip install -r custom_nodes/ComfyUI-Detail-Daemon/requirements.txt\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Audited 11 packages in 27ms\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | Using Python 3.12.3 environment at: /opt/venv\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:16 | worker-comfyui: pip install -r custom_nodes/ComfyUI-Manager/requirements.txt\n
-2025-11-01  09:38:23.260 | info | j1o0xmbql5wzpj | 2025-11-01 06:38:16 | worker-comfyui: Installing dependencies for copied custom_nodes\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | Finished.
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | worker-comfyui - Job completed. Returning 1 image(s).\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | worker-comfyui - Closing websocket connection.\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | worker-comfyui - --> If this output is useful, please consider opening an issue on GitHub to discuss adding support.\n
-2025-11-01  07:24:32.955 | warning | xe3dimsy9d4om6 | worker-comfyui - WARNING: Node 18 produced unhandled output keys: ['gifs'].\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | worker-comfyui - Encoded wan2.2_00001.mp4 as base64\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | worker-comfyui - Successfully fetched image data for wan2.2_00001.mp4\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | worker-comfyui - Fetching image data: type=output, subfolder=, filename=wan2.2_00001.mp4\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | worker-comfyui - Processing video file: wan2.2_00001.mp4 (type: output)\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | worker-comfyui - Node 18 contains 1 item(s) in 'gifs' key\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | worker-comfyui - Node 18 uses 'gifs' key instead of 'images' (common for video outputs)\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | worker-comfyui - Node 18 output keys: ['gifs']\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | }\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 |   }\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 |     ]\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 |       }\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 |         "fullpath": "/comfyui/output/wan2.2_00001.mp4"\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 |         "workflow": "wan2.2_00001.png",\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 |         "frame_rate": 24.0,\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 |         "format": "video/h264-mp4",\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 |         "type": "output",\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 |         "subfolder": "",\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 |         "filename": "wan2.2_00001.mp4",\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 |       {\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 |     "gifs": [\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 |   "18": {\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | worker-comfyui - Output structure: {\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | worker-comfyui - Processing 1 output nodes...\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | worker-comfyui - Fetching history for prompt 1785ca48-de39-4cfe-ba9b-7f89caf2d694...\n
-2025-11-01  07:24:32.955 | info | xe3dimsy9d4om6 | worker-comfyui - Execution finished for prompt 1785ca48-de39-4cfe-ba9b-7f89caf2d694\n
-2025-11-01  07:24:32.552 | info | xe3dimsy9d4om6 | worker-comfyui - Status update: 0 items remaining in queue\n
-2025-11-01  07:24:32.136 | info | xe3dimsy9d4om6 | Prompt executed in 447.51 seconds\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | loaded completely 12076.923828125 242.02829551696777 True\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.head.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.12.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.12.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.13.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.13.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.14.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.14.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.0.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.0.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.1.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.1.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.3.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.10.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.10.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.4.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.8.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.8.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.9.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.9.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.3.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.4.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.4.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.6.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly conv2 CausalConv3d(16, 16, kernel_size=(1, 1, 1), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.middle.0.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.middle.0.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.middle.1.norm RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.middle.2.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.middle.2.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.0.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.0.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.1.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.1.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.2.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.2.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.4.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.5.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.5.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.6.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.6.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.10.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.10.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.6.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.7.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.7.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.9.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.9.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.head.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.middle.0.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.middle.0.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.middle.1.norm RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.middle.2.residual.0 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.middle.2.residual.3 RMS_norm()\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly conv1 CausalConv3d(32, 32, kernel_size=(1, 1, 1), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.head.2 CausalConv3d(96, 3, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.conv1 CausalConv3d(3, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.3.shortcut CausalConv3d(96, 192, kernel_size=(1, 1, 1), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.4.shortcut CausalConv3d(192, 384, kernel_size=(1, 1, 1), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.6.shortcut CausalConv3d(192, 384, kernel_size=(1, 1, 1), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.2.resample.1 Conv2d(96, 96, kernel_size=(3, 3), stride=(2, 2))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.5.time_conv CausalConv3d(192, 192, kernel_size=(3, 1, 1), stride=(2, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.middle.1.proj Conv2d(384, 384, kernel_size=(1, 1), stride=(1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.middle.1.proj Conv2d(384, 384, kernel_size=(1, 1), stride=(1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.11.resample.1 Conv2d(192, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.conv1 CausalConv3d(16, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.12.residual.2 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.12.residual.6 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.13.residual.2 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.13.residual.6 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.14.residual.2 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.14.residual.6 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.0.residual.2 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.0.residual.6 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.1.residual.2 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.1.residual.6 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.head.2 CausalConv3d(384, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.5.resample.1 Conv2d(192, 192, kernel_size=(3, 3), stride=(2, 2))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.8.time_conv CausalConv3d(384, 384, kernel_size=(3, 1, 1), stride=(2, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.middle.1.to_qkv Conv2d(384, 1152, kernel_size=(1, 1), stride=(1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.middle.1.to_qkv Conv2d(384, 1152, kernel_size=(1, 1), stride=(1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.3.residual.2 CausalConv3d(96, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.3.resample.1 Conv2d(384, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.7.resample.1 Conv2d(384, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.3.time_conv CausalConv3d(384, 768, kernel_size=(3, 1, 1), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.7.time_conv CausalConv3d(384, 768, kernel_size=(3, 1, 1), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.10.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.10.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.8.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.8.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.9.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.9.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.3.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.4.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.4.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.8.resample.1 Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.4.residual.2 CausalConv3d(192, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.6.residual.2 CausalConv3d(192, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.middle.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.middle.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.middle.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.middle.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.1.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.1.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.4.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.5.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.5.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.6.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly decoder.upsamples.6.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.10.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.10.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.6.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.7.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.7.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.9.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.downsamples.9.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.middle.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.middle.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.middle.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly encoder.middle.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
-2025-11-01  07:24:22.837 | info | xe3dimsy9d4om6 | Requested to load WanVAE\n
-2025-11-01  07:24:22.836 | info | xe3dimsy9d4om6 | Restoring initial comfy attention\n
-2025-11-01  07:24:12.813 | info | xe3dimsy9d4om6 | \r  0%|          | 0/2 [00:00<?, ?it/s]\r 50%|█████     | 1/2 [01:04<01:04, 64.99s/it]\r100%|██████████| 2/2 [02:09<00:00, 64.66s/it]\r100%|██████████| 2/2 [02:09<00:00, 64.71s/it]\n
-2025-11-01  07:24:08.424 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:23:58.414 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:23:48.404 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:23:38.400 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:23:28.390 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:23:18.380 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:22:58.665 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:22:48.655 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:22:38.650 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:22:28.648 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:22:18.638 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:22:08.628 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:22:03.383 | info | xe3dimsy9d4om6 | Patching comfy attention to use sageattn\n
-2025-11-01  07:21:58.618 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:21:48.610 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:21:38.600 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:21:28.589 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:21:18.582 | info | xe3dimsy9d4om6 | worker-comfyui - Websocket receive timed out. Still waiting...\n
-2025-11-01  07:21:18.582 | info | xe3dimsy9d4om6 | Attempting to release mmap (573)\n
-2025-11-01  07:21:18.582 | info | xe3dimsy9d4om6 | loaded partially 1300.7694453729564 1300.763671875 0\n
-2025-11-01  07:21:18.582 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly diffusion_model.blocks.0.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
-2025-11-01  07:21:18.582 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly diffusion_model.blocks.0.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
-2025-11-01  07:21:18.582 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly diffusion_model.blocks.1.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
-2025-11-01  07:21:18.582 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly diffusion_model.blocks.1.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
-2025-11-01  07:21:18.582 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly diffusion_model.blocks.10.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
-2025-11-01  07:21:18.582 | info | xe3dimsy9d4om6 | lowvram: loaded module regularly diffusion_model.blocks.10.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | Finished.
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | worker-comfyui - Job completed. Returning 1 image(s).\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | worker-comfyui - Closing websocket connection.\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | worker-comfyui - --> If this output is useful, please consider opening an issue on GitHub to discuss adding support.\n
+2025-11-01  12:02:57.452 | warning | 9dxhdazz0woxj1 | worker-comfyui - WARNING: Node 18 produced unhandled output keys: ['gifs'].\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | worker-comfyui - Encoded wan2.2_00001.mp4 as base64\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | worker-comfyui - Successfully fetched image data for wan2.2_00001.mp4\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | worker-comfyui - Fetching image data: type=output, subfolder=, filename=wan2.2_00001.mp4\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | worker-comfyui - Processing video file: wan2.2_00001.mp4 (type: output)\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | worker-comfyui - Node 18 contains 1 item(s) in 'gifs' key\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | worker-comfyui - Node 18 uses 'gifs' key instead of 'images' (common for video outputs)\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | worker-comfyui - Node 18 output keys: ['gifs']\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | }\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 |   }\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 |     ]\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 |       }\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 |         "fullpath": "/comfyui/output/wan2.2_00001.mp4"\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 |         "workflow": "wan2.2_00001.png",\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 |         "frame_rate": 24.0,\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 |         "format": "video/h264-mp4",\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 |         "type": "output",\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 |         "subfolder": "",\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 |         "filename": "wan2.2_00001.mp4",\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 |       {\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 |     "gifs": [\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 |   "18": {\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | worker-comfyui - Output structure: {\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | worker-comfyui - Processing 1 output nodes...\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | worker-comfyui - Fetching history for prompt e9cd2afd-6602-4f81-896e-db1e29e8c247...\n
+2025-11-01  12:02:57.452 | info | 9dxhdazz0woxj1 | worker-comfyui - Execution finished for prompt e9cd2afd-6602-4f81-896e-db1e29e8c247\n
+2025-11-01  12:02:56.867 | info | 9dxhdazz0woxj1 | worker-comfyui - Status update: 0 items remaining in queue\n
+2025-11-01  12:02:56.386 | info | 9dxhdazz0woxj1 | Prompt executed in 450.43 seconds\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | loaded completely 12076.925659179688 242.02829551696777 True\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.head.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.12.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.12.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.13.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.13.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.14.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.14.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.0.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.0.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.1.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.1.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.3.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.10.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.10.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.4.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.8.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.8.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.9.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.9.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.3.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.4.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.4.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.6.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly conv2 CausalConv3d(16, 16, kernel_size=(1, 1, 1), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.0.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.0.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.1.norm RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.2.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.2.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.0.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.0.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.1.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.1.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.2.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.2.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.4.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.5.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.5.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.6.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.6.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.10.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.10.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.6.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.7.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.7.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.9.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.9.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.head.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.0.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.0.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.1.norm RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.2.residual.0 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.2.residual.3 RMS_norm()\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly conv1 CausalConv3d(32, 32, kernel_size=(1, 1, 1), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.head.2 CausalConv3d(96, 3, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.conv1 CausalConv3d(3, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.3.shortcut CausalConv3d(96, 192, kernel_size=(1, 1, 1), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.4.shortcut CausalConv3d(192, 384, kernel_size=(1, 1, 1), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.6.shortcut CausalConv3d(192, 384, kernel_size=(1, 1, 1), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.2.resample.1 Conv2d(96, 96, kernel_size=(3, 3), stride=(2, 2))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.5.time_conv CausalConv3d(192, 192, kernel_size=(3, 1, 1), stride=(2, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.1.proj Conv2d(384, 384, kernel_size=(1, 1), stride=(1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.1.proj Conv2d(384, 384, kernel_size=(1, 1), stride=(1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.11.resample.1 Conv2d(192, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.conv1 CausalConv3d(16, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.12.residual.2 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.12.residual.6 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.13.residual.2 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.13.residual.6 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.14.residual.2 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.14.residual.6 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.0.residual.2 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.0.residual.6 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.1.residual.2 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.1.residual.6 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.head.2 CausalConv3d(384, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.5.resample.1 Conv2d(192, 192, kernel_size=(3, 3), stride=(2, 2))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.8.time_conv CausalConv3d(384, 384, kernel_size=(3, 1, 1), stride=(2, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.1.to_qkv Conv2d(384, 1152, kernel_size=(1, 1), stride=(1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.1.to_qkv Conv2d(384, 1152, kernel_size=(1, 1), stride=(1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.3.residual.2 CausalConv3d(96, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.3.resample.1 Conv2d(384, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.7.resample.1 Conv2d(384, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.3.time_conv CausalConv3d(384, 768, kernel_size=(3, 1, 1), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.7.time_conv CausalConv3d(384, 768, kernel_size=(3, 1, 1), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.10.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.10.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.8.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.8.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.9.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.9.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.3.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.4.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.4.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.8.resample.1 Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.4.residual.2 CausalConv3d(192, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.6.residual.2 CausalConv3d(192, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.1.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.1.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.4.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.5.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.5.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.6.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.6.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.10.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.10.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.6.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.7.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.7.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.9.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.9.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | Requested to load WanVAE\n
+2025-11-01  12:02:47.366 | info | 9dxhdazz0woxj1 | Restoring initial comfy attention\n
+2025-11-01  12:02:37.351 | info | 9dxhdazz0woxj1 | \r  0%|          | 0/2 [00:00<?, ?it/s]\r 50%|█████     | 1/2 [01:05<01:05, 65.18s/it]\r100%|██████████| 2/2 [02:09<00:00, 64.81s/it]\r100%|██████████| 2/2 [02:09<00:00, 64.86s/it]\n
+2025-11-01  12:02:32.852 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:02:22.842 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:02:12.832 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:02:02.822 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:01:52.812 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:01:42.802 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:01:28.207 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:01:18.197 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:01:08.187 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:00:58.177 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:00:48.167 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:00:38.161 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:00:28.151 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:00:27.613 | info | 9dxhdazz0woxj1 | Patching comfy attention to use sageattn\n
+2025-11-01  12:00:18.141 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  12:00:08.134 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:59:58.124 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:59:48.114 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | Attempting to release mmap (518)\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | loaded partially 1299.7069453729564 1299.6993408203125 0\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.0.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.0.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.1.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.1.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.10.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.10.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.11.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.11.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.12.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.12.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.13.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.105 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.13.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.14.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.14.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.15.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.15.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.16.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.16.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.17.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.17.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.18.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.18.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.19.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.19.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.2.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.2.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.20.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.20.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.21.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.21.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.22.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.22.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.23.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.23.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.24.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.24.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.25.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.25.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.26.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.26.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.27.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.27.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.28.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.28.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.29.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.29.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.3.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.3.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.30.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.30.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.31.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.31.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.32.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.32.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.33.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.33.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.34.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.34.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.35.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.35.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.36.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.36.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.37.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.37.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.38.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.38.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.39.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.39.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.4.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.4.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.5.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.5.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.6.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.6.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.7.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.7.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.8.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.8.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.9.norm1 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.9.norm2 LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.head.norm LayerNorm((5120,), eps=1e-06, elementwise_affine=False)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.39.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.39.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.39.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.4.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.4.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.4.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.4.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.5.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.5.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.5.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.5.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.6.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.6.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.6.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.6.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.7.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.7.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.7.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.7.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.8.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.8.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.8.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.8.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.9.cross_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.9.cross_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.9.self_attn.norm_k RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.9.self_attn.norm_q RMSNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.0.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.1.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.10.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.11.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.12.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.13.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.14.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.15.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.16.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.17.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.18.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.19.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.2.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.20.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.21.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.22.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.23.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.24.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.25.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.26.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.27.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.28.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.29.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.3.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.30.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.31.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.32.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.33.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.34.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.35.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.36.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.37.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.38.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.39.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.4.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.5.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.6.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.7.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.8.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.9.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.head.head Linear(in_features=5120, out_features=64, bias=True)\n
+2025-11-01  11:59:38.104 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.patch_embedding Conv3d(36, 5120, kernel_size=(1, 2, 2), stride=(1, 2, 2))\n
+2025-11-01  11:59:31.805 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.9.self_attn.v Linear(in_features=5120, out_features=5120, bias=True)\n
+2025-11-01  11:59:31.804 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.31.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:31.703 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.32.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:31.419 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.33.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:31.419 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.34.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:31.061 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.35.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:31.061 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.36.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:30.895 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.37.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:30.552 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.38.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:30.552 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.39.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:30.375 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.4.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:30.375 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.5.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:30.157 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.6.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:29.929 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.7.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:29.929 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.8.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:29.700 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.9.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:29.700 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.text_embedding.2 Linear(in_features=5120, out_features=5120, bias=True)\n
+2025-11-01  11:59:29.541 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.time_embedding.2 Linear(in_features=5120, out_features=5120, bias=True)\n
+2025-11-01  11:59:29.541 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.0.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:59:29.394 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.time_projection.1 Linear(in_features=5120, out_features=30720, bias=True)\n
+2025-11-01  11:59:28.093 | info | 9dxhdazz0woxj1 | Requested to load WAN21\n
+2025-11-01  11:59:27.860 | info | 9dxhdazz0woxj1 | Unloading WAN21\n
+2025-11-01  11:59:27.860 | info | 9dxhdazz0woxj1 | Restoring initial comfy attention\n
+2025-11-01  11:59:27.443 | info | 9dxhdazz0woxj1 | \r  0%|          | 0/2 [00:00<?, ?it/s]\r 50%|█████     | 1/2 [01:11<01:11, 71.89s/it]\r100%|██████████| 2/2 [02:16<00:00, 67.45s/it]\r100%|██████████| 2/2 [02:16<00:00, 68.12s/it]\n
+2025-11-01  11:59:23.146 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:59:13.136 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:59:03.126 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:58:53.116 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:58:43.110 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:58:33.100 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:58:22.462 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:58:12.452 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:58:02.442 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:57:52.432 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:57:42.422 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:57:32.414 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:57:22.404 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:57:12.394 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:57:11.192 | info | 9dxhdazz0woxj1 | Patching comfy attention to use sageattn\n
+2025-11-01  11:57:02.384 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:56:52.374 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:56:42.364 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:56:32.354 | info | 9dxhdazz0woxj1 | worker-comfyui - Websocket receive timed out. Still waiting...\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.13.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.14.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.15.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.16.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.17.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.18.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.19.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.2.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.20.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.21.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.22.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.23.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.24.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.25.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.26.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.27.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.28.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.29.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.3.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.30.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.31.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.32.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.33.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.34.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.35.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.36.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.37.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.38.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.39.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.4.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.5.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.6.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.7.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.8.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.9.norm3 LayerNorm((5120,), eps=1e-06, elementwise_affine=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.head.head Linear(in_features=5120, out_features=64, bias=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.time_embedding.0 Linear(in_features=256, out_features=5120, bias=True)\n
+2025-11-01  11:56:22.344 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.patch_embedding Conv3d(36, 5120, kernel_size=(1, 2, 2), stride=(1, 2, 2))\n
+2025-11-01  11:56:17.448 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.9.self_attn.v Linear(in_features=5120, out_features=5120, bias=True)\n
+2025-11-01  11:56:17.448 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.31.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:17.285 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.32.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:16.988 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.33.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:16.988 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.34.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:16.713 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.35.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:16.712 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.36.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:16.532 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.37.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:16.326 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.38.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:16.326 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.39.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:16.094 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.4.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:16.094 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.5.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:15.941 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.6.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:15.782 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.7.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:15.782 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.8.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:15.569 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.9.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:15.569 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.text_embedding.2 Linear(in_features=5120, out_features=5120, bias=True)\n
+2025-11-01  11:56:15.407 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.time_embedding.2 Linear(in_features=5120, out_features=5120, bias=True)\n
+2025-11-01  11:56:15.407 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.blocks.0.ffn.0 Linear(in_features=5120, out_features=13824, bias=True)\n
+2025-11-01  11:56:15.238 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly diffusion_model.time_projection.1 Linear(in_features=5120, out_features=30720, bias=True)\n
+2025-11-01  11:56:15.238 | info | 9dxhdazz0woxj1 | Unloading WanTEModel\n
+2025-11-01  11:56:15.238 | info | 9dxhdazz0woxj1 | Unloading WanVAE\n
+2025-11-01  11:56:12.360 | info | 9dxhdazz0woxj1 | Requested to load WAN21\n
+2025-11-01  11:56:12.360 | info | 9dxhdazz0woxj1 | adm 0\n
+2025-11-01  11:56:12.360 | info | 9dxhdazz0woxj1 | model_type FLOW\n
+2025-11-01  11:56:12.360 | info | 9dxhdazz0woxj1 | model weight dtype torch.float16, manual cast: None\n
+2025-11-01  11:56:09.691 | info | 9dxhdazz0woxj1 | gguf qtypes: F16 (694), Q5_K (400), F32 (1)\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.0.residual.6 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.1.residual.2 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.1.residual.6 CausalConv3d(96, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.head.2 CausalConv3d(384, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.5.resample.1 Conv2d(192, 192, kernel_size=(3, 3), stride=(2, 2))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.8.time_conv CausalConv3d(384, 384, kernel_size=(3, 1, 1), stride=(2, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.1.to_qkv Conv2d(384, 1152, kernel_size=(1, 1), stride=(1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.1.to_qkv Conv2d(384, 1152, kernel_size=(1, 1), stride=(1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.3.residual.2 CausalConv3d(96, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.3.resample.1 Conv2d(384, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.7.resample.1 Conv2d(384, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.3.time_conv CausalConv3d(384, 768, kernel_size=(3, 1, 1), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.7.time_conv CausalConv3d(384, 768, kernel_size=(3, 1, 1), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.10.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.10.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.8.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.8.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.9.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.9.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.3.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.4.residual.2 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.4.residual.6 CausalConv3d(192, 192, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.8.resample.1 Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.4.residual.2 CausalConv3d(192, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.6.residual.2 CausalConv3d(192, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.middle.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.1.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.1.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.4.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.5.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.5.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.6.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly decoder.upsamples.6.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.10.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.10.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.6.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.7.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.7.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.9.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.downsamples.9.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.0.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.0.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.2.residual.2 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:56:09.348 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly encoder.middle.2.residual.6 CausalConv3d(384, 384, kernel_size=(3, 3, 3), stride=(1, 1, 1))\n
+2025-11-01  11:55:59.656 | info | 9dxhdazz0woxj1 | Requested to load WanVAE\n
+2025-11-01  11:55:58.965 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.12.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-11-01  11:55:58.965 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-11-01  11:55:58.965 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-11-01  11:55:58.965 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-11-01  11:55:58.965 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.13.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-11-01  11:55:58.965 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.k Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-11-01  11:55:58.965 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.o Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-11-01  11:55:58.965 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.q Linear(in_features=4096, out_features=4096, bias=False)\n
+2025-11-01  11:55:58.965 | info | 9dxhdazz0woxj1 | lowvram: loaded module regularly umt5xxl.transformer.encoder.block.14.layer.0.SelfAttention.v Linear(in_features=4096, out_features=4096, bias=False)\n

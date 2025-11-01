@@ -456,6 +456,39 @@ def get_history(prompt_id):
     return response.json()
 
 
+def _read_from_disk(filename, subfolder, image_type):
+    """
+    Read file directly from disk instead of HTTP /view.
+    This is much faster for large video files.
+
+    Args:
+        filename (str): Name of the file
+        subfolder (str): Subfolder path (can be empty)
+        image_type (str): Type of file ("output", "temp", etc.)
+
+    Returns:
+        bytes: File content, or None if file not found
+    """
+    root = "/comfyui"
+    if image_type in ("output", "temp"):
+        base = os.path.join(root, image_type)
+    else:
+        base = os.path.join(root, "output")
+
+    path = os.path.join(base, subfolder, filename) if subfolder else os.path.join(base, filename)
+
+    if os.path.isfile(path):
+        try:
+            with open(path, "rb") as f:
+                file_bytes = f.read()
+                print(f"worker-comfyui - Read {filename} from disk ({len(file_bytes)} bytes)")
+                return file_bytes
+        except Exception as e:
+            print(f"worker-comfyui - Error reading {path} from disk: {e}")
+            return None
+    return None
+
+
 def get_image_data(filename, subfolder, image_type):
     """
     Fetch image bytes from the ComfyUI /view endpoint.
@@ -711,19 +744,29 @@ def handler(job):
 
                     # Check if this is a video file (.mp4, .webm, etc.)
                     file_extension = os.path.splitext(filename)[1].lower() if filename else ".png"
-                    is_video = file_extension in [".mp4", ".webm", ".avi", ".mov", ".mkv"]
+                    video_exts = [".mp4", ".webm", ".avi", ".mov", ".mkv", ".gif", ".webp"]
+                    is_video = file_extension in video_exts
                     
                     if is_video:
                         print(f"worker-comfyui - Processing video file: {filename} (type: {img_type})")
                     
-                    # Use get_image_data for both images and videos (ComfyUI /view endpoint supports both)
-                    image_bytes = get_image_data(filename, subfolder, img_type)
+                    # Try reading from disk first (much faster for large videos)
+                    # Fallback to HTTP /view if file not found on disk
+                    image_bytes = _read_from_disk(filename, subfolder, img_type)
+                    if image_bytes is None:
+                        # Fallback to HTTP /view endpoint
+                        image_bytes = get_image_data(filename, subfolder, img_type)
 
                     if image_bytes:
                         if not file_extension:
                             file_extension = ".png" if not is_video else ".mp4"
 
-                        if os.environ.get("BUCKET_ENDPOINT_URL"):
+                        # Force S3 for videos (to avoid large base64 responses)
+                        # This significantly improves performance for large video files
+                        force_s3_video = os.environ.get("FORCE_S3_VIDEO", "true").lower() == "true"
+                        use_s3 = (is_video and force_s3_video) or os.environ.get("BUCKET_ENDPOINT_URL")
+
+                        if use_s3:
                             try:
                                 with tempfile.NamedTemporaryFile(
                                     suffix=file_extension, delete=False

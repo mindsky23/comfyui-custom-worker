@@ -93,6 +93,20 @@ else
     log "worker-comfyui: WARNING - Could not check CUDA availability via Python"
 fi
 
+# Check ffmpeg NVENC support (hardware video encoding)
+log "worker-comfyui: Checking ffmpeg NVENC support"
+if command -v ffmpeg >/dev/null 2>&1; then
+    if ffmpeg -encoders 2>/dev/null | grep -q nvenc; then
+        log "worker-comfyui: ✓ ffmpeg supports NVENC (hardware video encoding available)"
+        log "worker-comfyui: 💡 Tip: Enable NVENC in video nodes (h264_nvenc/hevc_nvenc) for 2-5x faster encoding"
+    else
+        log "worker-comfyui: ⚠ ffmpeg does not support NVENC (software encoding will be used)"
+        log "worker-comfyui: 💡 Tip: Consider using ffmpeg build with NVENC support for better performance"
+    fi
+else
+    log "worker-comfyui: WARNING - ffmpeg not found"
+fi
+
 # Performance optimizations for RTX 4090 and high-end GPUs
 # Enable PyTorch optimizations for faster inference
 export PYTORCH_ENABLE_MPS_FALLBACK=0  # Disable MPS (we're using CUDA)

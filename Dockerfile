@@ -68,6 +68,8 @@ RUN apt-get update && apt-get install -y \
     libxrender1 \
     ffmpeg \
     build-essential \
+    google-perftools \
+    libtcmalloc-minimal4 \
     && ln -sf /usr/bin/python3.12 /usr/bin/python \
     && ln -sf /usr/bin/pip3 /usr/bin/pip
 

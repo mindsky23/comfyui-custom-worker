@@ -201,6 +201,44 @@ If you have 24GB+ VRAM (RTX 4090), LowVRAM mode will be much slower than regular
 
 If you see `cannot import name 'draw_rounded_rectangle'` errors, this has been fixed in the latest build. If the error persists, the ComfyUI_LayerStyle nodes may be incompatible with your ComfyUI version - try updating or removing the nodes.
 
+## Environment Variables
+
+### S3 Configuration (for video files)
+
+For optimal performance, especially with large video files, configure S3 upload:
+
+- **`BUCKET_ENDPOINT_URL`**: S3 endpoint URL (optional, but recommended for video)
+- **`BUCKET_ACCESS_KEY_ID`**: S3 access key (optional)
+- **`BUCKET_SECRET_ACCESS_KEY`**: S3 secret key (optional)
+- **`FORCE_S3_VIDEO`**: Force S3 upload for video files (default: `true`)
+  - When enabled, all video files (`.mp4`, `.webm`, `.avi`, `.mov`, `.mkv`, `.gif`, `.webp`) are automatically uploaded to S3
+  - This avoids large base64 responses and significantly improves performance
+  - Set to `false` to disable automatic S3 upload for videos
+
+> [!NOTE]
+>
+> **Performance Optimization:** For large video files, S3 upload is strongly recommended. Base64 encoding can create responses that are 33% larger than the original file and slow down the API response.
+
+### Other Environment Variables
+
+- **`REFRESH_WORKER`**: Set to `"true"` to restart ComfyUI after each job (default: `"false"`)
+- **`COMFY_ORG_API_KEY`**: Comfy.org API key for API Nodes (can be overridden per-request)
+- **`WEBSOCKET_RECONNECT_ATTEMPTS`**: Number of websocket reconnection attempts (default: `5`)
+- **`WEBSOCKET_RECONNECT_DELAY_S`**: Delay between websocket reconnection attempts in seconds (default: `3`)
+
+For complete configuration details, see the [Configuration Guide](docs/configuration.md).
+
+## Performance Optimizations
+
+This worker includes several performance optimizations:
+
+- **Direct file reading**: Large video files are read directly from disk instead of HTTP `/view` endpoint (faster I/O)
+- **Automatic S3 upload**: Video files are automatically uploaded to S3 when configured (avoids base64 overhead)
+- **Memory optimization**: Uses `libtcmalloc` for better memory management (if available)
+- **GPU detection**: Automatically detects high-end GPUs (20GB+ VRAM) and optimizes settings
+
+For workflow optimization tips (Lightning LoRA, GGUF models, etc.), see [WORKFLOW-OPTIMIZATION-TIPS.md](WORKFLOW-OPTIMIZATION-TIPS.md).
+
 ## Further Documentation
 
 - **[Deployment Guide](docs/deployment.md):** Detailed steps for deploying on RunPod.
@@ -208,4 +246,5 @@ If you see `cannot import name 'draw_rounded_rectangle'` errors, this has been f
 - **[Customization Guide](docs/customization.md):** Adding custom models and nodes (Network Volumes, Docker builds).
 - **[Development Guide](docs/development.md):** Setting up a local environment for development & testing
 - **[CI/CD Guide](docs/ci-cd.md):** Information about the automated Docker build and publish workflows.
+- **[Workflow Optimization Tips](WORKFLOW-OPTIMIZATION-TIPS.md):** Tips for optimizing your ComfyUI workflow (Lightning LoRA, GGUF, TeaCache, etc.)
 - **[Acknowledgments](docs/acknowledgments.md):** Credits and thanks
