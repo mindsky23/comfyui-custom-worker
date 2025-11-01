@@ -64,6 +64,35 @@ fi
 log "worker-comfyui: Starting ComfyUI"
 export PYTHONUNBUFFERED=1
 
+# Check GPU availability before starting ComfyUI
+log "worker-comfyui: Checking GPU availability"
+if command -v nvidia-smi >/dev/null 2>&1; then
+    nvidia-smi --query-gpu=name,memory.total --format=csv,noheader,nounits | while IFS=, read -r gpu_name gpu_mem; do
+        log "worker-comfyui: GPU detected: ${gpu_name} (${gpu_mem}MB)"
+    done
+else
+    log "worker-comfyui: WARNING - nvidia-smi not found. GPU may not be accessible."
+fi
+
+# Check if CUDA is available via Python (more reliable)
+if python3 -c "import torch; print('CUDA available:', torch.cuda.is_available())" 2>/dev/null; then
+    CUDA_AVAILABLE=$(python3 -c "import torch; print('yes' if torch.cuda.is_available() else 'no')" 2>/dev/null || echo "unknown")
+    if [ "$CUDA_AVAILABLE" = "no" ]; then
+        log "worker-comfyui: ERROR - CUDA is not available via PyTorch"
+        log "worker-comfyui: This usually means:"
+        log "worker-comfyui:   1. Container was started without GPU access (missing --gpus all or similar)"
+        log "worker-comfyui:   2. NVIDIA drivers are not installed or not compatible"
+        log "worker-comfyui:   3. CUDA runtime is not properly installed"
+        log "worker-comfyui:"
+        log "worker-comfyui: For RunPod: Ensure your endpoint is configured with GPU access enabled"
+        log "worker-comfyui: For local testing: Use 'docker run --gpus all ...' to enable GPU access"
+    else
+        log "worker-comfyui: CUDA is available via PyTorch"
+    fi
+else
+    log "worker-comfyui: WARNING - Could not check CUDA availability via Python"
+fi
+
 # Performance optimizations for RTX 4090 and high-end GPUs
 # Enable PyTorch optimizations for faster inference
 export PYTORCH_ENABLE_MPS_FALLBACK=0  # Disable MPS (we're using CUDA)

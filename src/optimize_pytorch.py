@@ -33,8 +33,9 @@ def optimize_pytorch_for_rtx4090():
     
     # Optimize CUDA memory allocation
     # Larger max_split_size_mb reduces fragmentation and improves performance
+    # Note: PYTORCH_CUDA_ALLOC_CONF is deprecated, using PYTORCH_ALLOC_CONF instead
     if gpu_mem_gb >= 20:  # RTX 4090, 3090, etc.
-        os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'max_split_size_mb:512'
+        os.environ['PYTORCH_ALLOC_CONF'] = 'max_split_size_mb:512'
         print("✓ Set CUDA memory allocation: max_split_size_mb=512")
     
     # Disable blocking for async execution

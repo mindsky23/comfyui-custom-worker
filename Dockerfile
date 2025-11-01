@@ -24,7 +24,8 @@ ENV CMAKE_BUILD_PARALLEL_LEVEL=8
 
 # PyTorch/CUDA Performance Optimizations for RTX 4090 and similar high-end GPUs
 # These settings dramatically improve inference speed (can reduce processing time by 50-70%)
-ENV PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:512
+# Note: PYTORCH_CUDA_ALLOC_CONF is deprecated, using PYTORCH_ALLOC_CONF instead
+ENV PYTORCH_ALLOC_CONF=max_split_size_mb:512
 ENV TORCH_COMPILE_DEBUG=0
 # Enable TF32 (TensorFloat-32) for Ada Lovelace (RTX 4090) - 2-3x faster with minimal accuracy loss
 ENV TORCH_CUDNN_BENCHMARK=1
