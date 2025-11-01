@@ -542,7 +542,13 @@ def handler(job):
 
     force_s3_video = os.environ.get("FORCE_S3_VIDEO", "true").lower() == "true"
     bucket_endpoint = os.environ.get("BUCKET_ENDPOINT_URL")
+    bucket_region = os.environ.get("BUCKET_REGION") or os.environ.get("AWS_REGION")
     bucket_configured = bool(bucket_endpoint)
+
+    # Ensure boto3 (used by rp_upload) signs requests with the correct region
+    if bucket_region:
+        os.environ.setdefault("AWS_REGION", bucket_region)
+        os.environ.setdefault("AWS_DEFAULT_REGION", bucket_region)
 
     try:
         # Establish WebSocket connection
