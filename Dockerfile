@@ -55,7 +55,7 @@ ENV TORCH_CUDA_ARCH_LIST=${TORCH_CUDA_ARCH_LIST}
 ENV TRITON_CACHE_DIR=/tmp/triton_cache
 
 # Install Python, git and other necessary tools
-RUN apt-get update && apt-get install -y \
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked --mount=type=cache,target=/var/lib/apt/lists,sharing=locked apt-get update && apt-get install -y --no-install-recommends \
     python3.12 \
     python3.12-venv \
     python3.12-dev \
@@ -69,7 +69,8 @@ RUN apt-get update && apt-get install -y \
     ffmpeg \
     build-essential \
     && ln -sf /usr/bin/python3.12 /usr/bin/python \
-    && ln -sf /usr/bin/pip3 /usr/bin/pip
+    && ln -sf /usr/bin/pip3 /usr/bin/pip \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install uv (latest) using official installer and create isolated venv
 RUN wget -qO- https://astral.sh/uv/install.sh | sh \
@@ -81,7 +82,7 @@ RUN wget -qO- https://astral.sh/uv/install.sh | sh \
 ENV PATH="/opt/venv/bin:${PATH}"
 
 # Install comfy-cli + dependencies needed by it to install ComfyUI
-RUN uv pip install --no-cache-dir comfy-cli pip setuptools wheel
+RUN --mount=type=cache,target=/root/.cache/uv --mount=type=cache,target=/root/.cache/pip uv pip install comfy-cli pip setuptools wheel
 
 # Install ComfyUI
 RUN if [ -n "${CUDA_VERSION_FOR_COMFY}" ]; then \
@@ -105,7 +106,7 @@ RUN if [ "$ENABLE_COMFY_NODE_INSTALL" = "true" ]; then \
     fi
 
 # Upgrade PyTorch if needed (for newer CUDA versions)
-RUN if [ "$ENABLE_PYTORCH_UPGRADE" = "true" ]; then \
+RUN --mount=type=cache,target=/root/.cache/uv --mount=type=cache,target=/root/.cache/pip if [ "$ENABLE_PYTORCH_UPGRADE" = "true" ]; then \
       uv pip install --force-reinstall torch torchvision torchaudio --index-url ${PYTORCH_INDEX_URL}; \
     fi
 
@@ -157,15 +158,15 @@ RUN comfy-node-install \
 # Install nodes that need special handling (registry names or direct URLs)
 RUN cd custom_nodes && \
     # RES4LYF - direct git clone
-    git clone https://github.com/ClownsharkBatwing/RES4LYF.git RES4LYF || true && \
+    git clone --depth=1 --no-tags https://github.com/ClownsharkBatwing/RES4LYF.git RES4LYF || true && \
     # ComfyUI-TeaCache - registry name: teacache
     comfy-node-install teacache || true && \
     # cg-image-picker - direct GitHub URL (correct owner: chrisgoringe)
-    git clone https://github.com/chrisgoringe/cg-image-picker.git cg-image-picker || true && \
+    git clone --depth=1 --no-tags https://github.com/chrisgoringe/cg-image-picker.git cg-image-picker || true && \
     # HavocsCall_Custom_Nodes - registry name: havocscall_custom_nodes
     comfy-node-install havocscall_custom_nodes || true && \
     # DynamicPrompts - direct git clone (correct URL)
-    git clone https://github.com/adieyal/comfyui-dynamicprompts.git comfyui-dynamicprompts || true
+    git clone --depth=1 --no-tags https://github.com/adieyal/comfyui-dynamicprompts.git comfyui-dynamicprompts || true
 
 # Rename directories to match what ComfyUI expects
 # comfy-node-install creates directories with registry names (often lowercase), but ComfyUI looks for real repo names
@@ -196,7 +197,7 @@ ARG SKIP_NODE_INSTALL=false
 COPY --chown=root:root custom_nodes custom_nodes
 
 # Install dependencies for custom nodes (optimized - installs in parallel where possible)
-RUN if [ "$SKIP_NODE_INSTALL" = "true" ]; then \
+RUN --mount=type=cache,target=/root/.cache/uv --mount=type=cache,target=/root/.cache/pip if [ "$SKIP_NODE_INSTALL" = "true" ]; then \
       echo "Skipping custom nodes installation (will use Network Volume)"; \
       rm -rf custom_nodes && mkdir -p custom_nodes; \
     else \
@@ -204,10 +205,10 @@ RUN if [ "$SKIP_NODE_INSTALL" = "true" ]; then \
       # Collect all requirements.txt files (any depth) first, then install in batch for better caching
       find custom_nodes -name "requirements.txt" -type f 2>/dev/null -exec echo "Found: {}" \; && \
       find custom_nodes -name "requirements.txt" -type f 2>/dev/null | \
-        xargs -I {} uv pip install --no-cache-dir -r {} || true; \
+        xargs -I {} uv pip install -r {} || true; \
       # Install common dependencies that might be needed
-      uv pip install --no-cache-dir segment-anything-2 || true; \
-      uv pip install --no-cache-dir rembg || true; \
+      uv pip install segment-anything-2 || true; \
+      uv pip install rembg || true; \
     fi
 
 # Install sageattention for CUDA kernel optimization (required by ComfyUI-KJNodes)
@@ -222,7 +223,7 @@ RUN if [ "$SKIP_NODE_INSTALL" = "true" ]; then \
 # - SageAttention 2.2.0 requires PyTorch >= 2.1.1 (should be compatible with CUDA 12.8)
 # - --no-build-isolation allows using already installed PyTorch and CUDA toolkit
 ARG SKIP_SAGEATTENTION=false
-RUN if [ "$SKIP_SAGEATTENTION" != "true" ]; then \
+RUN --mount=type=cache,target=/root/.cache/uv --mount=type=cache,target=/root/.cache/pip if [ "$SKIP_SAGEATTENTION" != "true" ]; then \
         echo "Installing sageattention 2.2.0 (this may take 30-40 minutes due to CUDA compilation)..." && \
         echo "Base image: devel variant (provides CUDA_HOME, nvcc)" && \
         echo "Compiling for GPU architectures: ${TORCH_CUDA_ARCH_LIST}" && \
@@ -230,8 +231,8 @@ RUN if [ "$SKIP_SAGEATTENTION" != "true" ]; then \
         echo "CRITICAL: Must include 8.9 (Ada Lovelace: L40, L40S, RTX 6000 Ada, RTX 4090) and 12.0 (Blackwell: RTX 5090) in TORCH_CUDA_ARCH_LIST" && \
         export TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST}" && \
         export TRITON_CACHE_DIR=/tmp/triton_cache && \
-        timeout 2400 uv pip install --no-cache-dir sageattention==2.2.0 --no-build-isolation || \
-        timeout 2400 pip install --no-cache-dir sageattention==2.2.0 --no-build-isolation || \
+        timeout 2400 uv pip install sageattention==2.2.0 --no-build-isolation || \
+        timeout 2400 pip install sageattention==2.2.0 --no-build-isolation || \
         (echo "sageattention installation failed during build, will retry at runtime" && true); \
     else \
         echo "Skipping sageattention installation during build (will install at runtime)"; \
@@ -244,7 +245,7 @@ WORKDIR /
 ADD src/extra_model_paths.yaml /comfyui/extra_model_paths.yaml
 
 # Install Python runtime dependencies for the handler
-RUN uv pip install --no-cache-dir runpod requests websocket-client
+RUN --mount=type=cache,target=/root/.cache/uv --mount=type=cache,target=/root/.cache/pip uv pip install runpod requests websocket-client
 
 # Add application code and scripts
 ADD src/start.sh src/optimize_pytorch.py handler.py test_input.json ./

@@ -36,3 +36,13 @@ custom_nodes/**/._*
 custom_nodes/**/*.log
 custom_nodes/**/*.log.*
 
+# Reduce build context size
+.git
+ComfyUI/**
+assets/**
+docs/**
+tests/**
+tests-unit/**
+test_resources/**
+logs.txt
+
