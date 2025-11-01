@@ -540,6 +540,10 @@ def handler(job):
     output_data = []
     errors = []
 
+    force_s3_video = os.environ.get("FORCE_S3_VIDEO", "true").lower() == "true"
+    bucket_endpoint = os.environ.get("BUCKET_ENDPOINT_URL")
+    bucket_configured = bool(bucket_endpoint)
+
     try:
         # Establish WebSocket connection
         ws_url = f"ws://{COMFY_HOST}/ws?clientId={client_id}"
@@ -723,7 +727,25 @@ def handler(job):
                         if not file_extension:
                             file_extension = ".png" if not is_video else ".mp4"
 
-                        if os.environ.get("BUCKET_ENDPOINT_URL"):
+                        use_s3 = False
+
+                        if is_video:
+                            if force_s3_video:
+                                if not bucket_configured:
+                                    error_msg = (
+                                        "Video outputs require S3 upload, but BUCKET_ENDPOINT_URL is not set."
+                                        " Configure S3 credentials or set FORCE_S3_VIDEO=false to fall back to base64."
+                                    )
+                                    print(f"worker-comfyui - {error_msg}")
+                                    errors.append(error_msg)
+                                    continue
+                                use_s3 = True
+                            else:
+                                use_s3 = bucket_configured
+                        else:
+                            use_s3 = bucket_configured
+
+                        if use_s3:
                             try:
                                 with tempfile.NamedTemporaryFile(
                                     suffix=file_extension, delete=False

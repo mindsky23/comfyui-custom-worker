@@ -37,9 +37,11 @@ Configure these variables **only** if you want the worker to upload generated im
 
 | Environment Variable       | Description                                                                                                                             | Example                                                    |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| `BUCKET_ENDPOINT_URL`      | The full endpoint URL of your S3 bucket. **Must be set to enable S3 upload.**                                                           | `https://<your-bucket-name>.s3.<aws-region>.amazonaws.com` |
-| `BUCKET_ACCESS_KEY_ID`     | Your AWS access key ID associated with the IAM user that has write permissions to the bucket. Required if `BUCKET_ENDPOINT_URL` is set. | `AKIAIOSFODNN7EXAMPLE`                                     |
-| `BUCKET_SECRET_ACCESS_KEY` | Your AWS secret access key associated with the IAM user. Required if `BUCKET_ENDPOINT_URL` is set.                                      | `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`                 |
+| `BUCKET_ENDPOINT_URL`      | The full endpoint URL of your S3 bucket. **Must be set to enable S3 upload.**                                                           | `https://s3api-eu-ro-1.runpod.io`                          |
+| `BUCKET_REGION`            | Region of the bucket. Required for some custom endpoints (e.g., RunPod Object Storage).                                                 | `eu-ro-1`                                                  |
+| `BUCKET_ACCESS_KEY_ID`     | Your AWS/RunPod access key ID associated with the user that has write permissions to the bucket. Required if `BUCKET_ENDPOINT_URL` is set. | `RUNPODAKIAXXXX`                                           |
+| `BUCKET_SECRET_ACCESS_KEY` | Your AWS/RunPod secret access key associated with the user. Required if `BUCKET_ENDPOINT_URL` is set.                                   | `RUNPODSECRETXXXXXXXX`                                     |
+| `FORCE_S3_VIDEO`           | When `true`, video outputs are always uploaded to S3. If S3 is not configured, the job fails with a clear error. Set to `false` to fall back to base64 for videos. | `true` |
 
 **Note:** Upload uses the `runpod` Python library helper `rp_upload.upload_image`, which handles creating a unique path within the bucket based on the `job_id`.
 
