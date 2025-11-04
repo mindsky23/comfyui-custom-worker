@@ -1,48 +1,40 @@
-# SAFE EXCLUSIONS ONLY — leave all assets and docs intact
-
-# Git metadata (never needed at runtime)
-custom_nodes/**/.git
-custom_nodes/**/.gitignore
-custom_nodes/**/.gitattributes
-custom_nodes/**/.github
-custom_nodes/**/.gitmodules
-
-# Python cache (recreated automatically)
-custom_nodes/**/__pycache__
-custom_nodes/**/*.pyc
-custom_nodes/**/*.pyo
-custom_nodes/**/*.pyd
-custom_nodes/**/.Python
-
-# Build artifacts
-custom_nodes/**/build
-custom_nodes/**/dist
-custom_nodes/**/*.egg-info
-custom_nodes/**/.eggs
-
-# IDE/editor junk
-custom_nodes/**/.vscode
-custom_nodes/**/.idea
-custom_nodes/**/*.swp
-custom_nodes/**/*.swo
-custom_nodes/**/*~
-
-# OS junk
-custom_nodes/**/.DS_Store
-custom_nodes/**/Thumbs.db
-custom_nodes/**/._*
-
-# Logs
-custom_nodes/**/*.log
-custom_nodes/**/*.log.*
-
-# Reduce build context size
+# VCS
 .git
-ComfyUI/**
-assets/**
-docs/**
-tests/**
-tests-unit/**
-test_resources/**
-logs.txt
+.git/**
 
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv
+venv
+.poetry/
+.pytest_cache/
+
+# Node/Frontend
+node_modules
+dist
+build
+.next
+.yarn
+.yarn-cache
+
+# ML / большие артефакты
+models/
+checkpoints/
+weights/
+data/
+datasets/
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.onnx
+*.safetensors
+
+# OS/IDE/env
+.DS_Store
+.idea
+.vscode
+.env
+.env.*
