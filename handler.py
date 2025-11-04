@@ -716,31 +716,27 @@ def handler(job):
                     if is_video:
                         print(f"worker-comfyui - Processing video file: {filename} (type: {img_type})")
                     
-                    # Use get_image_data for both images and videos (ComfyUI /view endpoint supports both)
-                    image_bytes = get_image_data(filename, subfolder, img_type)
-
-                    if image_bytes:
-                        if not file_extension:
-                            file_extension = ".png" if not is_video else ".mp4"
-
+                    # Try to find file directly in volume first (more efficient for large files)
+                    volume_file_path = None
+                    if subfolder:
+                        volume_file_path = os.path.join("/comfyui", img_type, subfolder, filename)
+                    else:
+                        volume_file_path = os.path.join("/comfyui", img_type, filename)
+                    
+                    # Check if file exists in volume
+                    file_exists_in_volume = os.path.exists(volume_file_path) if volume_file_path else False
+                    
+                    if file_exists_in_volume:
+                        print(f"worker-comfyui - Found file in volume: {volume_file_path}")
+                        
                         if os.environ.get("BUCKET_ENDPOINT_URL"):
+                            # Upload directly from volume to S3 (no need to load into memory)
                             try:
-                                with tempfile.NamedTemporaryFile(
-                                    suffix=file_extension, delete=False
-                                ) as temp_file:
-                                    temp_file.write(image_bytes)
-                                    temp_file_path = temp_file.name
-                                print(
-                                    f"worker-comfyui - Wrote image bytes to temporary file: {temp_file_path}"
-                                )
-
-                                print(f"worker-comfyui - Uploading {filename} to S3...")
-                                s3_url = rp_upload.upload_image(job_id, temp_file_path)
-                                os.remove(temp_file_path)  # Clean up temp file
+                                print(f"worker-comfyui - Uploading {filename} to S3 from volume...")
+                                s3_url = rp_upload.upload_image(job_id, volume_file_path)
                                 print(
                                     f"worker-comfyui - Uploaded {filename} to S3: {s3_url}"
                                 )
-                                # Append dictionary with filename and URL
                                 output_data.append(
                                     {
                                         "filename": filename,
@@ -752,37 +748,109 @@ def handler(job):
                                 error_msg = f"Error uploading {filename} to S3: {e}"
                                 print(f"worker-comfyui - {error_msg}")
                                 errors.append(error_msg)
-                                if "temp_file_path" in locals() and os.path.exists(
-                                    temp_file_path
-                                ):
-                                    try:
-                                        os.remove(temp_file_path)
-                                    except OSError as rm_err:
-                                        print(
-                                            f"worker-comfyui - Error removing temp file {temp_file_path}: {rm_err}"
-                                        )
+                                # Fallback to /view URL if S3 upload fails
+                                try:
+                                    url_qs = urllib.parse.urlencode(
+                                        {"filename": filename, "subfolder": subfolder, "type": img_type}
+                                    )
+                                    file_url = f"http://{COMFY_HOST}/view?{url_qs}"
+                                    output_data.append(
+                                        {
+                                            "filename": filename,
+                                            "type": "url",
+                                            "data": file_url,
+                                        }
+                                    )
+                                    print(f"worker-comfyui - Fallback: Returning URL for {filename}: {file_url}")
+                                except Exception as url_err:
+                                    errors.append(f"Error building fallback URL: {url_err}")
                         else:
-                            # Return as base64 string
+                            # Return URL to /view endpoint (file is in volume, accessible via ComfyUI)
                             try:
-                                base64_image = base64.b64encode(image_bytes).decode(
-                                    "utf-8"
+                                url_qs = urllib.parse.urlencode(
+                                    {"filename": filename, "subfolder": subfolder, "type": img_type}
                                 )
-                                # Append dictionary with filename and base64 data
+                                file_url = f"http://{COMFY_HOST}/view?{url_qs}"
                                 output_data.append(
                                     {
                                         "filename": filename,
-                                        "type": "base64",
-                                        "data": base64_image,
+                                        "type": "url",
+                                        "data": file_url,
                                     }
                                 )
-                                print(f"worker-comfyui - Encoded {filename} as base64")
+                                print(f"worker-comfyui - Returning URL for {filename}: {file_url}")
                             except Exception as e:
-                                error_msg = f"Error encoding {filename} to base64: {e}"
+                                error_msg = f"Error building URL for {filename}: {e}"
                                 print(f"worker-comfyui - {error_msg}")
                                 errors.append(error_msg)
                     else:
-                        error_msg = f"Failed to fetch image data for {filename} from /view endpoint."
-                        errors.append(error_msg)
+                        # File not found in volume, fallback to /view endpoint (load into memory)
+                        print(f"worker-comfyui - File not found in volume, using /view endpoint: {volume_file_path}")
+                        image_bytes = get_image_data(filename, subfolder, img_type)
+
+                        if image_bytes:
+                            if not file_extension:
+                                file_extension = ".png" if not is_video else ".mp4"
+
+                            if os.environ.get("BUCKET_ENDPOINT_URL"):
+                                try:
+                                    with tempfile.NamedTemporaryFile(
+                                        suffix=file_extension, delete=False
+                                    ) as temp_file:
+                                        temp_file.write(image_bytes)
+                                        temp_file_path = temp_file.name
+                                    print(
+                                        f"worker-comfyui - Wrote file bytes to temporary file: {temp_file_path}"
+                                    )
+
+                                    print(f"worker-comfyui - Uploading {filename} to S3...")
+                                    s3_url = rp_upload.upload_image(job_id, temp_file_path)
+                                    os.remove(temp_file_path)  # Clean up temp file
+                                    print(
+                                        f"worker-comfyui - Uploaded {filename} to S3: {s3_url}"
+                                    )
+                                    output_data.append(
+                                        {
+                                            "filename": filename,
+                                            "type": "s3_url",
+                                            "data": s3_url,
+                                        }
+                                    )
+                                except Exception as e:
+                                    error_msg = f"Error uploading {filename} to S3: {e}"
+                                    print(f"worker-comfyui - {error_msg}")
+                                    errors.append(error_msg)
+                                    if "temp_file_path" in locals() and os.path.exists(
+                                        temp_file_path
+                                    ):
+                                        try:
+                                            os.remove(temp_file_path)
+                                        except OSError as rm_err:
+                                            print(
+                                                f"worker-comfyui - Error removing temp file {temp_file_path}: {rm_err}"
+                                            )
+                            else:
+                                # Return as a direct URL to ComfyUI /view (avoids huge base64 JSON)
+                                try:
+                                    url_qs = urllib.parse.urlencode(
+                                        {"filename": filename, "subfolder": subfolder, "type": img_type}
+                                    )
+                                    file_url = f"http://{COMFY_HOST}/view?{url_qs}"
+                                    output_data.append(
+                                        {
+                                            "filename": filename,
+                                            "type": "url",
+                                            "data": file_url,
+                                        }
+                                    )
+                                    print(f"worker-comfyui - Returning URL for {filename}: {file_url}")
+                                except Exception as e:
+                                    error_msg = f"Error building URL for {filename}: {e}"
+                                    print(f"worker-comfyui - {error_msg}")
+                                    errors.append(error_msg)
+                        else:
+                            error_msg = f"Failed to fetch file data for {filename} from /view endpoint."
+                            errors.append(error_msg)
 
             # Check for other output types
             other_keys = [k for k in node_output.keys() if k != "images"]
