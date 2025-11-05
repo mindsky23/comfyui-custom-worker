@@ -492,6 +492,68 @@ def get_image_data(filename, subfolder, image_type):
         return None
 
 
+def get_volume_path():
+    """
+    Find the available Network Volume path.
+    Checks common mount points in order: /workspace, /runpod-volume, /workplace
+
+    Returns:
+        str: The path to the available volume, or None if no volume is found.
+    """
+    volume_paths = ["/workspace", "/runpod-volume", "/workplace"]
+    
+    for volume_path in volume_paths:
+        if os.path.exists(volume_path) and os.path.isdir(volume_path):
+            # Check if it's writable
+            if os.access(volume_path, os.W_OK):
+                print(f"worker-comfyui - Found writable volume at: {volume_path}")
+                return volume_path
+    
+    print(f"worker-comfyui - WARNING: No writable volume found. Checked: {', '.join(volume_paths)}")
+    return None
+
+
+def save_video_to_volume(video_bytes, filename, job_id):
+    """
+    Save video file to Network Volume and return relative path.
+
+    Args:
+        video_bytes (bytes): The video file data.
+        filename (str): The original filename.
+        job_id (str): The job ID for organizing files.
+
+    Returns:
+        str: Relative path to the saved video (e.g., "outputs/{job_id}/{filename}"), or None if save failed.
+    """
+    volume_path = get_volume_path()
+    if not volume_path:
+        return None
+    
+    # Create outputs directory structure in volume
+    outputs_dir = os.path.join(volume_path, "outputs", job_id)
+    
+    try:
+        # Create directory if it doesn't exist
+        os.makedirs(outputs_dir, exist_ok=True)
+        
+        # Save video file
+        video_path = os.path.join(outputs_dir, filename)
+        with open(video_path, "wb") as f:
+            f.write(video_bytes)
+        
+        # Calculate relative path (relative to volume root)
+        relative_path = os.path.join("outputs", job_id, filename).replace("\\", "/")
+        
+        print(f"worker-comfyui - Saved video to volume: {video_path}")
+        print(f"worker-comfyui - Relative path: {relative_path}")
+        
+        return relative_path
+    except Exception as e:
+        print(f"worker-comfyui - Error saving video to volume: {e}")
+        print(traceback.format_exc())
+        return None
+
+
 def handler(job):
     """
     Handles a job using ComfyUI via websockets for status and image retrieval.
@@ -761,8 +823,25 @@ def handler(job):
                                         print(
                                             f"worker-comfyui - Error removing temp file {temp_file_path}: {rm_err}"
                                         )
+                        elif is_video:
+                            # For video files: save to Volume and return relative path
+                            print(f"worker-comfyui - Saving video {filename} to Volume...")
+                            volume_path = save_video_to_volume(image_bytes, filename, job_id)
+                            if volume_path:
+                                output_data.append(
+                                    {
+                                        "filename": filename,
+                                        "type": "volume_path",
+                                        "data": volume_path,
+                                    }
+                                )
+                                print(f"worker-comfyui - Video saved to Volume: {volume_path}")
+                            else:
+                                error_msg = f"Failed to save video {filename} to Volume. Volume may not be mounted or accessible."
+                                print(f"worker-comfyui - {error_msg}")
+                                errors.append(error_msg)
                         else:
-                            # Return as base64 string
+                            # For non-video files: return as base64 string
                             try:
                                 base64_image = base64.b64encode(image_bytes).decode(
                                     "utf-8"
